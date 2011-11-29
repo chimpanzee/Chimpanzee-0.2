@@ -108,7 +108,7 @@ define('CZ_FATAL_IMAGE_INVALID_DIR_TYPE', 0x0f0c);
 // Login
 define('CZ_FATAL_LOGIN_NOT_SET_AUTH_COLUMN_NAMES',       0x1001);
 define('CZ_FATAL_LOGIN_NOT_SET_AUTH_VALUE',              0x1002);
-define('CZ_FATAL_AUTHORIZED_LOGIN',                      0x1003);
+define('CZ_FATAL_LOGIN_AUTHORIZED',                      0x1003);
 define('CZ_FATAL_LOGIN_NOT_SET_AUTO_REDIRECT_CTRL_NAME', 0x1004);
 
 // Mail
@@ -232,7 +232,7 @@ final class CZCerrFatal extends CZBase
 		// Login
 		CZ_FATAL_LOGIN_NOT_SET_AUTH_COLUMN_NAMES       => 'Auth column names are not set.',
 		CZ_FATAL_LOGIN_NOT_SET_AUTH_VALUE              => 'Auth value is not set.',
-		CZ_FATAL_AUTHORIZED_LOGIN                      => 'Already logged in.',
+		CZ_FATAL_LOGIN_AUTHORIZED                      => 'Already logged in.',
 		CZ_FATAL_LOGIN_NOT_SET_AUTO_REDIRECT_CTRL_NAME => 'Auto-redirect controller name is not set.',
 		
 		// Mail
