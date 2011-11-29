@@ -1,0 +1,11 @@
+<a href="<?= $this->_url(array('index', 'regist')); ?>">New registration</a><br />
+<?= $records->getListHtml(); ?>
+<? $_prev_page_url = $records->getPrevPageUrl(); ?>
+<? $_next_page_url = $records->getNextPageUrl(); ?>
+<? if ($_prev_page_url || $_next_page_url): ?><div align="center"><? endif; ?>
+<? if ($_prev_page_url): ?><a href="<?= $_prev_page_url; ?>">Previous page</a><? endif; ?>
+<? if ($_prev_page_url && $_next_page_url): ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<? endif; ?>
+<? if ($_next_page_url): ?><a href="<?= $_next_page_url; ?>">Next page</a><? endif; ?>
+<? if ($_prev_page_url || $_next_page_url): ?></div><? endif; ?>
+<br />
+<a href="<?= $_return_url; ?>">Go back</a><br />
