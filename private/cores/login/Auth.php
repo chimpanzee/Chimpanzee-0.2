@@ -12,7 +12,7 @@ final class CZCloginAuth extends CZBase
 	 */
 	public function exec($model, $condition_sentences, $condition_values)
 	{
-		if (($login_id = $this->_cz->newCore('ses', 'get')->exec('login_id', FALSE))) {
+		if (($login_id = $this->_cz->newCore('ses', 'get')->exec('login_id', FALSE)) !== FALSE) {
 			$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_AUTHORIZED_LOGIN, 'ID: ' . $login_id);
 		}
 		

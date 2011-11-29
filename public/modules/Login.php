@@ -38,6 +38,18 @@ final class CZMLogin extends CZBase
 	{
 		$this->_cz->newCore('login', 'redirect_src_url')->exec();
 	}
+	
+	/**
+	 * @param object $model
+	 * 
+	 * @return boolean
+	 * 
+	 * @author Shin Uesugi
+	 */
+	public function relogin($model)
+	{
+		return $this->_cz->newCore('login', 'relogin')->exec($model);
+	}
 
 	
 	/*
