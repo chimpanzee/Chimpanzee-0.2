@@ -4,6 +4,8 @@ final class configUrl extends CZConfig
 	public function _construct()
 	{
 		$this->setValues(array(
+			'secure_ignore_flag' => FALSE,
+
 			'server_name' => '',
 			'path'        => '',
 

@@ -20,6 +20,10 @@ final class CZCurlGetRoot extends CZBase
 	 */
 	public function exec($secure_flag = FALSE, $params = NULL)
 	{
+		if ($this->_cz->newUser('config', 'url')->getValue('secure_ignore_flag', FALSE)) {
+			$secure_flag = FALSE;
+		}
+
 		if (!($server_name = $this->_cz->newUser('config', 'url')->getValue('server_name', ''))) {
 			$server_name = isset($_SERVER['SERVER_NAME']) ? $_SERVER['SERVER_NAME'] : 'localhost';
 		}
