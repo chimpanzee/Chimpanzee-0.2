@@ -7,7 +7,7 @@ final class CZSRequest extends CZBase
 	/**
 	 * @author Shin Uesugi
 	 */
-	function __construct()
+	public function _construct()
 	{
 		$this->_encoding = mb_internal_encoding();
 	}

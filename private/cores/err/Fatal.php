@@ -17,6 +17,7 @@ define('CZ_FATAL_CONFIG_NOT_SET_VAR', 0x0402);
 
 // Ses
 define('CZ_FATAL_SES_NOT_SET_VAR', 0x0501);
+define('CZ_FATAL_SES_NOT_SECURE',  0x0502);
 
 // Var
 define('CZ_FATAL_VAR_NOT_SAVED_VAR', 0x0601);
@@ -141,6 +142,7 @@ final class CZCerrFatal extends CZBase
 		
 		// Ses
 		CZ_FATAL_SES_NOT_SET_VAR => 'The session variable is not set.',
+		CZ_FATAL_SES_NOT_SECURE  => 'CZ_FATAL_SES_NOT_SECURE',	//TODO: Modify to Yanai-sann by Shin.
 		
 		// Var
 		CZ_FATAL_VAR_NOT_SAVED_VAR => 'The variable is not saved.',

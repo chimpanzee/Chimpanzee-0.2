@@ -8,7 +8,7 @@ final class CZCurlGetRequestProtocol extends CZBase
 	 */
 	public function exec()
 	{
-		return isset($_SERVER['HTTPS']) && ($_SERVER['HTTPS'] != 'off') ? 'https' : 'http';
+		return $this->_cz->newCore('url', 'is_secure')->exec() ? 'https' : 'http';
 	}
 }
 ?>

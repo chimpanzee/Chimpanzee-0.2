@@ -16,7 +16,7 @@ final class CZSAutoload extends CZBase
 	/**
 	 * @author Shin Uesugi
 	 */
-	function __construct()
+	public function _construct()
 	{
 		if (function_exists('__autoload')) {
 			spl_autoload_register('__autoload');
