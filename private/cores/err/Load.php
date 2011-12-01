@@ -2,23 +2,21 @@
 final class CZCerrLoad extends CZBase
 {
 	/**
-	 * @param string $default_msg
+	 * @param string $default_msg <option>
 	 * 
 	 * @return string / FALSE
 	 * 
 	 * @author Shin Uesugi
 	 */
-	public function exec($default_msg = '')
+	public function exec($default_msg = NULL)
 	{
-		if (!$this->_cz->isValidStr($msg = $this->_cz->newCore('ses', 'get')->exec('err_msg', ''))) {
-			if ($default_msg === FALSE) {
+		if (($msg = $this->_cz->newCore('ses', 'get')->exec('err_msg', FALSE)) === FALSE) {
+			if ($default_msg === NULL) {
+				$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_ERR_NOT_SAVED_MSG);
+			} else if ($default_msg === FALSE) {
 				return FALSE;
 			}
-			if ($this->_cz->isValidStr($default_msg)) {
-				$msg = $default_msg;
-			} else {
-				$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_ERR_NOT_SAVED_MSG);
-			}
+			$msg = $default_msg;
 		}
 		
 		$head_str = $this->_cz->newUser('config', 'err')->getValue('msg_head_str', '');

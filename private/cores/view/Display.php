@@ -16,8 +16,12 @@ final class CZCviewDisplay extends CZBase
 		unset($_var_name);
 		unset($_value);
 		
-		$_err_msg = $this->_cz->newCore('err', 'load')->exec(FALSE);
-		$this->_cz->newCore('err', 'free')->exec();
+		if ($this->_cz->newCore('ses', 'is_valid')->exec()) {
+			$_err_msg = $this->_cz->newCore('err', 'load')->exec(FALSE);
+			$this->_cz->newCore('err', 'free')->exec();
+		} else {
+			$_err_msg = FALSE;
+		}
 		
 		$_ctrl_name         = $this->_cz->newCore('forward', 'get_ctrl_name')->exec();
 		$_action_group_name = $this->_cz->newCore('forward', 'get_action_group_name')->exec();
@@ -29,12 +33,17 @@ final class CZCviewDisplay extends CZBase
 		
 		$_root_url         = $this->_cz->newCore('url', 'get_root')->exec();
 		$_self_url         = $this->_cz->newCore('url', 'get_self')->exec();
-		$_return_url       = $this->_cz->newCore('url', 'get_return')->exec();
 		$_images_url       = $this->_cz->newCore('url', 'get_images')->exec();
 		$_css_url          = $this->_cz->newCore('url', 'get_css')->exec();
 		$_js_url           = $this->_cz->newCore('url', 'get_js')->exec();
 		$_api_url          = $this->_cz->newCore('url', 'get_api')->exec();
 		$_image_server_url = $this->_cz->newCore('image', 'get_server_url')->exec();
+		
+		if ($this->_cz->newCore('ses', 'is_valid')->exec()) {
+			$_return_url = $this->_cz->newCore('url', 'get_return')->exec();
+		} else {
+			$_return_url = FALSE;
+		}
 		
 		$_facebook_url = 'http://www.facebook.com';
 		$_twitter_url  = 'http://twitter.com';

@@ -12,13 +12,13 @@ final class CZMErr extends CZBase
 	}
 	
 	/**
-	 * @param string $default_msg / FALSE
+	 * @param string $default_msg <option>
 	 * 
 	 * @return string
 	 * 
 	 * @author Shin Uesugi
 	 */
-	public function load($default_msg = '')
+	public function load($default_msg = NULL)
 	{
 		return $this->_cz->newCore('err', 'load')->exec($default_msg);
 	}
