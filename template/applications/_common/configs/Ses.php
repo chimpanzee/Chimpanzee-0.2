@@ -4,11 +4,14 @@ final class configSes extends CZConfig
 	public function _construct()
 	{
 		$this->setValues(array(
-			'secure_flag'      => TRUE,
+			'secure_flag' => TRUE,
+
+			'server_lifetime' => 86400,
+
 			'cookie_only_flag' => TRUE,
-			'lifetime'         => 0,
-			'path'             => '/',
-			'domain'           => NULL,
+			'cookie_lifetime'  => 0,
+			'cookie_path'      => '/',
+			'cookie_domain'    => NULL,
 		));
 	}
 }
