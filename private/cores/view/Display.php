@@ -31,7 +31,7 @@ final class CZCviewDisplay extends CZBase
 			$_views_dir = $this->_cz->application_dir . DIRECTORY_SEPARATOR . 'views';
 		}
 		
-		$_root_url         = $this->_cz->newCore('url', 'get_root')->exec();
+		$_root_url         = $this->_cz->newCore('url', 'get_root')->exec(FALSE);
 		$_self_url         = $this->_cz->newCore('url', 'get_self')->exec();
 		$_images_url       = $this->_cz->newCore('url', 'get_images')->exec();
 		$_css_url          = $this->_cz->newCore('url', 'get_css')->exec();
@@ -69,7 +69,7 @@ final class CZCviewDisplay extends CZBase
 	 * 
 	 * @author Shin Uesugi
 	 */
-	private function _url($action, $secure_flag = FALSE)
+	private function _url($action, $secure_flag = NULL)
 	{
 		return $this->_cz->newCore('url', 'get_action')->_exec($action, $secure_flag);
 	}
@@ -85,7 +85,7 @@ final class CZCviewDisplay extends CZBase
 	 * 
 	 * @author Shin Uesugi
 	 */
-	private function url($action, $secure_flag = FALSE)
+	private function url($action, $secure_flag = NULL)
 	{
 		return $this->_cz->newCore('url', 'get_action')->exec($action, $secure_flag);
 	}

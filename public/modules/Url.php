@@ -2,7 +2,7 @@
 final class CZMUrl extends CZBase
 {
 	/**
-	 * @param boolean secure_flag <option>
+	 * @param boolean $secure_flag <option>
 	 * @param array   $params(
 	 *   'routing' => array(
 	 *     string Parameter value
@@ -18,7 +18,7 @@ final class CZMUrl extends CZBase
 	 * 
 	 * @author Shin Uesugi
 	 */
-	public function getRoot($secure_flag = FALSE, $params = NULL)
+	public function getRoot($secure_flag = NULL, $params = NULL)
 	{
 		return $this->_cz->newCore('url', 'get_root')->exec($secure_flag, $params);
 	}

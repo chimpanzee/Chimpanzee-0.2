@@ -23,7 +23,7 @@ final class CZCredirectAction extends CZBase
 	 * 
 	 * @author Shin Uesugi
 	 */
-	public function _exec($action, $secure_flag = FALSE, $params = NULL)
+	public function _exec($action, $secure_flag = NULL, $params = NULL)
 	{
 		$url = $this->_cz->newCore('url', 'get_action')->_exec($action, $secure_flag, $params);
 		$this->_cz->newCore('redirect', 'url')->exec($url);
@@ -50,7 +50,7 @@ final class CZCredirectAction extends CZBase
 	 * 
 	 * @author Shin Uesugi
 	 */
-	public function exec($action, $secure_flag = FALSE, $params = NULL)
+	public function exec($action, $secure_flag = NULL, $params = NULL)
 	{
 		if (isset($action[1])) {
 			$action[2] = $action[1];

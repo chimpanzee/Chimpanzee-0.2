@@ -145,25 +145,5 @@ final class CZMDb extends CZBase
 	{
 		return $this->_cz->newCore('db', 'get_records')->exec($table_name, $column_names, $condition_sentences, $condition_values, $options);
 	}
-	
-	
-	/*
-	 * #Ngram
-	 */
-	
-	/**
-	 * @param integer $n
-	 * @param string  $str
-	 * @param string  $prefix
-	 * @param boolean $encode_flag
-	 * 
-	 * @return string
-	 * 
-	 * @author Shin Uesugi
-	 */
-	public function getNgram($n, $str, $prefix = '', $encode_flag = FALSE)
-	{
-		return $this->_cz->newCore('db', 'get_ngram')->exec($n, $str, $prefix, $encode_flag);
-	}
 }
 ?>

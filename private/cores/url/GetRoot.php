@@ -2,7 +2,7 @@
 final class CZCurlGetRoot extends CZBase
 {
 	/**
-	 * @param boolean secure_flag <option>
+	 * @param boolean $secure_flag <option>
 	 * @param array   $params(
 	 *   'routing' => array(
 	 *     string Parameter value
@@ -18,8 +18,11 @@ final class CZCurlGetRoot extends CZBase
 	 * 
 	 * @author Shin Uesugi
 	 */
-	public function exec($secure_flag = FALSE, $params = NULL)
+	public function exec($secure_flag = NULL, $params = NULL)
 	{
+		if ($secure_flag === NULL) {
+			$secure_flag = $this->_cz->newCore('url', 'is_secure')->exec();			
+		}
 		if ($this->_cz->newUser('config', 'url')->getValue('secure_ignore_flag', FALSE)) {
 			$secure_flag = FALSE;
 		}

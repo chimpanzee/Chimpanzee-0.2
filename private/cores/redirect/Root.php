@@ -2,7 +2,7 @@
 final class CZCredirectRoot extends CZBase
 {
 	/**
-	 * @param boolean secure_flag <option>
+	 * @param boolean $secure_flag <option>
 	 * @param array   $params(
 	 *   'routing' => array(
 	 *     string Parameter value
@@ -18,7 +18,7 @@ final class CZCredirectRoot extends CZBase
 	 * 
 	 * @author Shin Uesugi
 	 */
-	public function exec($secure_flag = FALSE, $params = NULL)
+	public function exec($secure_flag = NULL, $params = NULL)
 	{
 		$url = $this->_cz->newCore('url', 'get_root')->exec($secure_flag, $params);
 		$this->_cz->newCore('redirect', 'url')->exec($url);

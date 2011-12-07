@@ -100,7 +100,7 @@ class CZCtrl extends CZFunc
 	 * 
 	 * @author Shin Uesugi
 	 */
-	protected function _redirect($action, $secure_flag = FALSE, $params = NULL)
+	protected function _redirect($action, $secure_flag = NULL, $params = NULL)
 	{
 		$this->_cz->newCore('redirect', 'action')->_exec($action, $secure_flag, $params);
 	}
@@ -126,13 +126,13 @@ class CZCtrl extends CZFunc
 	 * 
 	 * @author Shin Uesugi
 	 */
-	protected function redirect($action, $secure_flag = FALSE, $params = NULL)
+	protected function redirect($action, $secure_flag = NULL, $params = NULL)
 	{
 		$this->_cz->newCore('redirect', 'action')->exec($action, $secure_flag, $params);
 	}
 	
 	/**
-	 * @param boolean secure_flag <option>
+	 * @param boolean $secure_flag <option>
 	 * @param array   $params(
 	 *   'routing' => array(
 	 *     string Parameter value
@@ -148,7 +148,7 @@ class CZCtrl extends CZFunc
 	 * 
 	 * @author Shin Uesugi
 	 */
-	protected function redirectRoot($secure_flag = FALSE, $params = NULL)
+	protected function redirectRoot($secure_flag = NULL, $params = NULL)
 	{
 		$this->_cz->newCore('redirect', 'root')->exec($secure_flag, $params);
 	}

@@ -23,7 +23,7 @@ final class CZCurlGetAction extends CZBase
 	 * 
 	 * @author Shin Uesugi
 	 */
-	public function _exec($action, $secure_flag = FALSE, $params = NULL)
+	public function _exec($action, $secure_flag = NULL, $params = NULL)
 	{
 		if (isset($action[2])) {
 			$ctrl_name = $action[2];
@@ -75,7 +75,7 @@ final class CZCurlGetAction extends CZBase
 	 * 
 	 * @author Shin Uesugi
 	 */
-	public function exec($action, $secure_flag = FALSE, $params = NULL)
+	public function exec($action, $secure_flag = NULL, $params = NULL)
 	{
 		if (isset($action[1])) {
 			$action[2] = $action[1];
