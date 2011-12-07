@@ -50,7 +50,7 @@ class CZForm extends CZFunc
 	 * 
 	 * @author Shin Uesugi
 	 */
-	protected function addPartProperty($part_name, $property_name, $value)
+	public function addPartProperty($part_name, $property_name, $value)
 	{
 		if (!isset($this->_parts[$part_name])) {
 			$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_FORM_NOT_SET_PART, $part_name, $this->getMainClassName());
