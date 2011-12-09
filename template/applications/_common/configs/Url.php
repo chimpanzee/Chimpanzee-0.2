@@ -6,9 +6,6 @@ final class configUrl extends CZConfig
 		$this->setValues(array(
 			'secure_ignore_flag' => FALSE,
 
-			'server_name' => '',
-			'path'        => '',
-
 			'images' => '',
 			'css'    => '',
 			'js'     => '',

@@ -3,6 +3,19 @@ final class CZMUrl extends CZBase
 {
 	/**
 	 * @param boolean $secure_flag <option>
+	 * 
+	 * @return string
+	 * 
+	 * @author Shin Uesugi
+	 */
+	public function getProtocol($secure_flag = NULL)
+	{
+		return $this->_cz->newCore('url', 'get_protocol')->exec($secure_flag);
+	}
+
+
+	/**
+	 * @param boolean $secure_flag <option>
 	 * @param array   $params(
 	 *   'routing' => array(
 	 *     string Parameter value
@@ -22,8 +35,8 @@ final class CZMUrl extends CZBase
 	{
 		return $this->_cz->newCore('url', 'get_root')->exec($secure_flag, $params);
 	}
-	
-	
+
+
 	/**
 	 * @return string
 	 * 
@@ -33,8 +46,8 @@ final class CZMUrl extends CZBase
 	{
 		return $this->_cz->newCore('url', 'get_self')->exec();
 	}
-	
-	
+
+
 	/**
 	 * @return string
 	 * 

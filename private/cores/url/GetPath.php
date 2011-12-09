@@ -8,10 +8,6 @@ final class CZCurlGetPath extends CZBase
 	 */
 	public function exec()
 	{
-		if ($path = $this->_cz->newUser('config', 'url')->getValue('path', '')) {
-			return '/' . $path;
-		}
-
 		if (isset($_SERVER['REQUEST_URI'])) {
 			if (strpos($_SERVER['REQUEST_URI'], $_SERVER['SCRIPT_NAME']) !== FALSE) {
 				$path = $_SERVER['SCRIPT_NAME'];

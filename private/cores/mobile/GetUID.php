@@ -8,12 +8,13 @@ final class CZCmobileGetUID extends CZBase
 	 */
 	public function exec()
 	{
-		$uid = FALSE;
 		$carrier_name = $this->_cz->newCore('mobile', 'get_carrier_name')->exec();
+
+		$uid = FALSE;
 		switch ($carrier_name) {
 			case 'docomo':
-				if (preg_match('/^.+ser([0-9a-zA-Z]+)/', $_SERVER['HTTP_USER_AGENT'], $matches)) {
-					$uid = $matches[1];
+				if (isset($_SERVER['HTTP_X_DCMGUID'])) {
+					$uid = $_SERVER['HTTP_X_DCMGUID'];
 				}
 				break;
 			case 'au':
@@ -22,12 +23,12 @@ final class CZCmobileGetUID extends CZBase
 				}
 				break;
 			case 'softbank':
-				if (preg_match('/^.+\/SN([0-9a-zA-Z]+)/', $_SERVER['HTTP_USER_AGENT'], $matches)) {
-					$uid = $matches[1];
+				if (isset($_SERVER['HTTP_X_JPHONE_UID'])) {
+					$uid = $_SERVER['HTTP_X_JPHONE_UID'];
 				}
 				break;
 		}
-		
+
 		return $uid;
 	}
 }
