@@ -16,12 +16,8 @@ final class CZCviewDisplay extends CZBase
 		unset($_var_name);
 		unset($_value);
 
-		if ($this->_cz->newCore('ses', 'is_valid')->exec()) {
-			$_err_msg = $this->_cz->newCore('err', 'load')->exec(FALSE);
-			$this->_cz->newCore('err', 'free')->exec();
-		} else {
-			$_err_msg = FALSE;
-		}
+		$_err_msg = $this->_cz->newCore('err', 'load')->exec(FALSE);
+		$this->_cz->newCore('err', 'free')->exec();
 
 		$_ctrl_name         = $this->_cz->newCore('forward', 'get_ctrl_name')->exec();
 		$_action_group_name = $this->_cz->newCore('forward', 'get_action_group_name')->exec();

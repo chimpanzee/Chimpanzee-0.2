@@ -4,17 +4,19 @@ final class CZMErr extends CZBase
 	/**
 	 * @param string $msg
 	 * 
+	 * @return boolean
+	 * 
 	 * @author Shin Uesugi
 	 */
 	public function save($msg)
 	{
-		$this->_cz->newCore('err', 'save')->exec($msg);
+		return $this->_cz->newCore('err', 'save')->exec($msg);
 	}
-	
+
 	/**
 	 * @param string $default_msg <option>
 	 * 
-	 * @return string
+	 * @return string / FALSE
 	 * 
 	 * @author Shin Uesugi
 	 */
@@ -22,7 +24,7 @@ final class CZMErr extends CZBase
 	{
 		return $this->_cz->newCore('err', 'load')->exec($default_msg);
 	}
-	
+
 	/**
 	 * @author Shin Uesugi
 	 */

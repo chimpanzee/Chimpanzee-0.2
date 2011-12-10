@@ -6,7 +6,9 @@ final class CZCerrFree extends CZBase
 	 */
 	public function exec()
 	{
-		$this->_cz->newCore('ses', 'free')->exec('err_msg');
+		if ($this->_cz->newCore('ses', 'is_valid')->exec()) {
+			$this->_cz->newCore('ses', 'free')->exec('err_msg');
+		}
 	}
 }
 ?>
