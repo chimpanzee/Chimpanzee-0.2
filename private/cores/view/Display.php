@@ -27,7 +27,6 @@ final class CZCviewDisplay extends CZBase
 			$_views_dir = $this->_cz->application_dir . DIRECTORY_SEPARATOR . 'views';
 		}
 
-		$_root_url         = $this->_cz->newCore('url', 'get_root')->exec(FALSE);
 		$_self_url         = $this->_cz->newCore('url', 'get_self')->exec();
 		$_images_url       = $this->_cz->newCore('url', 'get_images')->exec();
 		$_css_url          = $this->_cz->newCore('url', 'get_css')->exec();
@@ -35,9 +34,6 @@ final class CZCviewDisplay extends CZBase
 		$_api_url          = $this->_cz->newCore('url', 'get_api')->exec();
 		$_return_url       = $this->_cz->newCore('url', 'get_return')->exec();
 		$_image_server_url = $this->_cz->newCore('image', 'get_server_url')->exec();
-
-		$_facebook_url = 'http://www.facebook.com';
-		$_twitter_url  = 'http://twitter.com';
 
 		eval('?>' . $this->_cz->newCore('view', 'get_template')->exec($_views_dir, $file) . '<?;');
 		exit;
@@ -49,6 +45,18 @@ final class CZCviewDisplay extends CZBase
 	 */
 
 	/**
+	 * @param boolean $secure_flag <option>
+	 * 
+	 * @return string
+	 * 
+	 * @author Shin Uesugi
+	 */
+	private function root_url($secure_flag = NULL)
+	{
+		return $this->_cz->newCore('url', 'get_root')->exec($secure_flag);
+	}
+
+	/**
 	 * @param array $action(
 	 *   string Action name
 	 *   string Action group name / NULL <option>
@@ -56,7 +64,7 @@ final class CZCviewDisplay extends CZBase
 	 * )
 	 * @param boolean $secure_flag <option>
 	 * 
-	 * @return string URL
+	 * @return string
 	 * 
 	 * @author Shin Uesugi
 	 */
@@ -72,7 +80,7 @@ final class CZCviewDisplay extends CZBase
 	 * )
 	 * @param boolean $secure_flag <option>
 	 * 
-	 * @return string URL
+	 * @return string
 	 * 
 	 * @author Shin Uesugi
 	 */
