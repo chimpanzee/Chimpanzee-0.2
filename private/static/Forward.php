@@ -3,21 +3,21 @@ final class CZSForward extends CZBase
 {
 	// Object
 	private $_ctrl = NULL;
-	
+
 	private $_ctrl_name         = NULL;
 	private $_action_group_name = NULL;
 	private $_action_name       = NULL;
-	
+
 	private $_prev_ctrl_name         = NULL;
 	private $_prev_action_group_name = NULL;
 	private $_prev_action_name       = NULL;
-	
+
 
 	/**
 	 * @param array $action(
 	 *   string Action name
-	 *   string Action group name / FALSE <option>
-	 *   string Controller name           <option>
+	 *   string Action group name / NULL <option>
+	 *   string Controller name          <option>
 	 * )
 	 * @param array $params(
 	 *   'routing' => array(
@@ -42,7 +42,7 @@ final class CZSForward extends CZBase
 		}
 		exit;
 	}
-	
+
 	/**
 	 * @param array $action(
 	 *   string Action name
@@ -67,12 +67,12 @@ final class CZSForward extends CZBase
 	{
 		if (isset($action[1])) {
 			$action[2] = $action[1];
+			$action[1] = NULL;
 		}
-		$action[1] = FALSE;
 		self::_exec($action, $params);
 	}
-	
-	
+
+
 	/*
 	 * #Set property
 	 */
@@ -86,7 +86,7 @@ final class CZSForward extends CZBase
 	{
 		$this->_ctrl_name = $name;
 	}
-	
+
 	/**
 	 * @param string $name
 	 * 
@@ -116,7 +116,7 @@ final class CZSForward extends CZBase
 	{
 		$this->_prev_ctrl_name = $name;
 	}
-	
+
 	/**
 	 * @param string $name
 	 * 
@@ -136,12 +136,12 @@ final class CZSForward extends CZBase
 	{
 		$this->_prev_action_name = $name;
 	}
-	
-	
+
+
 	/*
 	 * #Get property
 	 */
-	
+
 	/**
 	 * @return string
 	 * 
@@ -151,7 +151,7 @@ final class CZSForward extends CZBase
 	{
 		return $this->_ctrl_name;
 	}
-	
+
 	/**
 	 * @return string
 	 * 
@@ -161,7 +161,7 @@ final class CZSForward extends CZBase
 	{
 		return $this->_action_group_name;
 	}
-	
+
 	/**
 	 * @return string
 	 * 
@@ -171,7 +171,7 @@ final class CZSForward extends CZBase
 	{
 		return $this->_action_name;
 	}
-	
+
 	/**
 	 * @return string
 	 * 
@@ -181,7 +181,7 @@ final class CZSForward extends CZBase
 	{
 		return $this->_prev_ctrl_name;
 	}
-	
+
 	/**
 	 * @return string
 	 * 
@@ -191,7 +191,7 @@ final class CZSForward extends CZBase
 	{
 		return $this->_prev_action_group_name;
 	}
-	
+
 	/**
 	 * @return string
 	 * 

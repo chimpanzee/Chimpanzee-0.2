@@ -8,8 +8,8 @@ final class CZCurlGetSelf extends CZBase
 	 */
 	public function exec()
 	{
-		$url  = $this->_cz->newCore('url', 'get_request_protocol')->exec();
-		$url .= '://' . $_SERVER['SERVER_NAME'];
+		$url  = $this->_cz->newCore('url', 'get_protocol')->exec();
+		$url .= '://' . $_SERVER['HTTP_HOST'];
 		$url .= $this->_cz->newCore('url', 'get_path')->exec();
 		
 		$routing_parts = $this->_cz->newCore('routing', 'get_parts')->exec();

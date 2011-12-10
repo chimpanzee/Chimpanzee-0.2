@@ -4,8 +4,8 @@ final class CZCredirectAction extends CZBase
 	/**
 	 * @param array $action(
 	 *   string Action name
-	 *   string Action group name / FALSE <option>
-	 *   string Controller name           <option>
+	 *   string Action group name / NULL <option>
+	 *   string Controller name          <option>
 	 * )
 	 * @param boolean $secure_flag <option>
 	 * @param array $params(
@@ -28,7 +28,7 @@ final class CZCredirectAction extends CZBase
 		$url = $this->_cz->newCore('url', 'get_action')->_exec($action, $secure_flag, $params);
 		$this->_cz->newCore('redirect', 'url')->exec($url);
 	}
-	
+
 	/**
 	 * @param array $action(
 	 *   string Action name
@@ -54,8 +54,8 @@ final class CZCredirectAction extends CZBase
 	{
 		if (isset($action[1])) {
 			$action[2] = $action[1];
+			$action[1] = NULL;
 		}
-		$action[1] = FALSE;
 		self::_exec($action, $secure_flag, $params);
 	}
 }

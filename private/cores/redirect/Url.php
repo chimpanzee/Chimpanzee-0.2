@@ -17,7 +17,7 @@ final class CZCredirectUrl extends CZBase
 		}
 		exit;
 	}
-	
+
 	/**
 	 * @param string  $url
 	 * @param integer $code
@@ -31,10 +31,10 @@ final class CZCredirectUrl extends CZBase
 		}
 		self::_external($url, $code);
 	}
-	
+
 	/**
 	 * @param string  $url
-	 * @param integer $code
+	 * @param integer $code <option>
 	 * 
 	 * @author Shin Uesugi
 	 */

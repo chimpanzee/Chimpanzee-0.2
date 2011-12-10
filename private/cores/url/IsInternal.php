@@ -10,7 +10,12 @@ final class CZCurlIsInternal extends CZBase
 	 */
 	public function exec($url)
 	{
-		return parse_url($url, PHP_URL_HOST) == $_SERVER['HTTP_HOST'];
+		$url_parts = parse_url($url);
+		$base_str = $url_parts['host'] . $url_parts['path'];
+
+		$cmp_str = $_SERVER['HTTP_HOST'] . $this->_cz->newCore('url', 'get_path')->exec();
+
+		return strncmp($base_str, $cmp_str, strlen($cmp_str)) == 0;
 	}
 }
 ?>

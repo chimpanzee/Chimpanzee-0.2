@@ -12,12 +12,11 @@ final class CZCurlGetPath extends CZBase
 			if (strpos($_SERVER['REQUEST_URI'], $_SERVER['SCRIPT_NAME']) !== FALSE) {
 				$path = $_SERVER['SCRIPT_NAME'];
 			} else {
-				$path = dirname($_SERVER['SCRIPT_NAME']);
+				if (($path = dirname($_SERVER['SCRIPT_NAME'])) == '/') {
+					$path = '';
+				}
 			}
 		} else {
-			$path = '';
-		}
-		if ($path == '/') {
 			$path = '';
 		}
 
