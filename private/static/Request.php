@@ -1,36 +1,36 @@
 <?php
 final class CZSRequest extends CZBase
 {
-	private $_encoding;
+    private $_encoding;
 
 
-	/**
-	 * @author Shin Uesugi
-	 */
-	public function _construct()
-	{
-		$this->_encoding = mb_internal_encoding();
-	}
+    /**
+     * @author Shin Uesugi
+     */
+    public function _construct()
+    {
+        $this->_encoding = mb_internal_encoding();
+    }
 
 
-	/**
-	 * @param string $encoding
-	 * 
-	 * @author Shin Uesugi
-	 */
-	public function setEncoding($encoding)
-	{
-		$this->_encoding = $encoding;
-	}
+    /**
+     * @param string $encoding
+     * 
+     * @author Shin Uesugi
+     */
+    public function setEncoding($encoding)
+    {
+        $this->_encoding = $encoding;
+    }
 
-	/**
-	 * @return string
-	 * 
-	 * @author Shin Uesugi
-	 */
-	public function getEncoding()
-	{
-		return $this->_encoding;
-	}
+    /**
+     * @return string
+     * 
+     * @author Shin Uesugi
+     */
+    public function getEncoding()
+    {
+        return $this->_encoding;
+    }
 }
 ?>
