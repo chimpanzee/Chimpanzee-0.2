@@ -16,7 +16,7 @@ final class CZCimageDisplay extends CZBase
 			$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_IMAGE_GET_INFO, 'File: ' . $path);
 		}
 		list($src_width, $src_height, $image_type) = $info;
-		
+
 		switch ($image_type) {
 			case IMAGETYPE_GIF:
 				if (!($src_image = imagecreatefromgif($path))) {
@@ -51,7 +51,7 @@ final class CZCimageDisplay extends CZBase
 			$dst_width  = $src_width;
 			$dst_height = $src_height;
 		}
-		
+
 		if (($src_width != $dst_width) || ($src_height != $dst_height)) {
 			if (!($dst_image = imagecreatetruecolor($dst_width, $dst_height))) {
 				$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_IMAGE_CREATE_RESOURCE);
@@ -63,10 +63,10 @@ final class CZCimageDisplay extends CZBase
 		} else {
 			$dst_image = $src_image;
 		}
-		
+
 		return $dst_image;
 	}
-	
+
 	/**
 	 * @param string  $dir_type
 	 * @param string  $file

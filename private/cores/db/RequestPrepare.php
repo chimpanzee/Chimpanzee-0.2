@@ -30,7 +30,7 @@ final class CZCdbRequestPrepare extends CZBase
 				if ($value === '') {
 					$value = NULL;
 				}
-				
+
 				if ($value === NULL) {
 					$data_type = PDO::PARAM_NULL;
 				} else if (is_bool($value)) {
@@ -53,7 +53,7 @@ final class CZCdbRequestPrepare extends CZBase
 			$info = $pdo_stmt->errorInfo();
 			$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_DB_EXEC_QUERY, $info[2] . '[' . $query . ']');
 		}
-		
+
 		return $pdo_stmt;
 	}
 }

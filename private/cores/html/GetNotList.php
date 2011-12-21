@@ -37,7 +37,7 @@ final class CZChtmlGetNotList extends CZBase
 			}
 		}
 		$html .= $tags['table_tail'];
-		
+
 		return $html;
 	}
 }

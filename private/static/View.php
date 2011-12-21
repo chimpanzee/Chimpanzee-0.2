@@ -13,7 +13,7 @@ final class CZSView extends CZBase
 	{
 		$this->_vars = $vars;
 	}
-	
+
 	/**
 	 * @return array
 	 * 

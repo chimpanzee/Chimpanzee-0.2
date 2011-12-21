@@ -25,10 +25,10 @@ final class CZCdbConnect extends CZBase
 			$server = $servers['main'];
 			$main_flag = TRUE;
 		}
-		
+
 		return array($server, $main_flag);
 	}
-	
+
 	/**
 	 * @param boolean $select_flag
 	 * 
@@ -42,7 +42,7 @@ final class CZCdbConnect extends CZBase
 		if ($pdo_tran) {
 			return $pdo_tran;
 		}
-		
+
 		$pdo_select = $this->_cz->loadStatic('db')->getPDOSelect();
 		if ($pdo_select) {
 			if ($select_flag) {
@@ -51,7 +51,7 @@ final class CZCdbConnect extends CZBase
 			$pdo_select = NULL;
 			$this->_cz->loadStatic('db')->setPDOSelect(NULL);
 		}
-		
+
 		list($server, $tran_flag) = self::_getServer($select_flag);
 		if (!isset($server['dsn'])) {
 			$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_DB_NOT_SET_SERVER_DSN);
@@ -75,17 +75,17 @@ final class CZCdbConnect extends CZBase
 		} catch (PDOException $e) {
 			$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_DB_CONNECT_SERVER, $e->getMessage());
 		}
-		
+
 		switch ($driver_name = $pdo->getAttribute(PDO::ATTR_DRIVER_NAME)) {
 			case 'mysql':
 				$this->_cz->newCore('db', 'request')->exec('SET NAMES utf8');
 				break;
-/*
+			/*
 			default:
 				$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_DB_NOT_SUPPORT_DRIVER, $driver_name);
-*/
+			*/
 		}
-		
+
 		return $pdo;
 	}
 }

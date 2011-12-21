@@ -19,7 +19,7 @@ final class CZCmobileGetCarrierName extends CZBase
 		} else {
 			return FALSE;
 		}
-		
+
 		return $name;
 	}
 }

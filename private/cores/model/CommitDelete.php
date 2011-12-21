@@ -25,11 +25,11 @@ final class CZCmodelCommitDelete extends CZBase
 				return FALSE;
 			}
 		}
-		
+
 		$record_num = $this->_cz->newCore('model', 'delete')->byId($model, $id);
-		
+
 		$model->freeAll();
-		
+
 		return $record_num;
 	}
 }

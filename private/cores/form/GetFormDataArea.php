@@ -19,10 +19,10 @@ final class CZCformGetFormDataArea extends CZBase
 		if (($value = $this->_cz->newCore('request', 'get_param')->getGetParam($part_name, FALSE)) !== FALSE) {
 			return $value;
 		}
-		
+
 		return $this->_cz->newCore('form', 'get_default_value')->exec($form, $part);
 	}
-	
+
 	/**
 	 * @param object $form
 	 * @param string $part_name
@@ -41,11 +41,11 @@ final class CZCformGetFormDataArea extends CZBase
 		if (isset($part['type']) && ($part['type'] == 'hidden')) {
 			$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_FORM_USE_PART_TYPE, $part['type'], $form->getMainClassName());
 		}
-		
+
 		if (!$values) {
 			$values = $form->load('values', array());
 		}
-		
+
 		if (isset($part['description'])) {
 			$head_str = $this->_cz->newUser('config', 'form')->getValue('description_head_str', '');
 			$tail_str = $this->_cz->newUser('config', 'form')->getValue('description_tail_str', '');
@@ -75,7 +75,7 @@ final class CZCformGetFormDataArea extends CZBase
 				$data_area .= $err_msg;
 			}
 		}
-		
+
 		return $description . $data_area;
 	}
 }

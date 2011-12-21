@@ -21,10 +21,10 @@ final class CZCmodelGetDetailHtml extends CZBase
 		foreach ($column_names as $column_name) {
 			$caption_areas[$column_name] = $column_name;
 		}
-		
+
 		return $caption_areas;
 	}
-	
+
 	/**
 	 * @param object $model
 	 * @param array  $captions
@@ -45,10 +45,10 @@ final class CZCmodelGetDetailHtml extends CZBase
 		foreach ($column_names as $column_name) {
 			$data_areas[$column_name] = $this->_cz->newCore('view', 'convert')->exec($record[$column_name]);
 		}
-		
+
 		return $data_areas;
 	}
-	
+
 	/**
 	 * @param object  $model
 	 * @param integer $id
@@ -64,10 +64,10 @@ final class CZCmodelGetDetailHtml extends CZBase
 		if (!($record = $this->_cz->newCore('model', 'get_record')->byId($model, $id, $column_names))) {
 			return FALSE;
 		}
-		
+
 		$caption_areas = self::_getCaptionAreas($model, $captions, $record);
 		$data_areas    = self::_getDataAreas($model, $captions, $record);
-		
+
 		return $this->_cz->newCore('html', 'get_detail')->exec($caption_areas, $data_areas);
 	}
 }

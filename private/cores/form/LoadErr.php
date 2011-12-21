@@ -28,7 +28,7 @@ final class CZCformLoadErr extends CZBase
 
 		$head_str = $this->_cz->newUser('config', 'form')->getValue('err_msg_head_str', '');
 		$tail_str = $this->_cz->newUser('config', 'form')->getValue('err_msg_tail_str', '');
-		
+
 		return $head_str . $msg . $tail_str;
 	}
 }

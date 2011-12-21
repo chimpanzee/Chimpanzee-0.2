@@ -13,7 +13,7 @@ final class CZCmodelGetNextPageUrl extends CZBase
 		if (!($paging = $model_records->getPaging())) {
 			return FALSE;
 		}
-		
+
 		$current_page_num = $this->_cz->newCore('model', 'get_current_page_num')->exec($model_records);
 		$max_page_num     = $this->_cz->newCore('model', 'get_max_page_num')->exec($model_records);
 		if ($current_page_num >= $max_page_num) {

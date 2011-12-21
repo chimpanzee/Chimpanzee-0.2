@@ -2,12 +2,12 @@
 class CZFunc extends CZBase
 {
 	private $_main_class_name;
-	
-	
+
+
 	/*
 	 * #Set property
 	 */
-	
+
 	/**
 	 * @param string $main_class_name
 	 * 
@@ -17,12 +17,12 @@ class CZFunc extends CZBase
 	{
 		$this->_main_class_name = $main_class_name;
 	}
-	
-	
+
+
 	/*
 	 * #Get property
 	 */
-	
+
 	/**
 	 * @return string
 	 * 
@@ -32,12 +32,12 @@ class CZFunc extends CZBase
 	{
 		return $this->_main_class_name;
 	}
-	
-	
+
+
 	/*
 	 * #Get cz property
 	 */
-	
+
 	/**
 	 * @return string
 	 * 
@@ -47,7 +47,7 @@ class CZFunc extends CZBase
 	{
 		return $this->_cz->application_name;
 	}
-	
+
 
 	/*
 	 * #Module object
@@ -64,7 +64,7 @@ class CZFunc extends CZBase
 	{
 		return $this->_cz->newModule($name);
 	}
-	
+
 	/**
 	 * @param string $name
 	 * 
@@ -76,7 +76,7 @@ class CZFunc extends CZBase
 	{
 		return $this->_cz->loadModule($name);
 	}
-	
+
 	/**
 	 * @param string $name
 	 * 
@@ -86,12 +86,12 @@ class CZFunc extends CZBase
 	{
 		$this->_cz->unloadModule($name);
 	}
-	
-	
+
+
 	/*
 	 * #Model Object
 	 */
-	
+
 	/**
 	 * @param string $name
 	 * 
@@ -103,10 +103,10 @@ class CZFunc extends CZBase
 	{
 		$arg_num = func_num_args();
 		$args    = func_get_args();
-		
+
 		return $this->_cz->newUser('model', $name, $arg_num, $args);
 	}
-	
+
 	/**
 	 * @param string $name
 	 * 
@@ -118,10 +118,10 @@ class CZFunc extends CZBase
 	{
 		$arg_num = func_num_args();
 		$args    = func_get_args();
-		
+
 		return $this->_cz->loadUser('model', $name, $arg_num, $args);
 	}
-	
+
 	/**
 	 * @param string $name
 	 * 
@@ -131,12 +131,12 @@ class CZFunc extends CZBase
 	{
 		$this->_cz->unloadUser('model', $name);
 	}
-	
-	
+
+
 	/*
 	 * #Form object
 	 */
-	
+
 	/**
 	 * @param string $name
 	 * 
@@ -148,10 +148,10 @@ class CZFunc extends CZBase
 	{
 		$arg_num = func_num_args();
 		$args    = func_get_args();
-		
+
 		return $this->_cz->newUser('form', $name, $arg_num, $args);
 	}
-	
+
 	/**
 	 * @param string $name
 	 * 
@@ -163,10 +163,10 @@ class CZFunc extends CZBase
 	{
 		$arg_num = func_num_args();
 		$args    = func_get_args();
-		
+
 		return $this->_cz->loadUser('form', $name, $arg_num, $args);
 	}
-	
+
 	/**
 	 * @param string $name
 	 * 
@@ -176,12 +176,12 @@ class CZFunc extends CZBase
 	{
 		$this->_cz->unloadUser('form', $name);
 	}
-	
-	
+
+
 	/*
 	 * #Func object
 	 */
-	
+
 	/**
 	 * @param string $name
 	 * 
@@ -193,10 +193,10 @@ class CZFunc extends CZBase
 	{
 		$arg_num = func_num_args();
 		$args    = func_get_args();
-		
+
 		return $this->_cz->newUser('func', $name, $arg_num, $args);
 	}
-	
+
 	/**
 	 * @param string $name
 	 * 
@@ -208,10 +208,10 @@ class CZFunc extends CZBase
 	{
 		$arg_num = func_num_args();
 		$args    = func_get_args();
-		
+
 		return $this->_cz->loadUser('func', $name, $arg_num, $args);
 	}
-	
+
 	/**
 	 * @param string $name
 	 * 
@@ -221,12 +221,12 @@ class CZFunc extends CZBase
 	{
 		$this->_cz->unloadUser('func', $name);
 	}
-	
-	
+
+
 	/*
 	 * #Table object
 	 */
-	
+
 	/**
 	 * @param string $name
 	 * 
@@ -238,10 +238,10 @@ class CZFunc extends CZBase
 	{
 		$arg_num = func_num_args();
 		$args    = func_get_args();
-		
+
 		return $this->_cz->newUser('table', $name, $arg_num, $args);
 	}
-	
+
 	/**
 	 * @param string $name
 	 * 
@@ -253,10 +253,10 @@ class CZFunc extends CZBase
 	{
 		$arg_num = func_num_args();
 		$args    = func_get_args();
-		
+
 		return $this->_cz->loadUser('table', $name, $arg_num, $args);
 	}
-	
+
 	/**
 	 * @param string $name
 	 * 
@@ -266,12 +266,12 @@ class CZFunc extends CZBase
 	{
 		$this->_cz->newUser('table', $name, $arg_num, $args);
 	}
-	
-	
+
+
 	/*
 	 * #Unload all object
 	 */
-	
+
 	/**
 	 * @author Shin Uesugi
 	 */
@@ -279,12 +279,12 @@ class CZFunc extends CZBase
 	{
 		$this->_cz->unloadAll();
 	}
-	
-	
+
+
 	/*
 	 * #Save variable
 	 */
-	
+
 	/**
 	 * @param string $var_name
 	 * @param mixed  $value
@@ -295,7 +295,7 @@ class CZFunc extends CZBase
 	{
 		$this->_cz->newCore('var', 'save')->exec($this->_main_class_name, $var_name, $value);
 	}
-	
+
 	/**
 	 * @param string $var_name
 	 * @param mixed  $defalt_value
@@ -308,7 +308,7 @@ class CZFunc extends CZBase
 	{
 		return $this->_cz->newCore('var', 'load')->exec($this->_main_class_name, $var_name, $defalt_value);
 	}
-	
+
 	/**
 	 * @param string $var_name
 	 * 
@@ -318,7 +318,7 @@ class CZFunc extends CZBase
 	{
 		$this->_cz->newCore('var', 'free')->exec($this->_main_class_name, $var_name);
 	}
-	
+
 	/**
 	 * @author Shin Uesugi
 	 */

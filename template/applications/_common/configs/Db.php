@@ -11,9 +11,9 @@ final class configDb extends CZConfig
 					'pass' => 'main_pass',
 				),
 			),
-			
+
 			'persistent_flag' => TRUE,
-			
+
 			'table_name_prefix' => '',
 		));
 	}

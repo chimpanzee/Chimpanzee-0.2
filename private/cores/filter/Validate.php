@@ -7,7 +7,7 @@ final class CZCfilterValidate extends CZBase
 	 * @param array  $ref_values
 	 * 
 	 * @return string
-	 *        
+	 * 
 	 * @author Shin Uesugi
 	 */
 	public function exec($info, $subject, $ref_values = array())

@@ -15,9 +15,9 @@ final class CZChtmlGetList extends CZBase
 		if (!isset($info['html_type'])) {
 			$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_HTML_NOT_SET_HTML_TYPE);
 		}
-		
+
 		$tags = $this->_cz->newCore('html', 'get_tags')->exec($info);
-		
+
 		$html = $tags['table_head'];
 		if ($info['html_type'] != 'br') {
 			$html .= $tags['row_head'];
@@ -60,7 +60,7 @@ final class CZChtmlGetList extends CZBase
 			}
 		}
 		$html .= $tags['table_tail'];
-		
+
 		return $html;
 	}
 }

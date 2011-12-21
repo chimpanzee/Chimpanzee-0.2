@@ -5,9 +5,9 @@ final class configCZ extends CZConfig
 	{
 		$this->setValues(array(
 			'obj_load_only' => FALSE,
-			
+
 			'develop_flag' => TRUE,
-		
+
 			'tmp_dir' => '',
 		));
 	}

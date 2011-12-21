@@ -13,7 +13,7 @@ final class CZCmodelGetRecords extends CZBase
 	public function exec($model_records, $format_flag = TRUE, $add_id_column_flag = FALSE)
 	{
 		$model = $model_records->getModel();
-		
+
 		$table_name          = $model->getTableName();
 		$id_column_name      = $model->getIdColumnName();
 		$column_names        = $model_records->getColumnNames();
@@ -21,7 +21,7 @@ final class CZCmodelGetRecords extends CZBase
 		$condition_values    = $model_records->getConditionValues();
 		$options             = $model_records->_getOptions();
 		$paging              = $model_records->getPaging();
-		
+
 		if ($add_id_column_flag && $column_names) {
 			$column_names[] = $id_column_name;
 		}

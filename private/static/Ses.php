@@ -16,7 +16,7 @@ final class CZSSes extends CZBase
 		$cookie_lifetime  = $this->_cz->newUser('config', 'ses')->getValue('cookie_lifetime', 0);
 		$cookie_path      = $this->_cz->newUser('config', 'ses')->getValue('cookie_path', '/');
 		$cookie_domain    = $this->_cz->newUser('config', 'ses')->getValue('cookie_domain', FALSE);
-		
+
 		if ($cookie_domain === FALSE) {
 			$cookie_domain = NULL;
 		}

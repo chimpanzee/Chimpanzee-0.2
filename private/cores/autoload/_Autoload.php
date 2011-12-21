@@ -14,7 +14,7 @@ final class CZCautoload_Autoload extends CZBase
 			require_once $search_path;
 			return TRUE;
 		}
-		
+
 		if ($dh = @opendir($search_dir)) {
 			while (($file = readdir($dh)) !== FALSE) {
 				if (($file == '.') || ($file == '..')) {
@@ -28,10 +28,10 @@ final class CZCautoload_Autoload extends CZBase
 				}
 			}
 		}
-		
+
 		return FALSE;
 	}	
-	
+
 	/**
 	 * @param string $class_name
 	 * 
@@ -51,7 +51,7 @@ final class CZCautoload_Autoload extends CZBase
 				return TRUE;
 			}
 		}
-		
+
 		return FALSE;
 	}
 }

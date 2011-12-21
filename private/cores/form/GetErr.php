@@ -18,7 +18,7 @@ final class CZCformGetErr extends CZBase
 			}
 			return $msg;
 		}
-		
+
 		return FALSE;
 	}
 }

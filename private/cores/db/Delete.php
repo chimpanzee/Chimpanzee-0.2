@@ -22,9 +22,9 @@ final class CZCdbDelete extends CZBase
 		}
 
 		$param_list = $this->_cz->newCore('db', 'get_param_list')->exec($condition_values);
-		
+
 		$pdo_stmt = $this->_cz->newCore('db', 'request_prepare')->exec($query, $param_list);
-		
+
 		return $pdo_stmt->rowCount();
 	}
 }

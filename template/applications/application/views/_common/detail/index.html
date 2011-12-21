@@ -2,5 +2,7 @@
 <br />
 <a href="<?= $this->_url(array('index', 'update')); ?>/<?= $id ?>">Update</a><br />
 <a href="<?= $this->_url(array('index', 'delete')); ?>/<?= $id ?>">Delete</a><br />
-<br />
-<a href="<?= $_return_url; ?>">Go back.</a><br />
+<? if ($_return_url): ?>
+	<br />
+	<a href="<?= $_return_url; ?>">Go back.</a><br />
+<? endif; ?>

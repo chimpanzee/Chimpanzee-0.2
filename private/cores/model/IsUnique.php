@@ -16,14 +16,14 @@ final class CZCmodelIsUnique extends CZBase
 			return TRUE;
 		}
 		$unique_err_msgs = $model->getFormUniqueErrMsgs();
-		
+
 		$format_flag = FALSE;
-		
+
 		if ($ignored_id !== NULL) {
 			$id_column_name = $model->getIdColumnName($model);
 			$init_condition_sentences = array($id_column_name . '<>:' . $id_column_name);
 			$init_condition_values    = array($id_column_name => $ignored_id);
-			
+
 			$column_names = array();
 			if (!($ignore_record = $this->_cz->newCore('model', 'get_record')->byId($model, $ignored_id, $column_names, $format_flag))) {
 				$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_MODEL_GET_RECORD, 'ID:' . $ignored_id);
@@ -33,7 +33,7 @@ final class CZCmodelIsUnique extends CZBase
 			$init_condition_values    = array();
 			$ignore_record            = array();
 		}
-		
+
 		$result = TRUE;
 		foreach ($uniques as $unique_name => $column_names) {
 			$condition_sentences = $init_condition_sentences;

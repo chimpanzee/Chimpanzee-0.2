@@ -20,7 +20,7 @@ final class CZCformGetDataArea extends CZBase
 		if (isset($part['tail_str']) && $this->_cz->isValidStr($data)) {
 			$data_area .= $part['tail_str'];
 		}
-		
+
 		return $data_area;
 	}
 }

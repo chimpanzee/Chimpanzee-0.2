@@ -14,7 +14,7 @@ final class CZCmobileIsMobile extends CZBase
 		if ($this->_cz->newUser('config', 'mobile')->getValue('force_flag', FALSE)) {
 			return TRUE;
 		}
-		
+
 		return $this->_cz->newCore('mobile', 'get_carrier_name')->exec() !== FALSE;
 	}
 }

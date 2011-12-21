@@ -15,7 +15,7 @@ final class configHtml extends CZConfig
 				'caption_head_str' => '<font color="#FF7700">*</font>',
 				'caption_tail_str' => '',
 			),
-			
+
 			'confirm' => array(
 				'html_type'   => 'table',
 				'tag_options' => array(
@@ -27,7 +27,7 @@ final class configHtml extends CZConfig
 				'caption_head_str' => '<font color="#FF7700">*</font>',
 				'caption_tail_str' => '',
 			),
-			
+
 			'list' => array(
 				'html_type'   => 'table',
 				'tag_options' => array(
@@ -39,7 +39,7 @@ final class configHtml extends CZConfig
 				'caption_head_str' => '',
 				'caption_tail_str' => '',
 			),
-			
+
 			'detail' => array(
 				'html_type'   => 'table',
 				'tag_options' => array(

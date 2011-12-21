@@ -9,7 +9,7 @@ final class CZCroutingGetParams extends CZBase
 	public function exec()
 	{
 		$parts = $this->_cz->newCore('routing', 'get_parts')->exec();
-		
+
 		return $parts['params'];
 	}
 }

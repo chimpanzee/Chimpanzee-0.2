@@ -31,7 +31,7 @@ final class CZCdbGetValuesQueryPart extends CZBase
 			}
 			$records_str .= '(' . $record_str . ')';
 		}
-		
+
 		return ' VALUES ' . $records_str;
 	}
 }

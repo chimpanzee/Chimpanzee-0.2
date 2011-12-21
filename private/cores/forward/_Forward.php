@@ -100,37 +100,38 @@ final class CZCforward_Forward extends CZBase
 
 
 		if ($this->_cz->newCore('ses', 'is_valid')->exec()) {
-			$prev_ctrl_name         = NULL;
-			$prev_action_group_name = NULL;
-			$prev_action_name       = NULL;
-			if ($this->_cz->newCore('url', 'get_internal_referer')->exec()) {
-				if (($name = $this->_cz->newCore('ses', 'get')->exec('prev_ctrl_name', FALSE)) !== FALSE) {
-					$prev_ctrl_name = $name;
-					$this->_cz->loadStatic('forward')->setPrevCtrlName($prev_ctrl_name);
-				}
-				if (($name = $this->_cz->newCore('ses', 'get')->exec('prev_action_group_name', FALSE)) !== FALSE) {
-					$prev_action_group_name = $name;
-					$this->_cz->loadStatic('forward')->setPrevActionGroupName($prev_action_group_name);
-				}
-				if (($name = $this->_cz->newCore('ses', 'get')->exec('prev_action_name', FALSE)) !== FALSE) {
-					$prev_action_name = $name;
-					$this->_cz->loadStatic('forward')->setPrevActionName($prev_action_name);
-				}
+			if (($name = $this->_cz->newCore('ses', 'get')->exec('prev_ctrl_name', FALSE)) !== FALSE) {
+				$prev_ctrl_name = $name;
+				$this->_cz->loadStatic('forward')->setPrevCtrlName($prev_ctrl_name);
+			} else {
+				$prev_ctrl_name = NULL;
+			}
+			if (($name = $this->_cz->newCore('ses', 'get')->exec('prev_action_group_name', FALSE)) !== FALSE) {
+				$prev_action_group_name = $name;
+				$this->_cz->loadStatic('forward')->setPrevActionGroupName($prev_action_group_name);
+			} else {
+				$prev_action_group_name = NULL;
+			}
+			if (($name = $this->_cz->newCore('ses', 'get')->exec('prev_action_name', FALSE)) !== FALSE) {
+				$prev_action_name = $name;
+				$this->_cz->loadStatic('forward')->setPrevActionName($prev_action_name);
+			} else {
+				$prev_action_name = NULL;
 			}
 
 			if (($current_ctrl_name !== $prev_ctrl_name) || ($current_action_group_name !== $prev_action_group_name)) {
 				if ($this->_cz->newUser('config', 'forward')->getValue('return_flag', FALSE)) {
 					$this->_cz->newCore('url', 'set_return')->exec();
 				}
-	
-				
+
+
 				if ($current_ctrl_name !== $prev_ctrl_name) {
 					$this->_cz->newCore('ses', 'set')->exec('prev_ctrl_name', $current_ctrl_name);
 					if (method_exists($ctrl, '_init')) {
 						call_user_func_array(array($ctrl, '_init'), $routing_params);
 					}
 				}
-	
+
 				if ($current_action_group_name !== $prev_action_group_name) {
 					$this->_cz->newCore('ses', 'set')->exec('prev_action_group_name', $current_action_group_name);
 				}
@@ -145,8 +146,8 @@ final class CZCforward_Forward extends CZBase
 				$this->_cz->newCore('ses', 'set')->exec('prev_action_name', $current_action_name);
 			}
 		}
-		
-		
+
+
 		return array($ctrl, $action_method_name, $routing_params);
 	}
 }

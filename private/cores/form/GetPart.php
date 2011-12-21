@@ -27,7 +27,7 @@ final class CZCformGetPart extends CZBase
 		if (!$part) {
 			$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_FORM_NOT_SET_PART, $part_name, $form->getMainClassName());
 		}
-		
+
 		return $part;
 	}
 }

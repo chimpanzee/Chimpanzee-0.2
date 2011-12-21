@@ -2,8 +2,8 @@
 final class CZCfilterBase extends CZBase
 {
 	private $_funcs_class_name = '';
-	
-	
+
+
 	/**
 	 * @param array  $info
 	 * @param string $subject
@@ -19,9 +19,9 @@ final class CZCfilterBase extends CZBase
 	{
 		$main_class_name         = get_class($main);
 		$this->_funcs_class_name = get_class($funcs);
-		
+
 		$validate_err_msg = $this->_cz->newUser('config', 'filter')->getValue('validate_err_msg', '');
-		
+
 		$infos = is_int(key($info)) ? $info : array($info);
 		foreach ($infos as $info) {
 			$params = array('subject' => $subject);
@@ -42,7 +42,7 @@ final class CZCfilterBase extends CZBase
 					$params[$param_name] = $value;
 				}
 			}
-			
+
 			if (!isset($info['func'])) {
 				$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_FILTER_NOT_SET_FUNC, '', $main_class_name);
 			}
@@ -61,7 +61,7 @@ final class CZCfilterBase extends CZBase
 					}
 				}
 			}
-			
+
 			if ($main_class_name == 'CZCfilterValidate') {
 				if ($this->_cz->isValidStr($result)) {
 					if (isset($info['err_msg'])) {
@@ -78,7 +78,7 @@ final class CZCfilterBase extends CZBase
 				$subject = $result;
 			}
 		}
-		
+
 		return $result;
 	}
 
@@ -111,7 +111,7 @@ final class CZCfilterBase extends CZBase
 				return $this->_funcs_class_name == 'CZCfilterValidateFuncs';
 			}
 		}
-		
+
 		return $this->_funcs_class_name == 'CZCfilterConvertFuncs';
 	}
 }

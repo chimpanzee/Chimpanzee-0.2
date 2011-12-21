@@ -15,12 +15,12 @@ final class CZModelRecords extends CZBase
 	private $_search_condition_sentences = array();
 	private $_search_condition_values    = array();
 	private $_paging                     = array();
-	
+
 
 	/*
 	 * #Initialization
 	 */
-	
+
 	/**
 	 * @param object $model
 	 * 
@@ -30,12 +30,12 @@ final class CZModelRecords extends CZBase
 	{
 		$this->_model = $model;
 	}
-	
-	
+
+
 	/*
 	 * #Set property
 	 */
-	
+
 	/**
 	 * @param array $names
 	 * 
@@ -46,10 +46,10 @@ final class CZModelRecords extends CZBase
 	public function setColumnNames($names)
 	{
 		$this->_column_names = $names;
-		
+
 		return $this;
 	}
-	
+
 	/**
 	 * @param array $sentences
 	 * @param array $values
@@ -62,10 +62,10 @@ final class CZModelRecords extends CZBase
 	{
 		$this->_condition_sentences = $sentences;
 		$this->_condition_values    = $values;
-		
+
 		return $this;
 	}
-	
+
 	/**
 	 * @param array $options
 	 * 
@@ -76,10 +76,10 @@ final class CZModelRecords extends CZBase
 	public function _setOptions($options)
 	{
 		$this->_options = $options;
-		
+
 		return $this;
 	}
-	
+
 	/**
 	 * @return object
 	 * 
@@ -88,10 +88,10 @@ final class CZModelRecords extends CZBase
 	public function enableDistinct()
 	{
 		$this->_options['distinct_flag'] = TRUE;
-		
+
 		return $this;
 	}
-	
+
 	/**
 	 * @param array $names
 	 * 
@@ -102,10 +102,10 @@ final class CZModelRecords extends CZBase
 	public function setGroupColumnNames($names)
 	{
 		$this->_options['group_column_names'] = $names;
-		
+
 		return $this;
 	}
-	
+
 	/**
 	 * @param array $sentences
 	 * 
@@ -116,10 +116,10 @@ final class CZModelRecords extends CZBase
 	public function setOrderSentences($sentences)
 	{
 		$this->_options['order_sentences'] = $sentences;
-		
+
 		return $this;
 	}
-	
+
 	/**
 	 * @param integer $limit
 	 * 
@@ -130,10 +130,10 @@ final class CZModelRecords extends CZBase
 	public function setLimit($limit)
 	{
 		$this->_options['limit'] = $limit;
-		
+
 		return $this;
 	}
-	
+
 	/**
 	 * @param integer $offset
 	 * 
@@ -144,10 +144,10 @@ final class CZModelRecords extends CZBase
 	public function setOffset($offset)
 	{
 		$this->_options['offset'] = $offset;
-		
+
 		return $this;
 	}
-	
+
 	/**
 	 * @param array $captions
 	 * 
@@ -158,10 +158,10 @@ final class CZModelRecords extends CZBase
 	public function setCaptions($captions)
 	{
 		$this->_captions = $captions;
-		
+
 		return $this;
 	}
-	
+
 	/**
 	 * @return object
 	 * 
@@ -170,10 +170,10 @@ final class CZModelRecords extends CZBase
 	public function enableLinkToDetail()
 	{
 		$this->_link_to_detail_flag = TRUE;
-		
+
 		return $this;
 	}
-	
+
 	/**
 	 * @author Shin Uesugi
 	 * 
@@ -182,10 +182,10 @@ final class CZModelRecords extends CZBase
 	public function enableLinkToUpdate()
 	{
 		$this->_link_to_update_flag = TRUE;
-		
+
 		return $this;
 	}
-	
+
 	/**
 	 * @author Shin Uesugi
 	 * 
@@ -194,10 +194,10 @@ final class CZModelRecords extends CZBase
 	public function enableLinkToDelete()
 	{
 		$this->_link_to_delete_flag = TRUE;
-		
+
 		return $this;
 	}
-	
+
 	/**
 	 * @param array $condition_sentences
 	 * @param array $condition_values
@@ -210,10 +210,10 @@ final class CZModelRecords extends CZBase
 	{
 		$this->_search_condition_sentences = $condition_sentences;
 		$this->_search_condition_values    = $condition_values;
-		
+
 		return $this;
 	}
-	
+
 	/**
 	 * @param integer $default_row_num
 	 * @param string  $page_num_param_name
@@ -230,15 +230,15 @@ final class CZModelRecords extends CZBase
 			'page_num_param_name' => $page_num_param_name,
 			'row_num_param_name'  => $row_num_param_name,
 		);
-		
+
 		return $this;
 	}
 
-	
+
 	/*
 	 * #Get property
 	 */
-	
+
 	/**
 	 * @return object
 	 * 
@@ -248,7 +248,7 @@ final class CZModelRecords extends CZBase
 	{
 		return $this->_model;
 	}
-	
+
 	/**
 	 * @return array
 	 * 
@@ -258,7 +258,7 @@ final class CZModelRecords extends CZBase
 	{
 		return $this->_column_names;
 	}
-	
+
 	/**
 	 * @return array
 	 * 
@@ -268,7 +268,7 @@ final class CZModelRecords extends CZBase
 	{
 		return $this->_condition_sentences;
 	}
-	
+
 	/**
 	 * @return array
 	 * 
@@ -278,7 +278,7 @@ final class CZModelRecords extends CZBase
 	{
 		return $this->_condition_values;
 	}
-	
+
 	/**
 	 * @return array
 	 * 
@@ -288,7 +288,7 @@ final class CZModelRecords extends CZBase
 	{
 		return $this->_options;
 	}
-	
+
 	/**
 	 * @return boolean
 	 * 
@@ -298,7 +298,7 @@ final class CZModelRecords extends CZBase
 	{
 		return isset($this->_options['distinct_flag']) ? $this->_options['distinct_flag'] : FALSE;
 	}
-	
+
 	/**
 	 * @return array
 	 * 
@@ -308,7 +308,7 @@ final class CZModelRecords extends CZBase
 	{
 		return isset($this->_options['group_column_names']) ? $this->_options['group_column_names'] : array();
 	}
-	
+
 	/**
 	 * @return array
 	 * 
@@ -318,7 +318,7 @@ final class CZModelRecords extends CZBase
 	{
 		return isset($this->_options['order_sentences']) ? $this->_options['order_sentences'] : array();
 	}
-	
+
 	/**
 	 * @return integer / NULL
 	 * 
@@ -328,7 +328,7 @@ final class CZModelRecords extends CZBase
 	{
 		return isset($this->_options['limit']) ? $this->_options['limit'] : NULL;
 	}
-	
+
 	/**
 	 * @return integer / NULL
 	 * 
@@ -338,7 +338,7 @@ final class CZModelRecords extends CZBase
 	{
 		return isset($this->_options['offset']) ? $this->_options['offset'] : NULL;
 	}
-	
+
 	/**
 	 * @return array
 	 * 
@@ -348,7 +348,7 @@ final class CZModelRecords extends CZBase
 	{
 		return $this->_captions;
 	}
-	
+
 	/**
 	 * @return boolean
 	 * 
@@ -358,7 +358,7 @@ final class CZModelRecords extends CZBase
 	{
 		return $this->_link_to_detail_flag;
 	}
-	
+
 	/**
 	 * @return boolean
 	 * 
@@ -368,7 +368,7 @@ final class CZModelRecords extends CZBase
 	{
 		return $this->_link_to_update_flag;
 	}
-	
+
 	/**
 	 * @return boolean
 	 * 
@@ -378,7 +378,7 @@ final class CZModelRecords extends CZBase
 	{
 		return $this->_link_to_delete_flag;
 	}
-	
+
 	/**
 	 * @return array
 	 * 
@@ -388,7 +388,7 @@ final class CZModelRecords extends CZBase
 	{
 		return $this->_search_condition_sentences;
 	}
-	
+
 	/**
 	 * @return array
 	 * 
@@ -398,7 +398,7 @@ final class CZModelRecords extends CZBase
 	{
 		return $this->_search_condition_values;
 	}
-	
+
 	/**
 	 * @return array
 	 * 
@@ -408,12 +408,12 @@ final class CZModelRecords extends CZBase
 	{
 		return $this->_paging;
 	}
-	
-	
+
+
 	/*
 	 * #Get data
 	 */
-	
+
 	/**
 	 * @param boolean $format_flag
 	 * 
@@ -425,12 +425,12 @@ final class CZModelRecords extends CZBase
 	{
 		return $this->_cz->newCore('model', 'get_records')->exec($this, $format_flag);
 	}
-	
+
 
 	/*
 	 * #Get table
 	 */
-	
+
 	/**
 	 * @param string  $id_column_name
 	 * @param string  $value_column_name
@@ -444,8 +444,8 @@ final class CZModelRecords extends CZBase
 	{
 		return $this->_cz->newCore('model', 'get_table')->exec($this, $id_column_name, $value_column_name, $format_flag);
 	}
-	
-	
+
+
 	/*
 	 * #Get HTML
 	 */
@@ -459,8 +459,8 @@ final class CZModelRecords extends CZBase
 	{
 		return $this->_cz->newCore('model', 'get_list_html')->exec($this);
 	}
-	
-	
+
+
 	/*
 	 * #Get URL
 	 */

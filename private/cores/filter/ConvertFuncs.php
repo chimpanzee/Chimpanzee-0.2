@@ -4,12 +4,12 @@ final class CZCfilterConvertFuncs extends CZBase
 	/*
 	 * #Preg
 	 */
-	
+
 	/**
 	 * @param object $base
 	 * 
 	 * @param array $params(
-	 * 			'subject'   => scalar
+	 *          'subject'   => scalar
 	 *          'pattern'   => string
 	 *          'match_num' => integer
 	 *        )
@@ -28,14 +28,14 @@ final class CZCfilterConvertFuncs extends CZBase
 		if (!$base->isExecFunc(__METHOD__, $params, $value_param_names, $option_param_names)) {
 			return '';
 		}
-		
+
 		if (!preg_match($params['pattern'], $params['subject'], $matches)) {
 			return '';
 		}
 		if (!isset($matches[$params['match_num']])) {
 			return '';
 		}
-		
+
 		return $matches[$params['match_num']];
 	}
 
@@ -62,11 +62,11 @@ final class CZCfilterConvertFuncs extends CZBase
 		if (!$base->isExecFunc(__METHOD__, $params, $value_param_names, $option_param_names)) {
 			return '';
 		}
-		
+
 		return preg_replace($params['pattern'], $params['replacement'], $params['subject']);
 	}
-	
-	
+
+
 	/*
 	 * #Date and Time
 	 */
@@ -92,14 +92,14 @@ final class CZCfilterConvertFuncs extends CZBase
 		if (!$base->isExecFunc(__METHOD__, $params, $value_param_names, $option_param_names)) {
 			return '';
 		}
-		
+
 		if (($timestamp = @strtotime($params['subject'])) === FALSE) {
 			return '';
 		}
-		
+
 		return date($params['format'], $timestamp);
 	}
-	
+
 	/**
 	 * @param object $base
 	 * 
@@ -121,10 +121,10 @@ final class CZCfilterConvertFuncs extends CZBase
 		if (!$base->isExecFunc(__METHOD__, $params, $value_param_names)) {
 			return '';
 		}
-		
+
 		return $params['year'] . '-' . $params['month'] . '-' . $params['day'];
 	}
-	
+
 	/**
 	 * @param object $base
 	 * 
@@ -146,15 +146,15 @@ final class CZCfilterConvertFuncs extends CZBase
 		if (!$base->isExecFunc(__METHOD__, $params, $value_param_names)) {
 			return '';
 		}
-		
+
 		return $params['hour'] . ':' . $params['min'] . ':' . $params['sec'];
 	}
-	
-	
+
+
 	/*
 	 * #Mail address
 	 */
-	
+
 	/**
 	 * @param object $base
 	 * 
@@ -172,15 +172,15 @@ final class CZCfilterConvertFuncs extends CZBase
 		if (!$base->isExecFunc(__METHOD__, $params, $value_param_names)) {
 			return '';
 		}
-		
+
 		$parts = explode('@', $params['subject']);
 		if (count($parts) != 2) {
 			return '';
 		}
-		
+
 		return $parts[0];
 	}
-	
+
 	/**
 	 * @param object $base
 	 * 
@@ -198,15 +198,15 @@ final class CZCfilterConvertFuncs extends CZBase
 		if (!$base->isExecFunc(__METHOD__, $params, $value_param_names)) {
 			return '';
 		}
-		
+
 		$parts = explode('@', $params['subject']);
 		if (count($parts) != 2) {
 			return '';
 		}
-		
+
 		return $parts[1];
 	}
-	
+
 	/**
 	 * @param object $base
 	 * 
@@ -226,15 +226,15 @@ final class CZCfilterConvertFuncs extends CZBase
 		if (!$base->isExecFunc(__METHOD__, $params, $value_param_names)) {
 			return '';
 		}
-		
+
 		return $params['account'] . '@' . $params['domain'];
 	}
-	
-	
+
+
 	/*
 	 * #Telephone number
 	 */
-	
+
 	/**
 	 * @param object $base
 	 * 
@@ -252,15 +252,15 @@ final class CZCfilterConvertFuncs extends CZBase
 		if (!$base->isExecFunc(__METHOD__, $params, $value_param_names)) {
 			return '';
 		}
-		
+
 		$parts = explode('-', $params['subject']);
 		if (count($parts) != 3) {
 			return '';
 		}
-		
+
 		return $parts[0];
 	}
-	
+
 	/**
 	 * @param object $base
 	 * 
@@ -278,15 +278,15 @@ final class CZCfilterConvertFuncs extends CZBase
 		if (!$base->isExecFunc(__METHOD__, $params, $value_param_names)) {
 			return '';
 		}
-		
+
 		$parts = explode('-', $params['subject']);
 		if (count($parts) != 3) {
 			return '';
 		}
-		
+
 		return $parts[1];
 	}
-	
+
 	/**
 	 * @param object $base
 	 * 
@@ -304,15 +304,15 @@ final class CZCfilterConvertFuncs extends CZBase
 		if (!$base->isExecFunc(__METHOD__, $params, $value_param_names)) {
 			return '';
 		}
-		
+
 		$parts = explode('-', $params['subject']);
 		if (count($parts) != 3) {
 			return '';
 		}
-		
+
 		return $parts[2];
 	}
-	
+
 	/**
 	 * @param object $base
 	 * 
@@ -335,21 +335,21 @@ final class CZCfilterConvertFuncs extends CZBase
 		if (!$base->isExecFunc(__METHOD__, $params, $value_param_names)) {
 			return '';
 		}
-		
+
 		if (!isset($params['separator_flag']) || $params['separator_flag']) {
 			$separator = '-';
 		} else {
 			$separator = '';
 		}
-		
+
 		return $params['area'] . $separator . $params['city'] . $separator . $params['rest'];
 	}
-	
-	
+
+
 	/*
 	 * #Zip code
 	 */
-	
+
 	/**
 	 * @param object $base
 	 * 
@@ -368,7 +368,7 @@ final class CZCfilterConvertFuncs extends CZBase
 		if (!$base->isExecFunc(__METHOD__, $params, $value_param_names)) {
 			return '';
 		}
-		
+
 		if (strlen($params['subject']) == 7) {
 			$head = substr($params['subject'], 0, 3);
 			$tail = substr($params['subject'], 3, 4);
@@ -376,10 +376,10 @@ final class CZCfilterConvertFuncs extends CZBase
 			$head = substr($params['subject'], 0, 3);
 			$tail = substr($params['subject'], 4, 4);
 		}
-		
+
 		return !isset($params['separator_flag']) || $params['separator_flag'] ? $head . '-' . $tail : $head . $tail;
 	}
-	
+
 	/**
 	 * @param object $base
 	 * 
@@ -397,17 +397,17 @@ final class CZCfilterConvertFuncs extends CZBase
 		if (!$base->isExecFunc(__METHOD__, $params, $value_param_names)) {
 			return '';
 		}
-		
+
 		$parts = explode('-', $params['subject']);
 		if (count($parts) == 2) {
 			$result = $parts[0];
 		} else {
 			$result = substr($params['subject'], 0, 3);
 		}
-		
+
 		return $result;
 	}
-	
+
 	/**
 	 * @param object $base
 	 * 
@@ -425,17 +425,17 @@ final class CZCfilterConvertFuncs extends CZBase
 		if (!$base->isExecFunc(__METHOD__, $params, $value_param_names)) {
 			return '';
 		}
-		
+
 		$parts = explode('-', $params['subject']);
 		if (count($parts) == 2) {
 			$result = $parts[1];
 		} else {
 			$result = substr($params['subject'], 3, 4);
 		}
-		
+
 		return $result;
 	}
-	
+
 	/**
 	 * @param object $base
 	 * 
@@ -456,13 +456,13 @@ final class CZCfilterConvertFuncs extends CZBase
 		if (!$base->isExecFunc(__METHOD__, $params, $value_param_names)) {
 			return '';
 		}
-		
+
 		if (!isset($params['separator_flag']) || $params['separator_flag']) {
 			$separator = '-';
 		} else {
 			$separator = '';
 		}
-		
+
 		return $params['head'] . $separator . $params['tail'];
 	}
 }

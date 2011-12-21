@@ -14,10 +14,10 @@ final class CZChtmlGetTags extends CZBase
 		if (!isset($info['tag_options'][$tag_name]) || !$this->_cz->isValidStr($info['tag_options'][$tag_name])) {
 			return '';
 		}
-		
+
 		return ' ' . $info['tag_options'][$tag_name];
 	}
-	
+
 	/**
 	 * @param array $info
 	 * 
@@ -28,11 +28,11 @@ final class CZChtmlGetTags extends CZBase
 	public function exec($info)
 	{
 		$mobile_flag = $this->_cz->newCore('mobile', 'is_mobile')->exec();
-		
+
 		if ($mobile_flag) {
 			$info['html_type'] = 'br';
 		}
-		
+
 		$tags = array();
 		switch($info['html_type']) {
 			case 'table':
@@ -73,7 +73,7 @@ final class CZChtmlGetTags extends CZBase
 			default:
 				$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_HTML_INVALID_HTML_TYPE, $info['html_type']);
 		}
-		
+
 		return $tags;
 	}
 }

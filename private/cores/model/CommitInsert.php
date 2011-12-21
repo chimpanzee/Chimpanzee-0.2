@@ -14,7 +14,7 @@ final class CZCmodelCommitInsert extends CZBase
 	{
 		$record = $this->_cz->newCore('model', 'get_record_by_form_values')->exec($model, $form_values);
 		$record = array_merge($record, $add_values);
-		
+
 		return $this->_cz->newCore('model', 'insert')->exec($model, $record);
 	}
 }

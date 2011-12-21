@@ -12,22 +12,22 @@ final class CZCmodelBeginUpdate extends CZBase
 	private function _getFormValues($model, $id)
 	{
 		$set_values = $model->getFormSetValues();
-		
+
 		$column_names = array();
 		$format_flag  = FALSE;
 		if (!($record = $this->_cz->newCore('model', 'get_record')->byId($model, $id, $column_names, $format_flag))) {
 			return FALSE;
 		}
-		
+
 		$form_values = array();
-		
+
 		foreach ($record as $column_name => $value) {
 			if (isset($set_values[$column_name])) {
 				continue;
 			}
 			$form_values[$column_name] = $value;
 		}
-		
+
 		foreach ($set_values as $form_part_name => $set_value) {
 			if (is_array($set_value)) {
 				if (isset($set_value['ref'])) {
@@ -45,10 +45,10 @@ final class CZCmodelBeginUpdate extends CZBase
 				$form_values[$form_part_name] = $set_value;
 			}
 		}
-		
+
 		return $form_values;
 	}
-	
+
 	/**
 	 * @param object  $model
 	 * @param integer $id
@@ -63,9 +63,9 @@ final class CZCmodelBeginUpdate extends CZBase
 			$model->free('update_id');
 			return FALSE;
 		}
-		
+
 		$model->save('update_id', $id);
-		
+
 		return $form_values;
 	}
 }

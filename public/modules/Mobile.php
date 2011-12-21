@@ -11,7 +11,7 @@ final class CZMMobile extends CZBase
 		return $this->_cz->newCore('mobile', 'is_mobile')->exec();
 	}
 
-	
+
 	/**
 	 * @return string / FALSE
 	 * 

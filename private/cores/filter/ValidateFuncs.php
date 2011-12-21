@@ -29,15 +29,15 @@ final class CZCfilterValidateFuncs extends CZBase
 		if (!preg_match($params['pattern'], $params['subject'])) {
 			return 'It is not corresponding to the pattern.';
 		}
-		
+
 		return '';
 	}
-	
-	
+
+
 	/*
 	 * #Number
 	 */
-	
+
 	/**
 	 * @param object $base
 	 * @param array  $params(
@@ -67,10 +67,10 @@ final class CZCfilterValidateFuncs extends CZBase
 		if (isset($params['max']) && ($params['subject'] > $params['max'])) {
 			return 'Please input it by ' . $params['max'] . ' or less.';
 		}
-		
+
 		return '';
 	}
-	
+
 	/**
 	 * @param object $base
 	 * @param array  $params(
@@ -89,7 +89,7 @@ final class CZCfilterValidateFuncs extends CZBase
 		if (!$base->isExecFunc(__METHOD__, $params, $value_param_names)) {
 			return '';
 		}
-		
+
 		if (!is_numeric($params['subject'])) {
 			return 'Please input it by the numerical value.';
 		}
@@ -100,11 +100,11 @@ final class CZCfilterValidateFuncs extends CZBase
 		if (isset($params['max']) && ($params['subject'] > $params['max'])) {
 			return 'Please input it by ' . $params['max'] . ' or less.';
 		}
-		
+
 		return '';
 	}
-	
-	
+
+
 	/*
 	 * #Facebook
 	 */
@@ -125,15 +125,15 @@ final class CZCfilterValidateFuncs extends CZBase
 		if (!$base->isExecFunc(__METHOD__, $params, $value_param_names)) {
 			return '';
 		}
-		
+
 		if (!preg_match('/^[0-9a-zA-Z\.]+$/', $params['subject'])) {
 			return 'Please input the user name of the facebook correctly.';
 		}
-		
+
 		return '';
 	}
-	
-	
+
+
 	/*
 	 * #Twitter
 	 */
@@ -154,19 +154,19 @@ final class CZCfilterValidateFuncs extends CZBase
 		if (!$base->isExecFunc(__METHOD__, $params, $value_param_names)) {
 			return '';
 		}
-		
+
 		if (!preg_match('/^[0-9a-zA-Z_]{1,15}$/', $params['subject'])) {
 			return 'Please input the user name of the twitter correctly.';
 		}
-		
+
 		return '';
 	}
-	
-	
+
+
 	/*
 	 * #Date
 	 */
-	
+
 	/**
 	 * @param object  $base
 	 * @param integer $year
@@ -183,7 +183,7 @@ final class CZCfilterValidateFuncs extends CZBase
 
 		return '';
 	}
-	
+
 	/**
 	 * @param object $base
 	 * @param array  $params(
@@ -200,14 +200,14 @@ final class CZCfilterValidateFuncs extends CZBase
 		if (!$base->isExecFunc(__METHOD__, $params, $value_param_names)) {
 			return '';
 		}
-		
+
 		if (($timestamp = strtotime($params['subject'])) === FALSE) {
 			return 'Please input the form at the date correctly.';
 		}
-		
+
 		return self::_date(date('Y', $timestamp), date('n', $timestamp), date('j', $timestamp));
 	}
-	
+
 	/**
 	 * @param object $base
 	 * @param array  $params(
@@ -228,11 +228,11 @@ final class CZCfilterValidateFuncs extends CZBase
 		if (!$base->isExecFunc(__METHOD__, $params, $value_param_names)) {
 			return '';
 		}
-		
+
 		return self::_date($params['year'], $params['month'], $params['day']);
 	}
-	
-	
+
+
 	/*
 	 * #URL
 	 */
@@ -253,19 +253,19 @@ final class CZCfilterValidateFuncs extends CZBase
 		if (!$base->isExecFunc(__METHOD__, $params, $value_param_names)) {
 			return '';
 		}
-		
+
 		if (!preg_match('/^(https?|ftp)(:\/\/[-_.!~*\'()a-zA-Z0-9;\/?:\@&=+\$,%#]+)$/', $params['subject'])) {
 			return 'Please input the URL correctly.';
 		}
-		
+
 		return '';
 	}
-	
-	
+
+
 	/*
 	 * #Mail address
 	 */
-	
+
 	/**
 	 * @param object $base
 	 * @param string $mail_addr
@@ -277,14 +277,14 @@ final class CZCfilterValidateFuncs extends CZBase
 		if (!preg_match('/^[0-9a-zA-Z][0-9a-zA-Z\._-]*@[0-9a-zA-Z_-][0-9a-zA-Z\._-]+\.[a-zA-Z]+$/', $mail_addr)) {
 			return 'Please input the e-mail address correctly.';
 		}
-		
+
 		return '';
 	}
-	
+
 	/**
 	 * @param object $base
 	 * @param array  $params(
-	 * 			'subject' => string Mail address
+	 *          'subject' => string Mail address
 	 *        )
 	 * 
 	 * @author Shin Uesugi
@@ -297,10 +297,10 @@ final class CZCfilterValidateFuncs extends CZBase
 		if (!$base->isExecFunc(__METHOD__, $params, $value_param_names)) {
 			return '';
 		}
-		
+
 		return self::_mail_addr($params['subject']);
 	}
-	
+
 	/**
 	 * @param object $base
 	 * @param array  $params(
@@ -319,15 +319,15 @@ final class CZCfilterValidateFuncs extends CZBase
 		if (!$base->isExecFunc(__METHOD__, $params, $value_param_names)) {
 			return '';
 		}
-		
+
 		return self::_mail_addr($params['account'] . '@' . $params['domain']);
 	}
-	
+
 
 	/*
 	 * #Telephone number of general
 	 */
-	
+
 	/**
 	 * @param object $base
 	 * @param string $tel_num
@@ -339,10 +339,10 @@ final class CZCfilterValidateFuncs extends CZBase
 		if (!preg_match('/^0[0-9]{1,3}\-?[0-9]{2,4}\-?[0-9]{3,4}$/', $tel_num)) {
 			return 'Please input the telephone number correctly.';
 		}
-		
+
 		return '';
 	}
-	
+
 	/**
 	 * @param object $base
 	 * @param array  $params(
@@ -359,10 +359,10 @@ final class CZCfilterValidateFuncs extends CZBase
 		if (!$base->isExecFunc(__METHOD__, $params, $value_param_names)) {
 			return '';
 		}
-		
+
 		return self::_tel_num($params['subject']);
 	}
-	
+
 	/**
 	 * @param object $base
 	 * @param array  $params(
@@ -383,15 +383,15 @@ final class CZCfilterValidateFuncs extends CZBase
 		if (!$base->isExecFunc(__METHOD__, $params, $value_param_names)) {
 			return '';
 		}
-		
+
 		return self::_tel_num($params['area'] . '-' . $params['city'] . '-' . $params['rest']);
 	}
-	
-	
+
+
 	/*
 	 * #Telephone number of mobile
 	 */
-	
+
 	/**
 	 * @param object $base
 	 * @param string $tel_num
@@ -403,10 +403,10 @@ final class CZCfilterValidateFuncs extends CZBase
 		if (!preg_match('/^0(9|8|7)0\-?[0-9]{4}\-?[0-9]{4}$/', $tel_num)) {
 			return 'Please input the mobile telephone number correctly.';
 		}
-		
+
 		return '';
 	}
-	
+
 	/**
 	 * @param object $base
 	 * @param array  $params(
@@ -423,10 +423,10 @@ final class CZCfilterValidateFuncs extends CZBase
 		if (!$base->isExecFunc(__METHOD__, $params, $value_param_names)) {
 			return '';
 		}
-		
+
 		return self::_mobile_tel_num($params['subject']);
 	}
-	
+
 	/**
 	 * @param object $base
 	 * @param array  $params(
@@ -447,15 +447,15 @@ final class CZCfilterValidateFuncs extends CZBase
 		if (!$base->isExecFunc(__METHOD__, $params, $value_param_names)) {
 			return '';
 		}
-		
+
 		return self::_mobile_tel_num($params['area'] . '-' . $params['city'] . '-' . $params['rest']);
 	}
-	
-	
+
+
 	/*
 	 * #Zip code
 	 */
-	
+
 	/**
 	 * @param object $base
 	 * @param string $zip_code
@@ -467,10 +467,10 @@ final class CZCfilterValidateFuncs extends CZBase
 		if (!preg_match('/^[0-9]{3}\-?[0-9]{4}$/', $zip_code)) {
 			return 'Please input the zip code correctly.';
 		}
-		
+
 		return '';
 	}
-	
+
 	/**
 	 * @param object $base
 	 * @param array  $params(
@@ -487,10 +487,10 @@ final class CZCfilterValidateFuncs extends CZBase
 		if (!$base->isExecFunc(__METHOD__, $params, $value_param_names)) {
 			return '';
 		}
-		
+
 		return self::_zip_code($params['subject']);
 	}
-	
+
 	/**
 	 * @param object $base
 	 * @param array  $params(
@@ -509,15 +509,15 @@ final class CZCfilterValidateFuncs extends CZBase
 		if (!$base->isExecFunc(__METHOD__, $params, $value_param_names)) {
 			return '';
 		}
-		
+
 		return self::_zip_code($params['head'] . '-' . $params['tail']);
 	}
-	
-	
+
+
 	/*
 	 * #Credit card
 	 */
-	
+
 	/**
 	 * @param object $base
 	 * @param array  $params(
@@ -534,11 +534,11 @@ final class CZCfilterValidateFuncs extends CZBase
 		if (!$base->isExecFunc(__METHOD__, $params, $value_param_names)) {
 			return '';
 		}
-		
+
 		if (!preg_match('/^[13456][0-9]{13,15}$/', $params['subject'])) {
 			return 'Please input the credit card number correctly.';
 		}
-		
+
 		return '';
 	}
 }

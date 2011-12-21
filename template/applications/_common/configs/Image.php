@@ -5,7 +5,7 @@ final class configImage extends CZConfig
 	{
 		$this->setValues(array(
 			'save_dir' => '',
-			
+
 			'server_url' => '',
 		));
 	}

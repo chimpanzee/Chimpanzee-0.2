@@ -3,12 +3,12 @@ require_once 'Func.php';
 class CZForm extends CZFunc
 {
 	private $_parts = array();
-	
-	
+
+
 	/*
 	 * #Set property
 	 */
-	
+
 	/**
 	 * @param array $parts
 	 * 
@@ -19,10 +19,10 @@ class CZForm extends CZFunc
 	protected function setParts($parts)
 	{
 		$this->_parts = $parts;
-		
+
 		return $this;
 	}
-	
+
 	/**
 	 * @param string $part_name
 	 * @param array  $part
@@ -31,16 +31,16 @@ class CZForm extends CZFunc
 	 * 
 	 * @author Shin Uesugi
 	 */
-	protected function addPart($part_name, $part)
+	public function addPart($part_name, $part)
 	{
 		if (isset($this->_parts[$part_name])) {
 			$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_FORM_SET_PART, $part_name, $this->getMainClassName());
 		}
 		$this->_parts[$part_name] = $part;
-		
+
 		return $this;
 	}
-	
+
 	/**
 	 * @param string $part_name
 	 * @param string $property_name
@@ -59,15 +59,15 @@ class CZForm extends CZFunc
 			$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_FORM_SET_PART_PROPERTY, $part_name, $this->getMainClassName());
 		}
 		$this->_parts[$part_name][$property_name] = $value;
-		
+
 		return $this;
 	}
-	
-	
+
+
 	/*
 	 * #Get property
 	 */
-	
+
 	/**
 	 * @return array
 	 * 
@@ -78,15 +78,15 @@ class CZForm extends CZFunc
 		if (!$this->_parts) {
 			$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_FORM_NOT_SET_PARTS, '', $this->getMainClassName());
 		}
-		
+
 		return $this->_parts;
 	}
-	
-	
+
+
 	/*
 	 * #Value
 	 */
-	
+
 	/**
 	 * @param array $replace_values
 	 * 
@@ -98,7 +98,7 @@ class CZForm extends CZFunc
 	{
 		return $this->_cz->newCore('form', 'init_values')->exec($this, $replace_values);
 	}
-	
+
 	/**
 	 * @param array $values
 	 * 
@@ -110,7 +110,7 @@ class CZForm extends CZFunc
 	{
 		return $this->_cz->newCore('form', 'save_values')->exec($this, $values);
 	}
-	
+
 	/**
 	 * @return boolean
 	 * 
@@ -120,7 +120,7 @@ class CZForm extends CZFunc
 	{
 		return $this->_cz->newCore('form', 'save_values')->byPost($this);
 	}
-	
+
 	/**
 	 * @param array $default_values
 	 * 
@@ -136,15 +136,15 @@ class CZForm extends CZFunc
 			}
 			$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_FORM_NOT_SAVED_VALUES, $var_name, $main_class_name);
 		}
-		
+
 		return $values;
 	}
 
-	
+
 	/*
 	 * #Save error
 	 */
-	
+
 	/**
 	 * @param string $part_name
 	 * @param string $msg
@@ -155,12 +155,12 @@ class CZForm extends CZFunc
 	{
 		$this->_cz->newCore('form', 'save_err')->exec($this, $part_name, $msg);
 	}
-	
-	
+
+
 	/*
 	 * #Get form HTML
 	 */
-	
+
 	/**
 	 * @param string $part_name
 	 * 
@@ -172,7 +172,7 @@ class CZForm extends CZFunc
 	{
 		return $this->_cz->newCore('form', 'get_edit_tag')->exec($this, $part_name);
 	}
-	
+
 	/**
 	 * @param string $part_name
 	 * 
@@ -184,7 +184,7 @@ class CZForm extends CZFunc
 	{
 		return $this->_cz->newCore('form', 'get_err')->exec($this, $part_name);
 	}
-	
+
 	/**
 	 * @param string $part_name
 	 * 
@@ -196,7 +196,7 @@ class CZForm extends CZFunc
 	{
 		return $this->_cz->newCore('form', 'get_form_data_area')->exec($this, $part_name);
 	}
-	
+
 	/**
 	 * @return string
 	 * 
@@ -206,12 +206,12 @@ class CZForm extends CZFunc
 	{
 		return $this->_cz->newCore('form', 'get_form_html')->exec($this);
 	}
-	
-	
+
+
 	/*
 	 * #Get confirm HTML
 	 */
-	
+
 	/**
 	 * @param string  $part_name
 	 * @param boolean $escape_flag
@@ -224,7 +224,7 @@ class CZForm extends CZFunc
 	{
 		return $this->_cz->newCore('form', 'get_confirm_data_area')->exec($this, $part_name, $escape_flag);
 	}
-	
+
 	/**
 	 * @param $escape_flag
 	 * 
@@ -236,12 +236,12 @@ class CZForm extends CZFunc
 	{
 		return $this->_cz->newCore('form', 'get_confirm_html')->exec($this, $escape_flag);
 	}
-	
-	
+
+
 	/*
 	 * #Load uploaded files
 	 */
-	
+
 	/**
 	 * @return array
 	 * 

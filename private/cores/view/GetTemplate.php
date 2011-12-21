@@ -10,7 +10,7 @@ final class CZCviewGetTemplate extends CZBase
 	 * 
 	 * @author Shin Uesugi
 	 */
-	private function _get($search_paths, $file, $required_flag = FALSE)
+	private function _get($search_paths, $required_flag = FALSE)
 	{
 		$template = FALSE;
 		foreach ($search_paths as  $search_path) {
@@ -23,15 +23,15 @@ final class CZCviewGetTemplate extends CZBase
 		}
 		if ($template === FALSE) {
 			if ($required_flag) {
-				$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_VIEW_NOT_EXIST_FILE, $file);
+				$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_VIEW_NOT_EXIST_FILE, implode(', ', $search_paths));
 			} else {
 				$template = '';
 			}
 		}
-		
+
 		return $template;
 	}
-	
+
 	/**
 	 * @param string $file
 	 * @param string $ctrl_name
@@ -48,10 +48,10 @@ final class CZCviewGetTemplate extends CZBase
 		if ($file === '') {
 			$file = $this->_cz->newCore('forward', 'get_action_name')->exec() . '.' . $file_extension;
 		}
-		
+
 		$relative_path = '';
-		$action_group_name = $this->_cz->newCore('forward', 'get_action_group_name')->exec();
-		if ($action_group_name !== '') {
+		$action_group_name = $this->_cz->loadStatic('forward')->getActionGroupName();
+		if ($action_group_name !== NULL) {
 			$relative_path .= $action_group_name . DIRECTORY_SEPARATOR;
 		}
 		$relative_path .= $file;
@@ -60,10 +60,10 @@ final class CZCviewGetTemplate extends CZBase
 			$views_dir        . DIRECTORY_SEPARATOR . $ctrl_name . DIRECTORY_SEPARATOR . $relative_path,
 			$views_common_dir . DIRECTORY_SEPARATOR . $relative_path,
 		);
-		
-		return self::_get($search_paths, $file, TRUE);
+
+		return self::_get($search_paths, TRUE);
 	}
-	
+
 	/**
 	 * @param string $file_name
 	 * @param string $ctrl_name
@@ -82,10 +82,10 @@ final class CZCviewGetTemplate extends CZBase
 			$views_dir        . DIRECTORY_SEPARATOR . $ctrl_name . DIRECTORY_SEPARATOR . $file,
 			$views_common_dir . DIRECTORY_SEPARATOR . $file,
 		);
-		
-		return self::_get($search_paths, $file);
+
+		return self::_get($search_paths);
 	}
-	
+
 	/**
 	 * @param string $file
 	 * 
@@ -112,15 +112,10 @@ final class CZCviewGetTemplate extends CZBase
 		$template .= self::_getSub ('_footer5', $file_extension, $views_dir, $views_common_dir, $ctrl_name);
 		$template .= self::_getSub ('_footer',  $file_extension, $views_dir, $views_common_dir, $ctrl_name);
 
-		/*
-		if (!$this->_cz->develop_flag) {
-			$template = str_replace(array("\t", "\r", "\n"), '', $template);
-		}
-		*/
 		if ($this->_cz->newCore('mobile', 'is_mobile')->exec()) {
 			$template = mb_convert_kana($template, 'ask');
 		}
-		
+
 		return $template;
 	}
 }

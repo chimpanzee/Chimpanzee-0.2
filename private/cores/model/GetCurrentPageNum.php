@@ -13,9 +13,9 @@ final class CZCmodelGetCurrentPageNum extends CZBase
 		if (!($paging = $model_records->getPaging())) {
 			return FALSE;
 		}
-		
+
 		$page_num = $this->_cz->newCore('request', 'get_param')->getGetParam($paging['page_num_param_name'], FALSE);
-		
+
 		return $page_num ? $page_num : 1;
 	}
 }

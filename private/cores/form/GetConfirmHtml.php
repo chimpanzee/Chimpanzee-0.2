@@ -13,7 +13,7 @@ final class CZCformGetConfirmHtml extends CZBase
 	{
 		$parts  = $form->getParts();
 		$values = $form->load('values');
-		
+
 		$caption_areas = array();
 		$data_areas    = array();
 		foreach ($parts as $part_name => $part) {
@@ -24,7 +24,7 @@ final class CZCformGetConfirmHtml extends CZBase
 				}
 			}
 		}
-		
+
 		return $this->_cz->newCore('html', 'get_confirm')->exec($caption_areas, $data_areas);
 	}
 }

@@ -16,7 +16,7 @@ final class CZCmodelGetRecord extends CZBase
 	public function exec($model, $column_names = array(), $condition_sentences = array(), $condition_values = array(), $format_flag = TRUE, $mask_flag = TRUE)
 	{
 		$table_name = $model->getTableName();
-		
+
 		if ($mask_flag) {
 			list($condition_sentences, $condition_values) = $this->_cz->newCore('model', 'merge_mask')->exec($model, $condition_sentences, $condition_values);
 		}
@@ -30,7 +30,7 @@ final class CZCmodelGetRecord extends CZBase
 
 		return $record;
 	}
-	
+
 	/**
 	 * @param object  $model
 	 * @param integer $id
@@ -44,10 +44,10 @@ final class CZCmodelGetRecord extends CZBase
 	public function byId($model, $id, $column_names = array(), $format_flag = TRUE)
 	{
 		$id_column_name = $model->getIdColumnName();
-		
+
 		$condition_sentences = array($id_column_name . '=:' . $id_column_name);
 		$condition_values    = array($id_column_name => $id);
-		
+
 		return self::exec($model, $column_names, $condition_sentences, $condition_values, $format_flag);
 	}
 }

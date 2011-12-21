@@ -15,7 +15,7 @@ final class CZCloginGetValues extends CZBase
 		} else {
 			$values = $this->_cz->newCore('ses', 'get')->exec('login_values', FALSE);
 		}
-		
+
 		return $values;
 	}
 }

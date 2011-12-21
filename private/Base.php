@@ -3,8 +3,8 @@ class CZBase
 {
 	// Object
 	protected $_cz;
-	
-	
+
+
 	/**
 	 * @param object $cz
 	 * 

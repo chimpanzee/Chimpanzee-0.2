@@ -13,7 +13,7 @@ class CZModel extends CZFunc
 	private $_formats                  = array();
 	private $_uniques                  = array();
 	private $_captions                 = array();
-	
+
 	private $_form_model_set_values  = array();
 	private $_form_ignore_part_names = array();
 	private $_form_set_values        = array();
@@ -23,7 +23,7 @@ class CZModel extends CZFunc
 	/*
 	 * #Set property
 	 */
-	
+
 	/**
 	 * @param string $table_name
 	 * @param string $id_column_name
@@ -36,10 +36,10 @@ class CZModel extends CZFunc
 	{
 		$this->_table_name     = $table_name;
 		$this->_id_column_name = $id_column_name;
-		
+
 		return $this;
 	}
-	
+
 	/**
 	 * @param array $condition_sentences
 	 * @param array $condition_values
@@ -52,7 +52,7 @@ class CZModel extends CZFunc
 	{
 		$this->_mask_condition_sentences = $condition_sentences;
 		$this->_mask_condition_values    = $condition_values;
-		
+
 		return $this;
 	}
 
@@ -66,10 +66,10 @@ class CZModel extends CZFunc
 	protected function setFormats($formats)
 	{
 		$this->_formats = $formats;
-		
+
 		return $this;
 	}
-	
+
 	/**
 	 * @param array $uniques
 	 * 
@@ -80,10 +80,10 @@ class CZModel extends CZFunc
 	protected function setUniques($uniques)
 	{
 		$this->_uniques = $uniques;
-		
+
 		return $this;
 	}
-	
+
 	/**
 	 * @param array $captions
 	 * 
@@ -94,10 +94,10 @@ class CZModel extends CZFunc
 	protected function setCaptions($captions)
 	{
 		$this->_captions = $captions;
-		
+
 		return $this;
 	}
-	
+
 	/**
 	 * @param array $values
 	 * 
@@ -108,10 +108,10 @@ class CZModel extends CZFunc
 	protected function setFormModelSetValues($values)
 	{
 		$this->_form_model_set_values = $values;
-		
+
 		return $this;
 	}
-	
+
 	/**
 	 * @param array $names
 	 * 
@@ -122,49 +122,49 @@ class CZModel extends CZFunc
 	protected function setFormIgnorePartNames($names)
 	{
 		$this->_form_ignore_part_names = $names;
-		
+
 		return $this;
 	}
-	
+
 	/**
 	 * @param array $values
 	 * 
 	 * @return object
-	 *        
+	 * 
 	 * @author Shin Uesugi
 	 */
 	protected function setFormSetValues($values)
 	{
 		$this->_form_set_values = $values;
-		
+
 		return $this;
 	}
-	
+
 	/**
 	 * @param array $msgs
 	 * 
 	 * @return object
-	 *        
+	 * 
 	 * @author Shin Uesugi
 	 */
 	protected function setFormUniqueErrMsgs($msgs)
 	{
 		$this->_form_unique_err_msgs = $msgs;
-		
+
 		return $this;
 	}
-	
+
 	/**
 	 * @param object $form
 	 * 
 	 * @return object
-	 *        
+	 * 
 	 * @author Shin Uesugi
 	 */
 	public function bindForm($form)
 	{
 		$this->_form = $form;
-		
+
 		return $this;
 	}
 
@@ -172,7 +172,7 @@ class CZModel extends CZFunc
 	/*
 	 * #Get property
 	 */
-	
+
 	/**
 	 * @return string
 	 * 
@@ -183,10 +183,10 @@ class CZModel extends CZFunc
 		if ($this->_table_name === '') {
 			$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_MODEL_NOT_SET_TABLE_NAME, '', $this->getMainClassName());
 		}
-		
+
 		return $this->_table_name;
 	}
-	
+
 	/**
 	 * @return string
 	 * 
@@ -197,10 +197,10 @@ class CZModel extends CZFunc
 		if ($this->_id_column_name === '') {
 			$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_MODEL_NOT_SET_ID_COLUMN_NAME, '', $this->getMainClassName());
 		}
-		
+
 		return $this->_id_column_name;
 	}
-	
+
 	/**
 	 * @return array
 	 * 
@@ -210,7 +210,7 @@ class CZModel extends CZFunc
 	{
 		return $this->_mask_condition_sentences;
 	}
-	
+
 	/**
 	 * @return array
 	 * 
@@ -220,7 +220,7 @@ class CZModel extends CZFunc
 	{
 		return $this->_mask_condition_values;
 	}
-	
+
 	/**
 	 * @return array
 	 * 
@@ -230,7 +230,7 @@ class CZModel extends CZFunc
 	{
 		return $this->_formats;
 	}
-	
+
 	/**
 	 * @return array
 	 * 
@@ -240,7 +240,7 @@ class CZModel extends CZFunc
 	{
 		return $this->_uniques;
 	}
-	
+
 	/**
 	 * @return array
 	 * 
@@ -250,7 +250,7 @@ class CZModel extends CZFunc
 	{
 		return $this->_captions;
 	}
-	
+
 	/**
 	 * @return array
 	 * 
@@ -260,7 +260,7 @@ class CZModel extends CZFunc
 	{
 		return $this->_form_model_set_values;
 	}
-	
+
 	/**
 	 * @return array
 	 * 
@@ -270,7 +270,7 @@ class CZModel extends CZFunc
 	{
 		return $this->_form_ignore_part_names;
 	}
-	
+
 	/**
 	 * @return array
 	 * 
@@ -280,7 +280,7 @@ class CZModel extends CZFunc
 	{
 		return $this->_form_set_values;
 	}
-	
+
 	/**
 	 * @return array
 	 * 
@@ -290,7 +290,7 @@ class CZModel extends CZFunc
 	{
 		return $this->_form_unique_err_msgs;
 	}
-	
+
 	/**
 	 * @return object
 	 * 
@@ -300,12 +300,12 @@ class CZModel extends CZFunc
 	{
 		return $this->_form;
 	}
-	
-	
+
+
 	/*
 	 * #Format record
 	 */
-	
+
 	/**
 	 * @param array $record
 	 * 
@@ -318,11 +318,11 @@ class CZModel extends CZFunc
 		return $this->_cz->newCore('model', 'format')->exec($this, $record);
 	}
 
-	
+
 	/*
 	 * #Insert data
 	 */
-	
+
 	/**
 	 * @param array $record
 	 * 
@@ -334,7 +334,7 @@ class CZModel extends CZFunc
 	{
 		return $this->_cz->newCore('model', 'insert')->exec($this, $record);
 	}
-	
+
 	/**
 	 * @param array  $form_values
 	 * @param array  $add_values
@@ -348,11 +348,11 @@ class CZModel extends CZFunc
 		return $this->_cz->newCore('model', 'commit_insert')->exec($this, $form_values, $add_values);
 	}
 
-	
+
 	/*
 	 * #Update data
 	 */
-	
+
 	/**
 	 * @param array $record
 	 * @param array $condition_sentences
@@ -366,7 +366,7 @@ class CZModel extends CZFunc
 	{
 		return $this->_cz->newCore('model', 'update')->exec($this, $record, $condition_sentences, $condition_values);
 	}
-	
+
 	/**
 	 * @param integer $id
 	 * @param array   $record
@@ -379,7 +379,7 @@ class CZModel extends CZFunc
 	{
 		return $this->_cz->newCore('model', 'update')->byId($this, $id, $record);
 	}
-	
+
 	/**
 	 * @param integer $id
 	 * 
@@ -391,7 +391,7 @@ class CZModel extends CZFunc
 	{
 		return $this->_cz->newCore('model', 'begin_update')->exec($this, $id);
 	}
-	
+
 	/**
 	 * @return boolean
 	 * 
@@ -401,7 +401,7 @@ class CZModel extends CZFunc
 	{
 		return $this->load('update_id', FALSE) !== FALSE;
 	}
-	
+
 	/**
 	 * @return string
 	 * 
@@ -412,10 +412,10 @@ class CZModel extends CZFunc
 		if (($id = $this->load('update_id', FALSE)) === FALSE) {
 			$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_MODEL_NOT_BEGUN_UPDATE, '', $this->getMainClassName());
 		}
-		
+
 		return $id;
 	}
-	
+
 	/**
 	 * @param array  $form_values
 	 * @param array  $add_values
@@ -428,12 +428,12 @@ class CZModel extends CZFunc
 	{
 		return $this->_cz->newCore('model', 'commit_update')->exec($this, $form_values, $add_values);
 	}
-	
-	
+
+
 	/*
 	 * #Delete data
 	 */
-	
+
 	/**
 	 * @param array $condition_sentences
 	 * @param array $condition_values
@@ -446,7 +446,7 @@ class CZModel extends CZFunc
 	{
 		return $this->_cz->newCore('model', 'delete')->exec($this, $condition_sentences, $condition_values);
 	}
-	
+
 	/**
 	 * @param integer $id
 	 * 
@@ -458,7 +458,7 @@ class CZModel extends CZFunc
 	{
 		return $this->_cz->newCore('model', 'delete')->byId($this, $id);
 	}
-	
+
 	/**
 	 * @param integer $id
 	 * 
@@ -470,7 +470,7 @@ class CZModel extends CZFunc
 	{
 		return $this->_cz->newCore('model', 'begin_delete')->exec($this, $id);
 	}
-	
+
 	/**
 	 * @return boolean
 	 * 
@@ -480,7 +480,7 @@ class CZModel extends CZFunc
 	{
 		return $this->load('delete_id', FALSE) !== FALSE;
 	}
-	
+
 	/**
 	 * @return string
 	 * 
@@ -491,10 +491,10 @@ class CZModel extends CZFunc
 		if (($id = $this->load('delete_id', FALSE)) === FALSE) {
 			$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_MODEL_NOT_BEGUN_DELETE, '', $this->getMainClassName());
 		}
-		
+
 		return $id;
 	}
-	
+
 	/**
 	 * @param array $relation_models
 	 * 
@@ -506,12 +506,12 @@ class CZModel extends CZFunc
 	{
 		return $this->_cz->newCore('model', 'commit_delete')->exec($this, $relation_models);
 	}
-	
-	
+
+
 	/*
 	 * #Get record
 	 */
-	
+
 	/**
 	 * @param array   $column_names
 	 * @param array   $condition_sentences
@@ -526,7 +526,7 @@ class CZModel extends CZFunc
 	{
 		return $this->_cz->newCore('model', 'get_record')->exec($this, $column_names, $condition_sentences, $condition_values, $format_flag);
 	}
-	
+
 	/**
 	 * @param integer $id
 	 * @param array   $column_names
@@ -540,12 +540,12 @@ class CZModel extends CZFunc
 	{
 		return $this->_cz->newCore('model', 'get_record')->byId($this, $id, $column_names, $format_flag);
 	}
-	
-	
+
+
 	/*
 	 * #Get value
 	 */
-	
+
 	/**
 	 * @param string  $column_name
 	 * @param array   $condition_sentences
@@ -574,12 +574,12 @@ class CZModel extends CZFunc
 	{
 		return $this->_cz->newCore('model', 'get_value')->byId($this, $id, $column_name, $format_flag);
 	}
-	
-	
+
+
 	/*
 	 * #Get HTML
 	 */
-	
+
 	/**
 	 * @param integer $id
 	 * 
@@ -591,12 +591,12 @@ class CZModel extends CZFunc
 	{
 		return $this->_cz->newCore('model', 'get_detail_html')->exec($this, $id);
 	}
-	
-	
+
+
 	/*
 	 * #Records
 	 */
-	
+
 	/**
 	 * @param string $name
 	 * 
@@ -612,10 +612,10 @@ class CZModel extends CZFunc
 		require_once 'ModelRecords.php';
 		$this->_model_records[$name] = new CZModelRecords($this);
 		$this->_model_records[$name]->_setCZ($this->_cz);
-		
+
 		return $this->_model_records[$name];
 	}
-	
+
 	/**
 	 * @param string $name
 	 * 
@@ -635,7 +635,7 @@ class CZModel extends CZFunc
 
 		return $this->_model_records[$name];
 	}
-	
+
 	/**
 	 * @param array $column_names
 	 * @param array $condition_sentences
@@ -654,7 +654,7 @@ class CZModel extends CZFunc
 			->_setOptions($options)
 			->get();
 	}
-	
+
 	/**
 	 * @param string $id_column_name
 	 * @param string $value_column_name
@@ -672,7 +672,7 @@ class CZModel extends CZFunc
 			$id_column_name,
 			$value_column_name,
 		);
-		
+
 		return self::_getRecords('_auto')
 			->setColumnNames($column_names)
 			->setCondition($condition_sentences, $condition_values)

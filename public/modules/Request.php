@@ -10,8 +10,8 @@ final class CZMRequest extends CZBase
 	{
 		$this->_cz->loadStatic('request')->setEncoding($encoding);
 	}
-	
-	
+
+
 	/**
 	 * @return array
 	 * 
@@ -21,7 +21,7 @@ final class CZMRequest extends CZBase
 	{
 		return $this->_cz->newCore('request', 'get_param')->getParams();
 	}
-	
+
 	/**
 	 * @param string $var_name
 	 * @param mixed  $default_value
@@ -35,7 +35,7 @@ final class CZMRequest extends CZBase
 		return $this->_cz->newCore('request', 'get_param')->getParam($var_name, $default_value);
 	}
 
-	
+
 	/**
 	 * @return array
 	 * 
@@ -45,7 +45,7 @@ final class CZMRequest extends CZBase
 	{
 		return $this->_cz->newCore('request', 'get_param')->getGetParams();
 	}
-	
+
 	/**
 	 * @param string $var_name
 	 * @param mixed  $default_value
@@ -59,7 +59,7 @@ final class CZMRequest extends CZBase
 		return $this->_cz->newCore('request', 'get_param')->getGetParam($var_name, $default_value);
 	}
 
-	
+
 	/**
 	 * @return array
 	 * 
@@ -69,7 +69,7 @@ final class CZMRequest extends CZBase
 	{
 		return $this->_cz->newCore('request', 'get_param')->getPostParams();
 	}
-	
+
 	/**
 	 * @param string $var_name
 	 * @param mixed  $default_value

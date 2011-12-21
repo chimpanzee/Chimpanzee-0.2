@@ -27,7 +27,7 @@ final class CZCmodelGetValue extends CZBase
 
 		return $value;
 	}
-	
+
 	/**
 	 * @param object  $model
 	 * @param integer $id
@@ -43,7 +43,7 @@ final class CZCmodelGetValue extends CZBase
 		$id_column_name = $model->getIdColumnName();
 		$condition_sentences = array($id_column_name . '=:' . $id_column_name);
 		$condition_values    = array($id_column_name => $id);
-		
+
 		return self::exec($model, $column_name, $condition_sentences, $condition_values, $format_flag);
 	}
 }

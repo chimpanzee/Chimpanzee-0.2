@@ -5,14 +5,14 @@ final class CZObjCtrl
 	private $_cz;
 	private $_loaded_static_objs  = array();
 	private $_loaded_dynamic_objs = array();
-	
+
 	private $_load_only = FALSE;
-	
-	
+
+
 	/*
 	 * #Get
 	 */
-	
+
 	/**
 	 * @param string  $main_type
 	 * @param string  $sub_type
@@ -86,10 +86,10 @@ final class CZObjCtrl
 			default:
 				self::_new('core', 'fatal', 'err')->exec(__FILE__, __LINE__, CZ_FATAL_OBJ_INVALID_MAIN_TYPE, $main_type);
 		}
-		
+
 		return $info;
 	}
-	
+
 	/**
 	 * @param string $main_type
 	 * @param string $sub_type
@@ -116,10 +116,10 @@ final class CZObjCtrl
 				self::_new('core', 'fatal', 'err')->exec(__FILE__, __LINE__, CZ_FATAL_OBJ_NOT_EXIST_CLASS_FILE, 'Class: ' . $class_name);
 			}
 		}
-		
+
 		return $class_path;
 	}
-	
+
 	/**
 	 * @param string $main_type
 	 * @param string $sub_type
@@ -127,7 +127,7 @@ final class CZObjCtrl
 	 * @param array  $construct_params
 	 * 
 	 * @return object / FALSE
-	 *         
+	 * 
 	 * @author Shin Uesugi
 	 */
 	private function _get($main_type, $sub_type, $info, $construct_params)
@@ -150,12 +150,12 @@ final class CZObjCtrl
 
 		return $obj;
 	}
-	
-	
+
+
 	/*
 	 * #Load
 	 */
-	
+
 	/**
 	 * @param string $main_type
 	 * @param string $name
@@ -163,7 +163,7 @@ final class CZObjCtrl
 	 * @param array  $construct_params
 	 * 
 	 * @return object / FALSE
-	 *         
+	 * 
 	 * @author Shin Uesugi
 	 */
 	public function load($main_type, $name, $sub_type = '', $construct_params = array())
@@ -179,7 +179,7 @@ final class CZObjCtrl
 				return $this->_loaded_dynamic_objs[$info['class_name']];
 			}
 		}
-		
+
 		if (!($obj = self::_get($main_type, $sub_type, $info, $construct_params))) {
 			return FALSE;
 		}
@@ -188,7 +188,7 @@ final class CZObjCtrl
 		} else {
 			$this->_loaded_dynamic_objs[$info['class_name']] = $obj;
 		}
-		
+
 		return $obj;
 	}
 
@@ -207,7 +207,7 @@ final class CZObjCtrl
 		}
 		unset($this->_loaded_dynamic_objs[$info['class_name']]);
 	}
-	
+
 	/**
 	 * @author Shin Uesugi
 	 */
@@ -215,12 +215,12 @@ final class CZObjCtrl
 	{
 		$this->_loaded_dynamic_objs = array();
 	}
-	
+
 
 	/*
 	 * #New
 	 */
-	
+
 	/**
 	 * @param string $main_type
 	 * @param string $name
@@ -228,7 +228,7 @@ final class CZObjCtrl
 	 * @param array  $construct_params
 	 * 
 	 * @return object / FALSE
-	 *         
+	 * 
 	 * @author Shin Uesugi
 	 */
 	public function _new($main_type, $name, $sub_type = '', $construct_params = array())
@@ -236,15 +236,15 @@ final class CZObjCtrl
 		if ($this->_load_only || ($main_type == 'static')) {
 			return self::load($main_type, $name, $sub_type);
 		}
-		
+
 		return self::_get($main_type, $sub_type, self::_getInfo($main_type, $sub_type, $name), $construct_params);
 	}
-	
+
 
 	/*
 	 * #Initilization
 	 */
-	
+
 	/**
 	 * @param object $cz
 	 * 
@@ -253,7 +253,7 @@ final class CZObjCtrl
 	function __construct($cz)
 	{
 		$this->_cz = $cz;
-		
+
 		// Global config
 		$this->_load_only = self::_new('user', 'CZ', 'config')->getValue('obj_load_only', FALSE);
 	}

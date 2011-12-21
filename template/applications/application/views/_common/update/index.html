@@ -3,5 +3,7 @@
 	<br />
 	<input type="submit" value="Update" /><br />
 </form>
-<br />
-<a href="<?= $_return_url; ?>">Go back.</a><br />
+<? if ($_return_url): ?>
+	<br />
+	<a href="<?= $_return_url; ?>">Go back.</a><br />
+<? endif; ?>

@@ -24,7 +24,7 @@ final class CZCdbGetSetQueryPart extends CZBase
 				$str .= $column_name . '=:' . $column_name;
 			}
 		}
-		
+
 		return ' SET ' . $str;
 	}
 }

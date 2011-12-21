@@ -29,7 +29,7 @@ final class CZCformGetDefaultValue extends CZBase
 			default:
 				$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_FORM_INVALID_PART_TYPE, $part['type'], $form->getMainClassName());
 		}
-		
+
 		return $value;
 	}
 }

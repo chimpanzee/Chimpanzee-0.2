@@ -22,7 +22,7 @@ final class CZCsesGet extends CZBase
 			}
 			$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_SES_NOT_SET_VAR, $var_name);
 		}
-		
+
 		return $_SESSION[$ses_name][$type][$var_name];
 	}
 }

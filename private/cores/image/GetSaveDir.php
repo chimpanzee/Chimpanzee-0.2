@@ -13,7 +13,7 @@ final class CZCimageGetSaveDir extends CZBase
 		if (!($dir = $this->_cz->newUser('config', 'image')->getValue('save_dir', FALSE))) {
 			$dir = $this->_cz->project_dir . DIRECTORY_SEPARATOR . 'images';
 		}
-		
+
 		return $dir;
 	}
 }

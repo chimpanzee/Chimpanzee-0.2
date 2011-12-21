@@ -32,7 +32,7 @@ final class CZCformInitValues extends CZBase
 		}
 
 		$form->save('values', $set_values);
-		
+
 		return $set_values;
 	}
 }

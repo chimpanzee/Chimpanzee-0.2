@@ -12,7 +12,7 @@ final class CZCurlGetImages extends CZBase
 			$url  = $this->_cz->newCore('url', 'get_root')->exec();
 			$url .= '/' . $this->_cz->newUser('config', 'url')->getValue('images_relative_path', 'images');
 		}
-		
+
 		return $url;
 	}
 }

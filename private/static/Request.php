@@ -3,7 +3,7 @@ final class CZSRequest extends CZBase
 {
 	private $_encoding;
 
-	
+
 	/**
 	 * @author Shin Uesugi
 	 */
@@ -12,7 +12,7 @@ final class CZSRequest extends CZBase
 		$this->_encoding = mb_internal_encoding();
 	}
 
-	
+
 	/**
 	 * @param string $encoding
 	 * 
@@ -22,7 +22,7 @@ final class CZSRequest extends CZBase
 	{
 		$this->_encoding = $encoding;
 	}
-	
+
 	/**
 	 * @return string
 	 * 

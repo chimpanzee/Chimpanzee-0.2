@@ -3,10 +3,10 @@ require_once 'Func.php';
 class CZConfig extends CZFunc
 {
 	private $_main_class_name;
-	
+
 	private $_values = array();
 
-	
+
 	/**
 	 * @param string $main_class_name
 	 * 
@@ -16,8 +16,8 @@ class CZConfig extends CZFunc
 	{
 		$this->_main_class_name = $main_class_name;
 	}
-	
-	
+
+
 	/**
 	 * @param array $values
 	 * 
@@ -28,10 +28,10 @@ class CZConfig extends CZFunc
 	protected function setValues($values)
 	{
 		$this->_values = $values;
-		
+
 		return $this;
 	}
-	
+
 	/**
 	 * @param string $var_name
 	 * @param mixed  $value
@@ -46,10 +46,10 @@ class CZConfig extends CZFunc
 			$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_CONFIG_SET_VAR, $var_name, $this->_main_class_name);
 		}
 		$this->_values[$var_name] = $value;
-		
+
 		return $this;
 	}
-	
+
 	/**
 	 * @param string $var_name
 	 * @param mixed  $defalut_value
@@ -66,7 +66,7 @@ class CZConfig extends CZFunc
 			}
 			$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_CONFIG_NOT_SET_VAR, $var_name, $this->_main_class_name);
 		}
-		
+
 		return $this->_values[$var_name];
 	}
 }

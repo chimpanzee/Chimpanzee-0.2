@@ -15,7 +15,7 @@ final class CZCloginAuth extends CZBase
 		if (($login_id = $this->_cz->newCore('ses', 'get')->exec('login_id', FALSE)) !== FALSE) {
 			$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_AUTHORIZED_LOGIN, 'ID: ' . $login_id);
 		}
-		
+
 		$column_names = array();
 		$format_flag  = FALSE;
 		$mask_flag    = FALSE;
@@ -27,7 +27,7 @@ final class CZCloginAuth extends CZBase
 		$this->_cz->newCore('ses', 'set')->exec('login_id',               $record[$id_column_name]);
 		$this->_cz->newCore('ses', 'set')->exec('login_values',           $record);
 		$this->_cz->newCore('ses', 'set')->exec('login_formatted_values', $model->format($record));
-		
+
 		return TRUE;
 	}
 }

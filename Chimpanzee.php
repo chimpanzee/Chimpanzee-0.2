@@ -2,7 +2,7 @@
 /**
  * Chimpanzee(PHP Framework)
  * 
- * PHP 5 >= 5.1.2
+ * PHP 5 >= 5.2.0
  * 
  * @version   0.20a
  * @copyright 2011 Chimpanzee project
@@ -22,7 +22,7 @@ final class Chimpanzee
 	// Object
 	private $_cz;
 	public  $obj;
-	
+
 
 	/**
 	 * @param string $project_dir
@@ -34,12 +34,12 @@ final class Chimpanzee
 	{
 		require_once 'private/CZ.php';
 		$this->_cz = new CZ(dirname(__FILE__), $project_dir, $application_name);
-		
+
 		require_once 'public/Obj.php';
 		$this->obj = new CZObj($this->_cz);
 	}
-	
-	
+
+
 	/**
 	 * @param string $application_name
 	 * 

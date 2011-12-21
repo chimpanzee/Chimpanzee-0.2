@@ -12,7 +12,7 @@ final class CZSAutoload extends CZBase
 	{
 		return $this->_cz->newCore('autoload', '_autoload')->exec($class_name);
 	}
-	
+
 	/**
 	 * @author Shin Uesugi
 	 */

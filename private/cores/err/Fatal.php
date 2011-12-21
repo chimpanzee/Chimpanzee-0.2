@@ -111,9 +111,13 @@ define('CZ_FATAL_LOGIN_NOT_SET_AUTH_COLUMN_NAMES',       0x1001);
 define('CZ_FATAL_LOGIN_NOT_SET_AUTH_VALUE',              0x1002);
 define('CZ_FATAL_LOGIN_AUTHORIZED',                      0x1003);
 define('CZ_FATAL_LOGIN_NOT_SET_AUTO_REDIRECT_CTRL_NAME', 0x1004);
+define('CZ_FATAL_LOGIN_NOT_SAVED_SRC_URL',               0x1005);
 
 // Mail
 define('CZ_FATAL_MAIL_READ_TEMPLATE_FILE', 0x1101);
+
+// Facebook
+define('CZ_FATAL_FACEBOOK_ILLEGAL_ACCESS', 0x1201);
 
 
 final class CZCerrFatal extends CZBase
@@ -126,27 +130,27 @@ final class CZCerrFatal extends CZBase
 	private $_msgs = array(
 		// Common
 		CZ_FATAL_COMMON_NOT_EXIST_ACTION_NAME => 'Action name is missing.',
-		
+
 		// Err
 		CZ_FATAL_ERR_NOT_SAVED_MSG => 'The error message is not saved.',
-		
+
 		// Obj
 		CZ_FATAL_OBJ_INVALID_MAIN_TYPE      => 'Global object type is invalid.',
 		CZ_FATAL_OBJ_INVALID_SUB_TYPE       => 'User object type is invalid.',
 		CZ_FATAL_OBJ_NOT_EXIST_CLASS_FILE   => 'The class file does not exist.',
 		CZ_FATAL_OBJ_NOT_LOADED_DYNAMIC_OBJ => 'The dynamic object is not loaded.',
-		
+
 		// Config
 		CZ_FATAL_CONFIG_SET_VAR     => 'The config variable is already set.',
 		CZ_FATAL_CONFIG_NOT_SET_VAR => 'The config variable is not set.',
-		
+
 		// Ses
 		CZ_FATAL_SES_NOT_SET_VAR => 'The session variable is not set.',
 		CZ_FATAL_SES_NOT_SECURE  => 'CZ_FATAL_SES_NOT_SECURE',	//TODO: Modify to Yanai-sann by Shin.
-		
+
 		// Var
 		CZ_FATAL_VAR_NOT_SAVED_VAR => 'The variable is not saved.',
-		
+
 		// DB
 		CZ_FATAL_DB_NOT_SET_SERVER_MAIN   => 'Main DB Server is not set.',
 		CZ_FATAL_DB_NOT_SET_SERVER_SUB    => 'Sub DB Server is not set.',
@@ -161,13 +165,13 @@ final class CZCerrFatal extends CZBase
 		CZ_FATAL_DB_BIND_VALUE            => 'Cannot bind value.',
 		CZ_FATAL_DB_EXEC_QUERY            => 'Cannot execute query.',
 		CZ_FATAL_DB_INVALID_SET_VALUE_KEY => 'Invalid set-value key.',
-		
+
 		// Filter
 		CZ_FATAL_FILTER_NOT_SET_FUNC       => 'The function is not set.',
 		CZ_FATAL_FILTER_NOT_SET_REF        => 'The reference is not set.',
 		CZ_FATAL_FILTER_NOT_SET_REF_VALUE  => 'The value in the reference is not set.',
 		CZ_FATAL_FILTER_NOT_SET_FUNC_PARAM => 'The parameter in the function is not set.',
-		
+
 		// Model
 		CZ_FATAL_MODEL_NOT_SET_TABLE_NAME               => 'Table name is not set.',
 		CZ_FATAL_MODEL_NOT_SET_ID_COLUMN_NAME           => 'ID column name is not set.',
@@ -183,7 +187,7 @@ final class CZCerrFatal extends CZBase
 		CZ_FATAL_MODEL_NOT_SET_FORM_SET_VALUE_REF_VALUE => 'Reference of form-set-value value is not set.',
 		CZ_FATAL_MODEL_INVALID_COLUMN_NAME              => 'The column name is invalid.',
 		CZ_FATAL_MODEL_NOT_ENABLED_PAGING               => 'Paging is not enabled.',
-		
+
 		// Form
 		CZ_FATAL_FORM_SET_PART                 => 'The part(input property) is already set.',
 		CZ_FATAL_FORM_NOT_SET_PARTS            => 'The parts(input property set) are not set.',
@@ -205,18 +209,18 @@ final class CZCerrFatal extends CZBase
 		CZ_FATAL_VIEW_ADDED_VAR      => 'The variable is already added.',
 		CZ_FATAL_VIEW_NOT_EXIST_FILE => 'The file does not exist.',
 		CZ_FATAL_VIEW_READ_FILE      => 'Cannot read file.',
-		
+
 		// Table
 		CZ_FATAL_TABLE_NOT_SET_TABLE => 'The table is not set.',
 		CZ_FATAL_TABLE_NOT_SET_ID    => 'The ID is invalid.',
-		
+
 		// Request
 		CZ_FATAL_REQUEST_INVALID_VAR_NAME => 'Variable name is invalid.',
-		
+
 		// Html
 		CZ_FATAL_HTML_NOT_SET_HTML_TYPE => 'Html type is not set.',
 		CZ_FATAL_HTML_INVALID_HTML_TYPE => 'Html type is invalid.',
-		
+
 		// Image
 		CZ_FATAL_IMAGE_CREATE_TMP_FILE  => 'Cannot create temporary file.',
 		CZ_FATAL_IMAGE_WRITE_FILE       => 'Cannot write file.',
@@ -230,15 +234,19 @@ final class CZCerrFatal extends CZBase
 		CZ_FATAL_IMAGE_RESAMPLE_DATA    => 'Cannot resample data.',
 		CZ_FATAL_IMAGE_DISPLAY_PNG      => 'Cannot display PNG.',
 		CZ_FATAL_IMAGE_INVALID_DIR_TYPE => 'The directory type is invalid.',
-		
+
 		// Login
 		CZ_FATAL_LOGIN_NOT_SET_AUTH_COLUMN_NAMES       => 'Auth column names are not set.',
 		CZ_FATAL_LOGIN_NOT_SET_AUTH_VALUE              => 'Auth value is not set.',
 		CZ_FATAL_LOGIN_AUTHORIZED                      => 'Already logged in.',
 		CZ_FATAL_LOGIN_NOT_SET_AUTO_REDIRECT_CTRL_NAME => 'Auto-redirect controller name is not set.',
-		
+		CZ_FATAL_LOGIN_NOT_SAVED_SRC_URL               => 'CZ_FATAL_LOGIN_NOT_SAVED_SRC_URL',	//TODO: Modify to Yanai-sann by Shin.
+
 		// Mail
 		CZ_FATAL_MAIL_READ_TEMPLATE_FILE => 'Cannot read template file.',
+
+		// Facebook
+		CZ_FATAL_FACEBOOK_ILLEGAL_ACCESS => 'CZ_FATAL_FACEBOOK_ILLEGAL_ACCESS',	//TODO: Modify to Yanai-sann by Shin.
 	);
 
 
@@ -256,7 +264,7 @@ final class CZCerrFatal extends CZBase
 		if (!isset($this->_msgs[$fatal_id])) {
 			throw new CZException('Invalid fatal id.(' . $fatal_id . ')');
 		}
-		
+
 		$msg = $this->_msgs[$fatal_id];
 		if ($this->_cz->develop_flag) {
 			if ($this->_cz->isValidStr($add_msg)) {
@@ -267,7 +275,7 @@ final class CZCerrFatal extends CZBase
 				$msg .= '(Relating object: ' . $relating_obj_name . ')';
 			}
 		}
-		
+
 		throw new CZException($msg, $fatal_id);
 	}
 }

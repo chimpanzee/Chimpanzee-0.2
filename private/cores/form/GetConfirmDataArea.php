@@ -17,9 +17,9 @@ final class CZCformGetConfirmDataArea extends CZBase
 		if (isset($part['confirm'])) {
 			return FALSE;
 		}
-		
+
 		$value = $values[$part_name];
-		
+
 		switch ($part['type']) {
 			case 'text':
 			case 'textarea':
@@ -77,7 +77,7 @@ final class CZCformGetConfirmDataArea extends CZBase
 			default:
 				$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_FORM_INVALID_PART_TYPE, $part['type'], $form->getMainClassName());
 		}
-		
+
 		return $data;
 	}
 
@@ -100,11 +100,11 @@ final class CZCformGetConfirmDataArea extends CZBase
 		if (isset($part['type']) && ($part == 'hidden')) {
 			$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_FORM_USE_PART_TYPE, $part['type'], $form->getMainClassName());
 		}
-		
+
 		if (!$values) {
 			$values = $form->load('values');
 		}
-		
+
 		$data_area = '';
 		if (isset($part['parts'])) {
 			foreach ($part['parts'] as $child_part_name => $child_part) {
@@ -122,7 +122,7 @@ final class CZCformGetConfirmDataArea extends CZBase
 			}
 			$data_area .= $this->_cz->newCore('form', 'get_data_area')->exec($form, $part, $data);
 		}
-		
+
 		return $data_area;
 	}
 }

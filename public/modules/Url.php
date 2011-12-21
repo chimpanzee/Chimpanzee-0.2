@@ -2,6 +2,60 @@
 final class CZMUrl extends CZBase
 {
 	/**
+	 * @param array $action(
+	 *   string Action name
+	 *   string Action group name / NULL <option>
+	 *   string Controller name          <option>
+	 * )
+	 * @param boolean $secure_flag <option>
+	 * @param array   $params(
+	 *   'routing' => array(
+	 *     string Parameter value
+	 *     ...
+	 *   ) <option>
+	 *   'get' => array(
+	 *     string Parameter name => string Parameter value
+	 *     ...
+	 *   ) <option>
+	 * ) <option>
+	 * 
+	 * @return string URL
+	 * 
+	 * @author Shin Uesugi
+	 */
+	public function _get($action, $secure_flag = NULL, $params = NULL)
+	{
+		return $this->_cz->newCore('url', 'get_action')->_exec($action, $secure_flag, $params);
+	}
+
+	/**
+	 * @param array $action(
+	 *   string Action name
+	 *   string Controller name <option>
+	 * )
+	 * @param boolean $secure_flag <option>
+	 * @param array   $params(
+	 *   'routing' => array(
+	 *     string Parameter value
+	 *     ...
+	 *   ) <option>
+	 *   'get' => array(
+	 *     string Parameter name => string Parameter value
+	 *     ...
+	 *   ) <option>
+	 * ) <option>
+	 * 
+	 * @return string URL
+	 * 
+	 * @author Shin Uesugi
+	 */
+	public function get($action, $secure_flag = NULL, $params = NULL)
+	{
+		return $this->_cz->newCore('url', 'get_action')->exec($action, $secure_flag, $params);
+	}
+
+
+	/**
 	 * @param boolean $secure_flag <option>
 	 * 
 	 * @return string

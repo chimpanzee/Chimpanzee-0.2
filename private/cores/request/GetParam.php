@@ -13,10 +13,10 @@ final class CZCrequestGetParam extends CZBase
 		} else {
 			$value = mb_convert_encoding($value, $internal_encoding, $request_encoding);
 		}
-		
+
 		return $value;
 	}
-	
+
 	/**
 	 * @author Shin Uesugi
 	 */
@@ -27,10 +27,10 @@ final class CZCrequestGetParam extends CZBase
 		if ($internal_encoding == $request_encoding) {
 			return $value;
 		}
-		
+
 		return self::_convertEncoding($value, $internal_encoding, $request_encoding);
 	}
-	
+
 	/**
 	 * @author Shin Uesugi
 	 */
@@ -42,10 +42,10 @@ final class CZCrequestGetParam extends CZBase
 			}
 			$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_REQUEST_INVALID_VAR_NAME, $var_name);
 		}
-		
+
 		return self::_getParams($var[$var_name]);
 	}
-	
+
 
 	/**
 	 * @return array
@@ -70,7 +70,7 @@ final class CZCrequestGetParam extends CZBase
 		return self::_getParam($_REQUEST, $var_name, $default_value);
 	}
 
-	
+
 	/**
 	 * @param string $var_name
 	 * 
@@ -96,7 +96,7 @@ final class CZCrequestGetParam extends CZBase
 		return self::_getParam($_GET, $var_name, $default_value);
 	}
 
-	
+
 	/**
 	 * @param string $var_name
 	 * 
@@ -108,7 +108,7 @@ final class CZCrequestGetParam extends CZBase
 	{
 		return self::_getParams($_POST);
 	}
-	
+
 	/**
 	 * @param string $var_name
 	 * @param mixed  $default_value

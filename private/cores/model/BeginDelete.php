@@ -15,9 +15,9 @@ final class CZCmodelBeginDelete extends CZBase
 			$model->free('delete_id');
 			return FALSE;
 		}
-		
+
 		$model->save('delete_id', $id);
-		
+
 		return $record;
 	}
 }

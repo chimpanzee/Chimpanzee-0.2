@@ -15,7 +15,7 @@ final class CZCformGetCaption extends CZBase
 		if (!$part) {
 			$part = $this->_cz->newCore('form', 'get_part')->exec($form, $part_name);
 		}
-		
+
 		return isset($part['caption']) ? $part['caption'] : $part_name;
 	}
 }

@@ -20,7 +20,7 @@ final class CZCmodelGetListHtml extends CZBase
 		if (!$captions && !$records) {
 			return FALSE;
 		}
-		
+
 		if ($captions) {
 			$caption_areas = $captions;
 		} else {
@@ -42,10 +42,10 @@ final class CZCmodelGetListHtml extends CZBase
 		if ($link_to_delete_flag) {
 			$caption_areas['__delete__'] = '';
 		}
-		
+
 		return $caption_areas;
 	}
-	
+
 	/**
 	 * @param object  $model_records
 	 * @param array   $captions
@@ -84,7 +84,7 @@ final class CZCmodelGetListHtml extends CZBase
 				'tail_str' => '">' . $this->_cz->newUser('config', 'model')->getValue('link_to_delete_str', 'Delete') .  '</a>',
 			);
 		}
-		
+
 		$data_areas_list = array();
 		if ($captions) {
 			$column_names = array_keys($captions);
@@ -110,10 +110,10 @@ final class CZCmodelGetListHtml extends CZBase
 			}
 			$data_areas_list[] = $data_areas;
 		}
-		
+
 		return $data_areas_list;
 	}
-	
+
 	/**
 	 * @param object $model_records
 	 * 
@@ -129,16 +129,16 @@ final class CZCmodelGetListHtml extends CZBase
 		$link_to_detail_flag = $model_records->getLinkToDetailFlag();
 		$link_to_update_flag = $model_records->getLinkToUpdateFlag();
 		$link_to_delete_flag = $model_records->getLinkToDeleteFlag();
-		
+
 		$format_flag        = TRUE;
 		$add_id_column_flag = !in_array($id_column_name, $column_names);
 		$records  = $this->_cz->newCore('model', 'get_records')->exec($model_records, $format_flag, $add_id_column_flag);
-		
+
 		if (!$caption_areas = self::_getCaptionAreas($model_records, $captions, $records, $link_to_detail_flag, $link_to_update_flag, $link_to_delete_flag, $add_id_column_flag, $id_column_name)) {
 			return FALSE;
 		}
 		$data_areas_list = self::_getDataAreasList($model_records, $captions, $records, $link_to_detail_flag, $link_to_update_flag, $link_to_delete_flag, $add_id_column_flag, $id_column_name);
-		
+
 		return $this->_cz->newCore('html', 'get_list')->exec($caption_areas, $data_areas_list);
 	}
 }

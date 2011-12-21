@@ -19,7 +19,7 @@ final class CZCformGetPartNames extends CZBase
 				$names[] = $part_name;
 			}
 		}
-		
+
 		return $names;
 	}
 }

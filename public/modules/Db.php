@@ -4,7 +4,7 @@ final class CZMDb extends CZBase
 	/*
 	 * #Transaction
 	 */
-	
+
 	/**
 	 * @author Shin Uesugi
 	 */
@@ -12,7 +12,7 @@ final class CZMDb extends CZBase
 	{
 		$this->_cz->newCore('db', 'begin')->exec();
 	}
-	
+
 	/**
 	 * @author Shin Uesugi
 	 */
@@ -20,12 +20,12 @@ final class CZMDb extends CZBase
 	{
 		$this->_cz->newCore('db', 'commit')->exec();
 	}
-	
-	
+
+
 	/*
 	 * #Request query
 	 */
-	
+
 	/**
 	 * @param string $query
 	 * 
@@ -37,12 +37,12 @@ final class CZMDb extends CZBase
 	{
 		return $this->_cz->newCore('db', 'request')->exec($query);
 	}
-	
-	
+
+
 	/*
 	 * #Update data
 	 */
-	
+
 	/**
 	 * @param string $table_name
 	 * @param array  $record
@@ -55,7 +55,7 @@ final class CZMDb extends CZBase
 	{
 		return $this->_cz->newCore('db', 'insert')->exec($table_name, $record);
 	}
-	
+
 	/**
 	 * @return PDO::lastInsertId
 	 * 
@@ -65,7 +65,7 @@ final class CZMDb extends CZBase
 	{
 		return $this->_cz->newCore('db', 'get_inserted_id')->exec();
 	}
-	
+
 	/**
 	 * @param string $table_name
 	 * @param array  $record
@@ -80,7 +80,7 @@ final class CZMDb extends CZBase
 	{
 		return $this->_cz->newCore('db', 'update')->exec($table_name, $record, $condition_sentences, $condition_values);
 	}
-	
+
 	/**
 	 * @param string $table_name / array
 	 * @param array  $condition_sentences
@@ -94,12 +94,12 @@ final class CZMDb extends CZBase
 	{
 		return $this->_cz->newCore('db', 'delete')->exec($table_name, $condition_sentences, $condition_values);
 	}
-	
-	
+
+
 	/*
 	 * #Get data
 	 */
-	
+
 	/**
 	 * @param string $table_name
 	 * @param string $column_name
@@ -114,7 +114,7 @@ final class CZMDb extends CZBase
 	{
 		return $this->_cz->newCore('db', 'get_value')->exec($table_name, $column_name, $condition_sentences, $condition_values);
 	}
-	
+
 	/**
 	 * @param string $table_name
 	 * @param array  $column_names
@@ -129,7 +129,7 @@ final class CZMDb extends CZBase
 	{
 		return $this->_cz->newCore('db', 'get_record')->exec($table_name, $column_names, $condition_sentences, $condition_values);
 	}
-	
+
 	/**
 	 * @param string $table_name
 	 * @param array  $column_names

@@ -10,7 +10,7 @@ final class configUrl extends CZConfig
 			'css'    => '',
 			'js'     => '',
 			'api'    => '',
-		
+
 			'images_relative_path' => 'images',
 			'css_relative_path'    => 'css',
 			'js_relative_path'     => 'js',

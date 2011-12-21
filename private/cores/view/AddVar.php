@@ -15,7 +15,7 @@ final class CZCviewAddVar extends CZBase
 		if (isset($vars[$var_name])) {
 			$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_VIEW_ADDED_VAR, $var_name);
 		}
-		
+
 		if (!is_object($value)) {
 			$value = $this->_cz->newCore('view', 'convert')->exec($value, $escape_flag, $ignore_escape_keys);
 		}

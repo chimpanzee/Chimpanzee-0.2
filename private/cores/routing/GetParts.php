@@ -9,19 +9,19 @@ final class CZCroutingGetParts extends CZBase
 	private function _getUrlParts()
 	{
 		$parts = array();
-		
+
 		$url_path = $this->_cz->newCore('url', 'get_path')->exec();
-		
+
 		$src_parts = explode('/', str_replace($url_path, '', $_SERVER['REQUEST_URI']));
 		foreach ($src_parts as $part) {
 			if ($part !== '') {
 				$parts[] = $part;
 			}
 		}
-		
+
 		return $parts;
 	}
-	
+
 	/**
 	 * @return array
 	 * 
@@ -33,7 +33,7 @@ final class CZCroutingGetParts extends CZBase
 		$action_group_name = '';
 		$action_name       = '';
 		$params            = array();
-		
+
 		$url_parts = self::_getUrlParts();
 		$maybe_action_group_name = '';
 		foreach ($url_parts as $num => $url_part) {

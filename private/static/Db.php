@@ -4,8 +4,8 @@ final class CZSDb extends CZBase
 	// Object
 	private $_pdo_tran   = NULL;
 	private $_pdo_select = NULL;
-	
-	
+
+
 	/**
 	 * @param object $pdo
 	 * 
@@ -15,7 +15,7 @@ final class CZSDb extends CZBase
 	{
 		$this->_pdo_tran = $pdo;
 	}
-	
+
 	/**
 	 * @return object / NULL
 	 * 
@@ -25,8 +25,8 @@ final class CZSDb extends CZBase
 	{
 		return $this->_pdo_tran;
 	}
-	
-	
+
+
 	/**
 	 * @param object $pdo / NULL
 	 * 
@@ -36,7 +36,7 @@ final class CZSDb extends CZBase
 	{
 		$this->_pdo_select = $pdo;
 	}
-	
+
 	/**
 	 * @return object / NULL
 	 * 

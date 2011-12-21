@@ -4,7 +4,7 @@ final class CZMLogin extends CZBase
 	/*
 	 * #Login
 	 */
-	
+
 	/**
 	 * @param object $model
 	 * @param array  $values
@@ -18,7 +18,7 @@ final class CZMLogin extends CZBase
 	{
 		return $this->_cz->newCore('login', 'login')->exec($model, $values, $auth_column_names);
 	}
-	
+
 	/**
 	 * @param array $condition_values
 	 * 
@@ -30,7 +30,17 @@ final class CZMLogin extends CZBase
 	{
 		return $this->_cz->newCore('login', 'is_logged_in')->exec($condition_values);
 	}
-	
+
+	/**
+	 * @param string $url
+	 * 
+	 * @author Shin Uesugi
+	 */
+	public function saveSrcUrl($url)
+	{
+		$this->_cz->newCore('login', 'save_src_url')->exec($url);
+	}
+
 	/**
 	 * @author Shin Uesugi
 	 */
@@ -38,7 +48,7 @@ final class CZMLogin extends CZBase
 	{
 		$this->_cz->newCore('login', 'redirect_src_url')->exec();
 	}
-	
+
 	/**
 	 * @param object $model
 	 * 
@@ -51,7 +61,7 @@ final class CZMLogin extends CZBase
 		return $this->_cz->newCore('login', 'relogin')->exec($model);
 	}
 
-	
+
 	/*
 	 * #Get value
 	 */
@@ -65,7 +75,7 @@ final class CZMLogin extends CZBase
 	{
 		return $this->_cz->newCore('login', 'get_id')->exec();
 	}
-	
+
 	/**
 	 * @param boolean $format_flag
 	 * 
@@ -78,11 +88,11 @@ final class CZMLogin extends CZBase
 		return $this->_cz->newCore('login', 'get_values')->exec($format_flag);
 	}
 
-	
+
 	/*
 	 * #Logout
 	 */
-	
+
 	/**
 	 * @author Shin Uesugi
 	 */

@@ -21,7 +21,7 @@ final class CZCformSaveValues extends CZBase
 		);
 		$form->save('uploaded_files', $uploaded_files);
 	}
-	
+
 	/**
 	 * @param object $form
 	 * @param string $part_name
@@ -49,7 +49,7 @@ final class CZCformSaveValues extends CZBase
 					$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_FORM_UPLOAD_FILE, 'Part: ' . $part_name, $form->getMainClassName());
 			}
 		}
-		
+
 		if (!is_uploaded_file($_FILES[$part_name]['tmp_name'])) {
 			$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_FORM_NOT_EXIST_UPLOADED_FILE, 'Part: ' . $part_name, $form->getMainClassName());
 		}
@@ -61,10 +61,10 @@ final class CZCformSaveValues extends CZBase
 			$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_FORM_WRITE_TMP_FILE, 'Part:' . $part_name . '/File:' . $tmp_path, $form->getMainClassName());
 		}
 		self::_saveUploadedFile($form, $part_name, $tmp_path);
-		
+
 		return TRUE;
 	}
-	
+
 	/**
 	 * @param object  $form
 	 * @param string  $part_name
@@ -114,10 +114,10 @@ final class CZCformSaveValues extends CZBase
 		} else {
 			$value = isset($values[$part_name]) ? $values[$part_name] : '';
 		}
-		
+
 		return $value;
 	}
-	
+
 	/**
 	 * @param object $form
 	 * @param string $part_name
@@ -150,10 +150,10 @@ final class CZCformSaveValues extends CZBase
 			$msg = $this->_cz->newUser('config', 'form')->getValue('required_err_msg', 'Please input it.');
 			$this->_cz->newCore('form', 'save_err')->exec($form, $part_name, $msg);
 		}
-		
+
 		return $err_flag;
 	}
-	
+
 	/**
 	 * @param object $form
 	 * @param string $part_name
@@ -171,10 +171,10 @@ final class CZCformSaveValues extends CZBase
 			$this->_cz->newCore('form', 'save_err')->exec($form, $part_name, $msg);
 			return TRUE;
 		}
-		
+
 		return FALSE;
 	}
-	
+
 	/**
 	 * @param object $form
 	 * @param string $part_name
@@ -190,16 +190,16 @@ final class CZCformSaveValues extends CZBase
 		if (!isset($part['validate'])) {
 			return FALSE;
 		}
-		
+
 		$subject = isset($set_values[$part_name]) ? $set_values[$part_name] : '';
 		if ($msg = $this->_cz->newCore('filter', 'validate')->exec($part['validate'], $subject, $set_values)) {
 			$this->_cz->newCore('form', 'save_err')->exec($form, $part_name, $msg);
 			return TRUE;
 		}
-		
+
 		return FALSE;
 	}
-	
+
 	/**
 	 * @param object  $form
 	 * @param array   $values
@@ -212,7 +212,7 @@ final class CZCformSaveValues extends CZBase
 	public function exec($form, $values, $post_flag = FALSE)
 	{
 		$form->free('err_msgs');
-		
+
 		$set_values = array();
 		$parts = $form->getParts();
 		foreach ($parts as $part_name => $part) {
@@ -237,9 +237,9 @@ final class CZCformSaveValues extends CZBase
 				}
 			}
 		}
-		
+
 		$form->save('values', $set_values);
-		
+
 		return !$this->_cz->newCore('form', 'is_err')->exec($form);
 	}
 
@@ -256,9 +256,9 @@ final class CZCformSaveValues extends CZBase
 			$this->_cz->newCore('forward', '404')->exec();
 		}
 		$form->free('uploaded_files');
-		
+
 		$values = $this->_cz->newCore('request', 'get_param')->getPostParams();
-		
+
 		return self::exec($form, $values, TRUE);
 	}
 }

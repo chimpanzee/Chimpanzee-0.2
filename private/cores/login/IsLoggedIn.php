@@ -26,7 +26,7 @@ final class CZCloginIsLoggedIn extends CZBase
 		} else {
 			$success_flag = FALSE;
 		}
-		
+
 		$auto_redirect = $this->_cz->newUser('config', 'login')->getValue('auto_redirect', FALSE);
 		if (!$success_flag && $auto_redirect) {
 			if (!isset($auto_redirect['ctrl_name'])) {
@@ -38,17 +38,17 @@ final class CZCloginIsLoggedIn extends CZBase
 			if (!isset($auto_redirect['secure_flag'])) {
 				$auto_redirect['secure_flag'] = TRUE;
 			}
-			
+
 			$request_url = $this->_cz->newCore('url', 'get_request')->exec();
 			$this->_cz->newCore('ses', 'set')->exec('auto_redirect_src_url', $request_url);
-			
+
 			if (isset($auto_redirect['action_group_name']) && $this->_cz->isValidStr($auto_redirect['action_group_name'])) {
 				$this->_cz->newCore('redirect', 'action')->_exec(array($auto_redirect['action_name'], $auto_redirect['action_group_name'], $auto_redirect['ctrl_name']), $auto_redirect['secure_flag']);
 			} else {
 				$this->_cz->newCore('redirect', 'action')->exec(array($auto_redirect['action_name'], $auto_redirect['ctrl_name']), $auto_redirect['secure_flag']);
 			}
 		}
-		
+
 		return $success_flag;
 	}
 }

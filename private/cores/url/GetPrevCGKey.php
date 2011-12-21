@@ -14,7 +14,7 @@ final class CZCurlGetPrevCGKey extends CZBase
 		if (($action_group_name = $this->_cz->newCore('forward', 'get_prev_action_group_name')->exec()) !== '') {
 			$key .= ':' . $action_group_name;
 		}
-		
+
 		return $key;
 	}
 }

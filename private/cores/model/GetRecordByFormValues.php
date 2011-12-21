@@ -14,10 +14,10 @@ final class CZCmodelGetRecordByFormValues extends CZBase
 		if (!$form_values) {
 			return array();
 		}
-		
+
 		$set_values             = $model->getFormModelSetValues();
 		$ignore_form_part_names = $model->getFormIgnorePartNames();
-		
+
 		$record = array();
 
 		foreach ($form_values as $form_part_name => $form_value) {
@@ -45,7 +45,7 @@ final class CZCmodelGetRecordByFormValues extends CZBase
 				$record[$column_name] = $set_value;
 			}
 		}
-		
+
 		return $record;
 	}
 }

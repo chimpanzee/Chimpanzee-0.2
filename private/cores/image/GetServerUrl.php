@@ -11,7 +11,7 @@ final class CZCimageGetServerUrl extends CZBase
 		if (!($url = $this->_cz->newUser('config', 'image')->getValue('server_url', FALSE))) {
 			$url = $this->_cz->newCore('url', 'get_root')->exec() . '/image.php';
 		}
-		
+
 		return $url;
 	}
 }

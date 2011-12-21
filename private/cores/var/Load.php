@@ -19,7 +19,7 @@ final class CZCvarLoad extends CZBase
 			}
 			$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_VAR_NOT_SAVED_VAR, $var_name, $main_class_name);
 		}
-		
+
 		return $values[$var_name];
 	}
 }

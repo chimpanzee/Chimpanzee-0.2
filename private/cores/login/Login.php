@@ -24,7 +24,7 @@ final class CZCloginLogin extends CZBase
 			$condition_sentences[]          = $column_name . '=:' . $column_name;
 			$condition_values[$column_name] = $values[$column_name];
 		}
-		
+
 		return $this->_cz->newCore('login', 'auth')->exec($model, $condition_sentences, $condition_values);
 	}
 }

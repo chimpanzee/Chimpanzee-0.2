@@ -11,7 +11,7 @@ final class CZCdbGetInsertedId extends CZBase
 	public function exec($sequence_name = NULL)
 	{
 		$pdo = $this->_cz->newCore('db', 'connect')->exec();
-		
+
 		return $pdo->lastInsertId($sequence_name);
 	}
 }

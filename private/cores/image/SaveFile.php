@@ -18,7 +18,7 @@ final class CZCimageSaveFile extends CZBase
 			@unlink($save_path);
 			$this->_cz->newCore('err', 'fatal')->exec(__FILE, __LINE__, CZ_FATAL_IMAGE_WRITE_FILE, $save_path);
 		}
-		
+
 		return basename($save_path);
 	}
 }

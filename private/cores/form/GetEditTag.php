@@ -21,10 +21,10 @@ final class CZCformGetEditTag extends CZBase
 		if ($value !== NULL) {
 			$id .= ':' . $value;
 		}
-		
+
 		return $id;
 	}
-	
+
 	/**
 	 * @param object $form
 	 * @param string $part_name
@@ -48,10 +48,10 @@ final class CZCformGetEditTag extends CZBase
 				$option .=  ' ' . $part['option'];
 			}
 		}
-		
+
 		return $option;
 	}
-	
+
 	/**
 	 * @param object $form
 	 * @param string $part_name
@@ -70,10 +70,10 @@ final class CZCformGetEditTag extends CZBase
 			$tag .= ' value="' . $value . '"';
 		}
 		$tag .= ' />';
-		
+
 		return $tag;
 	}
-	
+
 	/**
 	 * @param object $form
 	 * @param string $part_name
@@ -95,10 +95,10 @@ final class CZCformGetEditTag extends CZBase
 		if (isset($part['label'])) {
 			$tag .= $part['label'];
 		}
-		
+
 		return $tag;
 	}
-	
+
 	/**
 	 * @param object $form
 	 * @param string $part_name
@@ -126,10 +126,10 @@ final class CZCformGetEditTag extends CZBase
 			$tag .= ' />';
 			$tag .= $val;
 		}
-		
+
 		return $tag;
 	}
-	
+
 	/**
 	 * @param object $form
 	 * @param string $part_name
@@ -156,10 +156,10 @@ final class CZCformGetEditTag extends CZBase
 			}
 		}
 		$tag .= '</select>';
-		
+
 		return $tag;
 	}
-	
+
 	/**
 	 * @param object $form
 	 * @param string $part_name
@@ -175,10 +175,10 @@ final class CZCformGetEditTag extends CZBase
 		$tag  = '<textarea' . self::_getTagOption($form, $part_name, $part) . '>';
 		$tag .= $value;
 		$tag .= '</textarea>';
-		
+
 		return $tag;
 	}
-	
+
 	/**
 	 * @param object $form
 	 * @param string $part_name
@@ -195,7 +195,7 @@ final class CZCformGetEditTag extends CZBase
 			$search_child_part_flag = TRUE;
 			$part = $this->_cz->newCore('form', 'get_part')->exec($form, $part_name, $search_child_part_flag);
 		}
-		
+
 		if ($value === NULL) {
 			if (!($values = $form->load('values', array()))) {
 				$values = $this->_cz->newCore('form', 'init_values')->exec($form);
@@ -227,7 +227,7 @@ final class CZCformGetEditTag extends CZBase
 			default:
 				$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_FORM_INVALID_PART_TYPE, $part['type'], $form->getMainClassName());
 		}
-		
+
 		return $tag;
 	}
 }

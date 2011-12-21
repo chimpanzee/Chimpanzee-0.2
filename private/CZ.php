@@ -3,32 +3,32 @@ final class Cz
 {
 	// Object
 	private $_obj_ctrl;
-	
+
 	// CZ directories
 	public $cz_dir;
 	public $private_dir;
 	public $public_dir;
 	public $extensions_dir;
-	
+
 	// User directories
 	public $project_dir;
 	public $applicatoins_dir;
 	public $common_dir;
 	public $application_dir;
 	public $tmp_dir;
-	
+
 	public $application_name;
-	
+
 	public $develop_flag = TRUE;
 
-	
+
 	/*
 	 * #Static object
 	 */
-	
+
 	/**
 	 * @param string $name
-	 *
+	 * 
 	 * @return object
 	 * 
 	 * @author Shin Uesugi
@@ -38,15 +38,15 @@ final class Cz
 		return $this->_obj_ctrl->load('static', $name);
 	}
 
-	
+
 	/*
 	 * #Core object
 	 */
-	
+
 	/**
 	 * @param string $type
 	 * @param string $name
-	 *
+	 * 
 	 * @return object
 	 * 
 	 * @author Shin Uesugi
@@ -55,11 +55,11 @@ final class Cz
 	{
 		return $this->_obj_ctrl->_new('core', $name, $type);
 	}
-	
+
 	/**
 	 * @param string $type
 	 * @param string $name
-	 *
+	 * 
 	 * @return object
 	 * 
 	 * @author Shin Uesugi
@@ -68,7 +68,7 @@ final class Cz
 	{
 		return $this->_obj_ctrl->load('core', $name, $type);
 	}
-	
+
 	/**
 	 * @param string $type
 	 * @param string $name
@@ -79,12 +79,12 @@ final class Cz
 	{
 		$this->_obj_ctrl->unload('core', $name, $type);
 	}
-	
-	
+
+
 	/*
 	 * #Module object
 	 */
-	
+
 	/**
 	 * @param string $name
 	 * 
@@ -118,12 +118,12 @@ final class Cz
 	{
 		$this->_obj_ctrl->unload('module', $name);
 	}
-	
-	
+
+
 	/*
 	 * #User object
 	 */
-	
+
 	/**
 	 * @param integer $arg_num
 	 * @param array   $args
@@ -140,10 +140,10 @@ final class Cz
 				$params[] = $args[$i];
 			}
 		}
-		
+
 		return $params;
 	}
-	
+
 	/**
 	 * @param string  $type
 	 * @param string  $name
@@ -184,12 +184,12 @@ final class Cz
 	{
 		$this->_obj_ctrl->unload('user', $name, $type);
 	}
-	
-	
+
+
 	/*
 	 * #Unload all dynamic object
 	 */
-	
+
 	/**
 	 * @author Shin Uesugi
 	 */
@@ -197,12 +197,12 @@ final class Cz
 	{
 		$this->_obj_ctrl->unloadAll();
 	}
-	
-	
+
+
 	/*
 	 * #Set application name
 	 */
-	
+
 	/**
 	 * @param string $application_name
 	 */
@@ -215,12 +215,12 @@ final class Cz
 		}
 		$this->application_name = $application_name;
 	}
-	
-	
+
+
 	/*
 	 * #Initialization
 	 */
-	
+
 	/**
 	 * @param string $cz_dir
 	 * @param string $project_dir
@@ -236,17 +236,17 @@ final class Cz
 		$this->extensions_dir = $cz_dir . DIRECTORY_SEPARATOR . 'extensions';
 
 		$this->project_dir = $project_dir;
-		
+
 		$this->applicatoins_dir = $this->project_dir . DIRECTORY_SEPARATOR . 'applications';
-		
+
 		$this->common_dir = $this->applicatoins_dir . DIRECTORY_SEPARATOR . '_common';
 		self::setApplicationName($application_name);
-		
+
 		require_once 'ObjCtrl.php';
 		$this->_obj_ctrl = new CZObjCtrl($this);
-		
+
 		self::loadStatic('autoload');
-		
+
 
 		/*
 		 * Global config
@@ -258,7 +258,7 @@ final class Cz
 		} else {
 			ini_set('display_errors', 'Off');
 		}
-		
+
 		$this->tmp_dir = self::newUser('config', 'CZ')->getValue('tmp_dir', FALSE);
 		if (!$this->tmp_dir) {
 			$this->tmp_dir = $this->project_dir . DIRECTORY_SEPARATOR . 'tmp';
@@ -269,7 +269,7 @@ final class Cz
 	/*
 	 * #Other cz methods
 	 */
-	
+
 	/**
 	 * @param string $value
 	 * 
@@ -281,7 +281,7 @@ final class Cz
 	{
 		return ($value !== NULL) && !is_bool($value) && !is_array($value) && ($value !== '');
 	}
-	
+
 	/**
 	 * ex: '_xxx_yyy...' => '_XxxYyy...'
 	 * 
@@ -298,7 +298,7 @@ final class Cz
 		foreach ($parts as $part) {
 			$upper_str .= ($part !== '') ? ucfirst($part) : '_';
 		}
-		
+
 		return $upper_str;
 	}
 }

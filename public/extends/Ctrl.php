@@ -31,7 +31,7 @@ class CZCtrl extends CZFunc
 	{
 		$this->_cz->loadStatic('forward')->_exec($action, $params);
 	}
-	
+
 	/**
 	 * @param array $action(
 	 *   string Action name
@@ -56,7 +56,7 @@ class CZCtrl extends CZFunc
 	{
 		$this->_cz->loadStatic('forward')->exec($action, $params);
 	}
-	
+
 	/**
 	 * @author Shin Uesugi
 	 */
@@ -64,7 +64,7 @@ class CZCtrl extends CZFunc
 	{
 		$this->_cz->newCore('forward', '403')->exec();
 	}
-	
+
 	/**
 	 * @author Shin Uesugi
 	 */
@@ -72,12 +72,12 @@ class CZCtrl extends CZFunc
 	{
 		$this->_cz->newCore('forward', '404')->exec();
 	}
-	
-	
+
+
 	/*
 	 * #Redirect
 	 */
-	
+
 	/**
 	 * @param array $action(
 	 *   string Action name
@@ -130,7 +130,7 @@ class CZCtrl extends CZFunc
 	{
 		$this->_cz->newCore('redirect', 'action')->exec($action, $secure_flag, $params);
 	}
-	
+
 	/**
 	 * @param boolean $secure_flag <option>
 	 * @param array   $params(
@@ -152,7 +152,7 @@ class CZCtrl extends CZFunc
 	{
 		$this->_cz->newCore('redirect', 'root')->exec($secure_flag, $params);
 	}
-	
+
 	/**
 	 * @return exit
 	 * 
@@ -162,7 +162,7 @@ class CZCtrl extends CZFunc
 	{
 		$this->_cz->newCore('redirect', 'return')->exec();
 	}
-	
+
 	/**
 	 * @param string $url
 	 * 
@@ -174,7 +174,7 @@ class CZCtrl extends CZFunc
 	{
 		$this->_cz->newCore('redirect', '301')->exec($url);
 	}
-	
+
 	/**
 	 * @param string $url
 	 * 
@@ -186,12 +186,12 @@ class CZCtrl extends CZFunc
 	{
 		$this->_cz->newCore('redirect', '302')->exec($url);
 	}
-	
-	
+
+
 	/*
 	 * #Process
 	 */
-	
+
 	/**
 	 * @param string $process_name <option>
 	 * 
@@ -201,7 +201,7 @@ class CZCtrl extends CZFunc
 	{
 		$this->_cz->newCore('process', 'begin')->exec($process_name);
 	}
-	
+
 	/**
 	 * @param string / array $process_name <option>
 	 * 
@@ -211,7 +211,7 @@ class CZCtrl extends CZFunc
 	{
 		$this->_cz->newCore('process', 'check')->exec($process_name);
 	}
-	
+
 	/**
 	 * @author Shin Uesugi
 	 */
@@ -219,12 +219,12 @@ class CZCtrl extends CZFunc
 	{
 		$this->_cz->newCore('process', 'end')->exec();
 	}
-	
-	
+
+
 	/*
 	 * #Get previous
 	 */
-	
+
 	/**
 	 * @return string / NULL
 	 * 
@@ -234,7 +234,7 @@ class CZCtrl extends CZFunc
 	{
 		return $this->_cz->loadStatic('forward')->getPrevCtrlName();
 	}
-	
+
 	/**
 	 * @return string / NULL
 	 * 
@@ -244,7 +244,7 @@ class CZCtrl extends CZFunc
 	{
 		return $this->_cz->loadStatic('forward')->getPrevActionGroupName();
 	}
-	
+
 	/**
 	 * @return string / NULL
 	 * 
@@ -254,12 +254,12 @@ class CZCtrl extends CZFunc
 	{
 		return $this->_cz->loadStatic('forward')->getPrevActionName();
 	}
-	
-	
+
+
 	/*
 	 * #Check previous action
 	 */
-	
+
 	/**
 	 * @param array $actions
 	 * 
@@ -269,7 +269,7 @@ class CZCtrl extends CZFunc
 	{
 		$this->_cz->newCore('forward', 'check_prev_actions')->_exec($actions);
 	}
-	
+
 	/**
 	 * @param array $actions
 	 * 
@@ -279,12 +279,12 @@ class CZCtrl extends CZFunc
 	{
 		$this->_cz->newCore('forward', 'check_prev_actions')->exec($actions);
 	}
-	
-	
+
+
 	/*
 	 * #View
 	 */
-	
+
 	/**
 	 * @param string  $var_name
 	 * @param mixed   $value
@@ -297,7 +297,7 @@ class CZCtrl extends CZFunc
 	{
 		$this->_cz->newCore('view', 'add_var')->exec($var_name, $value, $escape_flag, $ignore_escape_keys);
 	}
-	
+
 	/**
 	 * @param string $file
 	 * 

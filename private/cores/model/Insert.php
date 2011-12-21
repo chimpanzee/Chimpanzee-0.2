@@ -12,11 +12,11 @@ final class CZCmodelInsert extends CZBase
 	public function exec($model, $record)
 	{
 		$table_name = $model->getTableName();
-		
+
 		if (!$this->_cz->newCore('model', 'is_unique')->exec($model, $record)) {
 			return FALSE;
 		}
-		
+
 		return $this->_cz->newCore('db', 'insert')->exec($table_name, $record);
 	}
 }

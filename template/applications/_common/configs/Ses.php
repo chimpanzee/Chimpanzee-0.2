@@ -4,7 +4,7 @@ final class configSes extends CZConfig
 	public function _construct()
 	{
 		$this->setValues(array(
-			'secure_flag' => TRUE,
+			'secure_flag' => FALSE,
 
 			'server_lifetime' => 86400,
 

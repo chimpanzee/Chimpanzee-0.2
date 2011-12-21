@@ -8,7 +8,7 @@ final class CZObj
 	/*
 	 * #Initialization
 	 */
-	
+
 	/**
 	 * @param object $cz
 	 * 
@@ -18,8 +18,8 @@ final class CZObj
 	{
 		$this->_cz = $cz;
 	}
-	
-	
+
+
 	/*
 	 * #Module
 	 */
@@ -35,7 +35,7 @@ final class CZObj
 	{
 		return $this->_cz->newModule($name);
 	}
-	
+
 	/**
 	 * @param string $name
 	 * 
@@ -47,7 +47,7 @@ final class CZObj
 	{
 		return $this->_cz->loadModule($name);
 	}
-	
+
 	/**
 	 * @param string $name
 	 * 
@@ -57,12 +57,12 @@ final class CZObj
 	{
 		$this->_cz->unloadModule($name);
 	}
-	
-	
+
+
 	/*
 	 * #Model
 	 */
-	
+
 	/**
 	 * @param string $name
 	 * 
@@ -74,10 +74,10 @@ final class CZObj
 	{
 		$arg_num = func_num_args();
 		$args    = func_get_args();
-		
+
 		return $this->_cz->newUser('model', $name, $arg_num, $args);
 	}
-	
+
 	/**
 	 * @param string $name
 	 * 
@@ -89,10 +89,10 @@ final class CZObj
 	{
 		$arg_num = func_num_args();
 		$args    = func_get_args();
-		
+
 		return $this->_cz->loadUser('model', $name, $arg_num, $args);
 	}
-	
+
 	/**
 	 * @param string $name
 	 * 
@@ -102,12 +102,12 @@ final class CZObj
 	{
 		$this->_cz->unloadUser('model', $name);
 	}
-	
-	
+
+
 	/*
 	 * #Form
 	 */
-	
+
 	/**
 	 * @param string $name
 	 * 
@@ -119,10 +119,10 @@ final class CZObj
 	{
 		$arg_num = func_num_args();
 		$args    = func_get_args();
-		
+
 		return $this->_cz->newUser('form', $name, $arg_num, $args);
 	}
-	
+
 	/**
 	 * @param string $name
 	 * 
@@ -134,10 +134,10 @@ final class CZObj
 	{
 		$arg_num = func_num_args();
 		$args    = func_get_args();
-		
+
 		return $this->_cz->loadUser('form', $name, $arg_num, $args);
 	}
-	
+
 	/**
 	 * @param string $name
 	 * 
@@ -147,12 +147,12 @@ final class CZObj
 	{
 		$this->_cz->unloadUser('form', $name);
 	}
-	
-	
+
+
 	/*
 	 * #Func
 	 */
-	
+
 	/**
 	 * @param string $name
 	 * 
@@ -164,10 +164,10 @@ final class CZObj
 	{
 		$arg_num = func_num_args();
 		$args    = func_get_args();
-		
+
 		return $this->_cz->newUser('func', $name, $arg_num, $args);
 	}
-	
+
 	/**
 	 * @param string $name
 	 * 
@@ -179,10 +179,10 @@ final class CZObj
 	{
 		$arg_num = func_num_args();
 		$args    = func_get_args();
-		
+
 		return $this->_cz->loadUser('func', $name, $arg_num, $args);
 	}
-	
+
 	/**
 	 * @param string $name
 	 * 
@@ -192,12 +192,12 @@ final class CZObj
 	{
 		$this->_cz->unloadUser('func', $name);
 	}
-	
-	
+
+
 	/*
 	 * #Table
 	 */
-	
+
 	/**
 	 * @param string $name
 	 * 
@@ -209,10 +209,10 @@ final class CZObj
 	{
 		$arg_num = func_num_args();
 		$args    = func_get_args();
-		
+
 		return $this->_cz->newUser('table', $name, $arg_num, $args);
 	}
-	
+
 	/**
 	 * @param string $name
 	 * 
@@ -224,10 +224,10 @@ final class CZObj
 	{
 		$arg_num = func_num_args();
 		$args    = func_get_args();
-		
+
 		return $this->_cz->loadUser('table', $name, $arg_num, $args);
 	}
-	
+
 	/**
 	 * @param string $name
 	 * 
@@ -237,12 +237,12 @@ final class CZObj
 	{
 		$this->_cz->newUser('table', $name);
 	}
-	
-	
+
+
 	/*
 	 * #Unload all
 	 */
-	
+
 	/**
 	 * @author Shin Uesugi
 	 */

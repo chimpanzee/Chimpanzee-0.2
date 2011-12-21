@@ -30,10 +30,10 @@ final class CZCviewConvert extends CZBase
 				$value = mb_convert_kana($value, 'ask');
 			}
 		}
-		
+
 		return $value;
 	}
-	
+
 	/**
 	 * @param mixed   $value
 	 * @param boolean $escape_flag
@@ -46,7 +46,7 @@ final class CZCviewConvert extends CZBase
 	public function exec($value, $escape_flag = TRUE, $ignore_escape_keys = array())
 	{
 		$mobile_flag = $this->_cz->newCore('mobile', 'is_mobile')->exec();
-		
+
 		return self::_exec($value, $escape_flag, $ignore_escape_keys, $mobile_flag);
 	}
 }

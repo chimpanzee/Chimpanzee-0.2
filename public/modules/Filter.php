@@ -14,8 +14,8 @@ final class CZMFilter extends CZBase
 	{
 		return $this->_cz->newCore('filter', 'convert')->exec($info, $subject, $ref_values);
 	}
-	
-	
+
+
 	/**
 	 * @param array  $info
 	 * @param string $subject

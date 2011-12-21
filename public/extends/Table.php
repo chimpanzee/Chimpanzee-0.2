@@ -2,10 +2,10 @@
 class CZTable extends CZBase
 {
 	private $_main_class_name;
-	
+
 	private $_table = array();
 
-	
+
 	/**
 	 * @param string $main_class_name
 	 * 
@@ -15,7 +15,7 @@ class CZTable extends CZBase
 	{
 		$this->_main_class_name = $main_class_name;
 	}
-	
+
 
 	/**
 	 * @param array $table
@@ -26,7 +26,7 @@ class CZTable extends CZBase
 	{
 		$this->_table = $table;
 	}
-	
+
 	/**
 	 * @return array
 	 * 
@@ -37,7 +37,7 @@ class CZTable extends CZBase
 		if (!$this->_table) {
 			$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_TABLE_NOT_SET_TABLE, '', $this->_main_class_name);
 		}
-		
+
 		return $this->_table;
 	}
 
@@ -57,7 +57,7 @@ class CZTable extends CZBase
 			}
 			$this->_cz->newCore('err', 'fatal')->exec(__FILE__, __LINE__, CZ_FATAL_TABLE_NOT_SET_ID, $id, $this->_main_class_name);
 		}
-		
+
 		return $this->_table[$id];
 	}
 }
