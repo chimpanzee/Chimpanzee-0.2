@@ -158,13 +158,60 @@ class CZCtrl extends CZFunc
     }
 
     /**
+     * @param array   $default_action <Option>
+     *        array(
+     *            string Controller name
+     *            string Action group name <Option>
+     *            string Action name <Option>
+     *        )
+     * @param boolean $secure_flag <Option>
+     * @param array   $params <Option>
+     *        array(
+     *            'routing' => array(
+     *                string Parameter value
+     *                ...
+     *            ) <Option>
+     *            'get' => array(
+     *                string Parameter name => string Parameter value
+     *                ...
+     *            ) <Option>
+     *        )
+     * 
      * @return Exit / FALSE
      * 
      * @author Shin Uesugi
      */
-    protected function redirectReturn()
+    protected function _redirectReturn($default_action = NULL, $secure_flag = NULL, $params = NULL)
     {
-        return $this->_cz->newCore('redirect', 'return')->exec();
+        return $this->_cz->newCore('redirect', 'return')->_exec($default_action, $secure_flag, $params);
+    }
+    
+    /**
+     * @param array   $default_action <Option>
+     *        array(
+     *            string Controller name
+     *            string Action name <Option>
+     *        )
+     * @param boolean $secure_flag <Option>
+     * @param array   $params <Option>
+     *        array(
+     *            'routing' => array(
+     *                string Parameter value
+     *                ...
+     *            ) <Option>
+     *            'get' => array(
+     *                string Parameter name => string Parameter value
+     *                ...
+     *            ) <Option>
+     *        )
+     * 
+     * @return Exit / FALSE
+     * 
+     * @author Shin Uesugi
+     */
+    protected function redirectReturn($default_action = NULL, $secure_flag = NULL, $params = NULL)
+    {
+        return $this->_cz->newCore('redirect', 'return')->exec($default_action, $secure_flag, $params);
     }
 
     /**
