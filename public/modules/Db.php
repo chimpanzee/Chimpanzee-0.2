@@ -28,9 +28,9 @@ final class CZMDb extends CZBase
 
     /**
      * @param string $query
-     * 
+     *
      * @return integer
-     * 
+     *
      * @author Shin Uesugi
      */
     public function request($query)
@@ -46,9 +46,9 @@ final class CZMDb extends CZBase
     /**
      * @param string $table_name
      * @param array  $record
-     * 
+     *
      * @return integer
-     * 
+     *
      * @author Shin Uesugi
      */
     public function insert($table_name, $record)
@@ -58,7 +58,7 @@ final class CZMDb extends CZBase
 
     /**
      * @return PDO::lastInsertId
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getInsertedId()
@@ -71,9 +71,9 @@ final class CZMDb extends CZBase
      * @param array  $record
      * @param array  $condition_sentences <Option>
      * @param array  $condition_values <Option>
-     * 
+     *
      * @return integer
-     * 
+     *
      * @author Shin Uesugi
      */
     public function update($table_name, $record, $condition_sentences = array(), $condition_values = array())
@@ -89,9 +89,9 @@ final class CZMDb extends CZBase
      *        )
      * @param array  $condition_sentences <Option>
      * @param array  $condition_values <Option>
-     * 
+     *
      * @return integer
-     * 
+     *
      * @author Shin Uesugi
      */
     public function delete($table_name, $condition_sentences = array(), $condition_values = array())
@@ -109,9 +109,9 @@ final class CZMDb extends CZBase
      * @param string $column_name
      * @param array  $condition_sentences <Option>
      * @param array  $condition_values <Option>
-     * 
+     *
      * @return string / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getValue($table_name, $column_name, $condition_sentences = array(), $condition_values = array())
@@ -124,9 +124,9 @@ final class CZMDb extends CZBase
      * @param array  $column_names <Option>
      * @param array  $condition_sentences <Option>
      * @param array  $condition_values <Option>
-     * 
+     *
      * @return array / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getRecord($table_name, $column_names = array(), $condition_sentences = array(), $condition_values = array())
@@ -140,9 +140,9 @@ final class CZMDb extends CZBase
      * @param array  $condition_sentences <Option>
      * @param array  $condition_values <Option>
      * @param array  $options <Option>
-     * 
+     *
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getRecords($table_name, $column_names = array(), $condition_sentences = array(), $condition_values = array(), $options = array())

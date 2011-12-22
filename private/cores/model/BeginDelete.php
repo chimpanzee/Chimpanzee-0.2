@@ -4,9 +4,9 @@ final class CZCmodelBeginDelete extends CZBase
     /**
      * @param object  $model
      * @param integer $id
-     * 
+     *
      * @return array / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($model, $id)

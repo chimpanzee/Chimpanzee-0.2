@@ -13,9 +13,9 @@ final class CZCredirectRoot extends CZBase
      *                ...
      *            ) <Option>
      *        ) <Option>
-     * 
+     *
      * @return Exit
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($secure_flag = NULL, $params = NULL)

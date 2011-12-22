@@ -10,9 +10,9 @@ final class CZCfilterBase extends CZBase
      * @param array  $ref_values
      * @param object $main
      * @param object $funcs
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($info, $subject, $ref_values, $main, $funcs)
@@ -88,9 +88,9 @@ final class CZCfilterBase extends CZBase
      * @param array $params
      * @param array $value_param_names
      * @param array $option_param_names
-     * 
+     *
      * @param boolean
-     * 
+     *
      * @author Shin Uesugi
      */
     public function isExecFunc($method_name, $params, $value_param_names, $option_param_names = array())

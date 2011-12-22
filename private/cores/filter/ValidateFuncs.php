@@ -11,7 +11,7 @@ final class CZCfilterValidateFuncs extends CZBase
      *            'subject' => string
      *            'pattern' => string
      *        )
-     * 
+     *
      * @author Shin Uesugi
      */
     public function cz_preg_match($base, $params)
@@ -25,7 +25,7 @@ final class CZCfilterValidateFuncs extends CZBase
         if (!$base->isExecFunc(__METHOD__, $params, $value_param_names, $option_param_names)) {
             return '';
         }
-        
+
         if (!preg_match($params['pattern'], $params['subject'])) {
             return 'It is not corresponding to the pattern.';
         }
@@ -45,7 +45,7 @@ final class CZCfilterValidateFuncs extends CZBase
      *            'min'     => integer <Option>
      *            'max'     => integer <Option>
      *        )
-     * 
+     *
      * @author Shin Uesugi
      */
     public function cz_int($base, $params)
@@ -56,7 +56,7 @@ final class CZCfilterValidateFuncs extends CZBase
         if (!$base->isExecFunc(__METHOD__, $params, $value_param_names)) {
             return '';
         }
-        
+
         if (!is_numeric($params['subject']) || (strpos($params['subject'], '.') !== FALSE)) {
             return 'Please input it by the integer.';
         }
@@ -78,7 +78,7 @@ final class CZCfilterValidateFuncs extends CZBase
      *            'min'     => integer <Option>
      *            'max'     => integer <Option>
      *        )
-     * 
+     *
      * @author Shin Uesugi
      */
     public function cz_float($base, $params)
@@ -93,7 +93,7 @@ final class CZCfilterValidateFuncs extends CZBase
         if (!is_numeric($params['subject'])) {
             return 'Please input it by the numerical value.';
         }
-        
+
         if (isset($params['min']) && ($params['subject'] < $params['min'])) {
             return 'Please input it by ' . $params['min'] . ' or more.';
         }
@@ -114,7 +114,7 @@ final class CZCfilterValidateFuncs extends CZBase
      * @param array  $params(
      *            'subject' => string User name
      *        )
-     * 
+     *
      * @author Shin Uesugi
      */
     public function cz_facebook_user_name($base, $params)
@@ -143,7 +143,7 @@ final class CZCfilterValidateFuncs extends CZBase
      * @param array  $params(
      *            'subject' => string User name
      *        )
-     * 
+     *
      * @author Shin Uesugi
      */
     public function cz_twitter_user_name($base, $params)
@@ -171,7 +171,7 @@ final class CZCfilterValidateFuncs extends CZBase
      * @param integer $year
      * @param integer $month
      * @param integer $day
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _date($year, $month, $day)
@@ -188,7 +188,7 @@ final class CZCfilterValidateFuncs extends CZBase
      * @param array  $params(
      *            'subject' => string Date
      *        )
-     * 
+     *
      * @author Shin Uesugi
      */
     public function cz_date($base, $params)
@@ -214,7 +214,7 @@ final class CZCfilterValidateFuncs extends CZBase
      *            'month' => integer
      *            'day'   => integer
      *        )
-     * 
+     *
      * @author Shin Uesugi
      */
     public function cz_date_parts($base, $params)
@@ -241,7 +241,7 @@ final class CZCfilterValidateFuncs extends CZBase
      * @param array  $params(
      *            'subject' => string URL
      *        )
-     * 
+     *
      * @author Shin Uesugi
      */
     public function cz_url($base, $params)
@@ -268,7 +268,7 @@ final class CZCfilterValidateFuncs extends CZBase
     /**
      * @param object $base
      * @param string $mail_addr
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _mail_addr($mail_addr)
@@ -285,7 +285,7 @@ final class CZCfilterValidateFuncs extends CZBase
      * @param array  $params(
      *            'subject' => string Mail address
      *        )
-     * 
+     *
      * @author Shin Uesugi
      */
     public function cz_mail_addr($base, $params)
@@ -306,7 +306,7 @@ final class CZCfilterValidateFuncs extends CZBase
      *            'account' => string
      *            'domain'  => string
      *        )
-     * 
+     *
      * @author Shin Uesugi
      */
     public function cz_mail_addr_parts($base, $params)
@@ -330,7 +330,7 @@ final class CZCfilterValidateFuncs extends CZBase
     /**
      * @param object $base
      * @param string $tel_num
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _tel_num($tel_num)
@@ -347,7 +347,7 @@ final class CZCfilterValidateFuncs extends CZBase
      * @param array  $params(
      *            'subject' => string Telephone number
      *        )
-     * 
+     *
      * @author Shin Uesugi
      */
     public function cz_tel_num($base, $params)
@@ -369,7 +369,7 @@ final class CZCfilterValidateFuncs extends CZBase
      *            'city' => string
      *            'rest' => string
      *        )
-     * 
+     *
      * @author Shin Uesugi
      */
     public function cz_tel_num_parts($base, $params)
@@ -394,7 +394,7 @@ final class CZCfilterValidateFuncs extends CZBase
     /**
      * @param object $base
      * @param string $tel_num
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _mobile_tel_num($tel_num)
@@ -411,7 +411,7 @@ final class CZCfilterValidateFuncs extends CZBase
      * @param array  $params(
      *            'subject' => string Telephone number
      *        )
-     * 
+     *
      * @author Shin Uesugi
      */
     public function cz_mobile_tel_num($base, $params)
@@ -433,7 +433,7 @@ final class CZCfilterValidateFuncs extends CZBase
      *            'city' => string
      *            'rest' => string
      *        )
-     * 
+     *
      * @author Shin Uesugi
      */
     public function cz_mobile_tel_num_parts($base, $params)
@@ -457,7 +457,7 @@ final class CZCfilterValidateFuncs extends CZBase
 
     /**
      * @param string $zip_code
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _zip_code($zip_code)
@@ -474,7 +474,7 @@ final class CZCfilterValidateFuncs extends CZBase
      * @param array  $params(
      *            'subject' => string Zip code
      *        )
-     * 
+     *
      * @author Shin Uesugi
      */
     public function cz_zip_code($base, $params)
@@ -495,7 +495,7 @@ final class CZCfilterValidateFuncs extends CZBase
      *            'head' => string
      *            'tail' => string
      *        )
-     * 
+     *
      * @author Shin Uesugi
      */
     public function cz_zip_code_parts($base, $params)
@@ -521,7 +521,7 @@ final class CZCfilterValidateFuncs extends CZBase
      * @param array  $params(
      *            'subject' => string Credit card number
      *        )
-     * 
+     *
      * @author Shin Uesugi
      */
     public function cz_credit_card_num($base, $params)

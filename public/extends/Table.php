@@ -8,7 +8,7 @@ class CZTable extends CZBase
 
     /**
      * @param string $main_class_name
-     * 
+     *
      * @author Shin Uesugi
      */
     public function _setMainClassName($main_class_name)
@@ -19,7 +19,7 @@ class CZTable extends CZBase
 
     /**
      * @param array $table
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function set($table)
@@ -29,7 +29,7 @@ class CZTable extends CZBase
 
     /**
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function get()
@@ -44,9 +44,9 @@ class CZTable extends CZBase
     /**
      * @param string $id
      * @param string $default_value <Option>
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getValue($id, $default_value = NULL)

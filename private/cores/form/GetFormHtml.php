@@ -3,9 +3,9 @@ final class CZCformGetFormHtml extends CZBase
 {
     /**
      * @param object $form
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($form)

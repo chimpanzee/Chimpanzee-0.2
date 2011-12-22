@@ -3,9 +3,9 @@ final class CZCloginRelogin extends CZBase
 {
     /**
      * @param object $model
-     * 
+     *
      * @return boolean
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($model)

@@ -4,9 +4,9 @@ final class CZChtmlGetList extends CZBase
     /**
      * @param array $caption_areas
      * @param array $data_areas_list
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($caption_areas, $data_areas_list)

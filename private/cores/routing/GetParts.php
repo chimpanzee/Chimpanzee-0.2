@@ -3,7 +3,7 @@ final class CZCroutingGetParts extends CZBase
 {
     /**
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _getUrlParts()
@@ -24,7 +24,7 @@ final class CZCroutingGetParts extends CZBase
 
     /**
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec()

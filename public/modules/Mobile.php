@@ -3,7 +3,7 @@ final class CZMMobile extends CZBase
 {
     /**
      * @return boolean
-     * 
+     *
      * @author Shin Uesugi
      */
     public function isMobile()
@@ -14,7 +14,7 @@ final class CZMMobile extends CZBase
 
     /**
      * @return string / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getCarrierName()
@@ -25,7 +25,7 @@ final class CZMMobile extends CZBase
 
     /**
      * @return string / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getUID()

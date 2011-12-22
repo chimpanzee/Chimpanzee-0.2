@@ -6,9 +6,9 @@ final class CZCformGetEditTag extends CZBase
      * @param string $part_name
      * @param array  $part
      * @param string $value <Option>
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _getTagId($form, $part_name, $part, $value = NULL)
@@ -30,9 +30,9 @@ final class CZCformGetEditTag extends CZBase
      * @param string $part_name
      * @param array  $part
      * @param string $value <Option>
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _getTagOption($form, $part_name, $part, $value = NULL)
@@ -57,9 +57,9 @@ final class CZCformGetEditTag extends CZBase
      * @param string $part_name
      * @param array  $part
      * @param string $value <Option>
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _getInputTag($form, $part_name, $part, $value = NULL)
@@ -79,9 +79,9 @@ final class CZCformGetEditTag extends CZBase
      * @param string $part_name
      * @param array  $part
      * @param string $value
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _getInputCheckboxTag($form, $part_name, $part, $value)
@@ -104,9 +104,9 @@ final class CZCformGetEditTag extends CZBase
      * @param string $part_name
      * @param array  $part
      * @param string $value
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _getInputRadioTag($form, $part_name, $part, $value)
@@ -135,9 +135,9 @@ final class CZCformGetEditTag extends CZBase
      * @param string $part_name
      * @param array  $part
      * @param string $value
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _getSelectTag($form, $part_name, $part, $value)
@@ -165,9 +165,9 @@ final class CZCformGetEditTag extends CZBase
      * @param string $part_name
      * @param array  $part
      * @param string $value
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _getTextareaTag($form, $part_name, $part, $value)
@@ -184,9 +184,9 @@ final class CZCformGetEditTag extends CZBase
      * @param string $part_name
      * @param array  $part
      * @param string $value
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($form, $part_name, $part = array(), $value = NULL)

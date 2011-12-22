@@ -29,9 +29,9 @@ final class CZSForward extends CZBase
      *                ...
      *            ) <Option>
      *        ) <Option>
-     * 
+     *
      * @return Exit
-     * 
+     *
      * @author Shin Uesugi
      */
     public function _exec($action, $params = NULL)
@@ -58,9 +58,9 @@ final class CZSForward extends CZBase
      *                ...
      *            ) <Option>
      *        ) <Option>
-     * 
+     *
      * @return Exit
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($action, $params = NULL)
@@ -79,7 +79,7 @@ final class CZSForward extends CZBase
 
     /**
      * @param string $name
-     * 
+     *
      * @author Shin Uesugi
      */
     public function setCtrlName($name)
@@ -89,7 +89,7 @@ final class CZSForward extends CZBase
 
     /**
      * @param string $name
-     * 
+     *
      * @author Shin Uesugi
      */
     public function setActionGroupName($name)
@@ -99,7 +99,7 @@ final class CZSForward extends CZBase
 
     /**
      * @param string $name
-     * 
+     *
      * @author Shin Uesugi
      */
     public function setActionName($name)
@@ -109,7 +109,7 @@ final class CZSForward extends CZBase
 
     /**
      * @param string $name
-     * 
+     *
      * @author Shin Uesugi
      */
     public function setPrevCtrlName($name)
@@ -119,7 +119,7 @@ final class CZSForward extends CZBase
 
     /**
      * @param string $name
-     * 
+     *
      * @author Shin Uesugi
      */
     public function setPrevActionGroupName($name)
@@ -129,7 +129,7 @@ final class CZSForward extends CZBase
 
     /**
      * @param string $name
-     * 
+     *
      * @author Shin Uesugi
      */
     public function setPrevActionName($name)
@@ -144,7 +144,7 @@ final class CZSForward extends CZBase
 
     /**
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getCtrlName()
@@ -154,7 +154,7 @@ final class CZSForward extends CZBase
 
     /**
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getActionGroupName()
@@ -164,7 +164,7 @@ final class CZSForward extends CZBase
 
     /**
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getActionName()
@@ -174,7 +174,7 @@ final class CZSForward extends CZBase
 
     /**
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getPrevCtrlName()
@@ -184,7 +184,7 @@ final class CZSForward extends CZBase
 
     /**
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getPrevActionGroupName()
@@ -194,7 +194,7 @@ final class CZSForward extends CZBase
 
     /**
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getPrevActionName()

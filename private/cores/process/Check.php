@@ -7,9 +7,9 @@ final class CZCprocessCheck extends CZBase
      *            string Process name
      *            ...
      *        )
-     * 
+     *
      * @return Void / Forward 403
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($process_name = NULL)
@@ -20,7 +20,7 @@ final class CZCprocessCheck extends CZBase
             if ($process_name === NULL) {
                 $process_name = $this->_cz->newCore('process', 'get_default_name')->exec();
             }
-            
+
             $process_names = array($process_name);
         }
 

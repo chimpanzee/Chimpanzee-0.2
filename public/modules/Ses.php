@@ -4,7 +4,7 @@ final class CZMSes extends CZBase
     /**
      * @param string $var_name
      * @param mixed  $value
-     * 
+     *
      * @author Shin Uesugi
      */
     public function set($var_name, $value)
@@ -15,9 +15,9 @@ final class CZMSes extends CZBase
     /**
      * @param string $var_name
      * @param mixed  $default_value <Option>
-     * 
+     *
      * @return mixed
-     * 
+     *
      * @author Shin Uesugi
      */
     public function get($var_name, $default_value = NULL)
@@ -27,7 +27,7 @@ final class CZMSes extends CZBase
 
     /**
      * @param string $var_name
-     * 
+     *
      * @author Shin Uesugi
      */
     public function free($var_name)

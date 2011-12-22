@@ -5,9 +5,9 @@ final class CZCformLoadErr extends CZBase
      * @param object $form
      * @param string $part_name
      * @param string $default_msg <Option>
-     * 
+     *
      * @return string / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($form, $part_name, $default_msg = NULL)

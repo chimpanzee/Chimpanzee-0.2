@@ -4,9 +4,9 @@ final class CZCmodelBeginUpdate extends CZBase
     /**
      * @param object  $model
      * @param integer $id
-     * 
+     *
      * @return array / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _getFormValues($model, $id)
@@ -52,9 +52,9 @@ final class CZCmodelBeginUpdate extends CZBase
     /**
      * @param object  $model
      * @param integer $id
-     * 
+     *
      * @return array / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($model, $id)

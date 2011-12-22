@@ -5,9 +5,9 @@ final class CZCformGetPart extends CZBase
      * @param object  $form
      * @param string  $part_name
      * @param boolean $search_child_part_flag <Default: FALSE>
-     * 
+     *
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($form, $part_name, $search_child_part_flag = FALSE)

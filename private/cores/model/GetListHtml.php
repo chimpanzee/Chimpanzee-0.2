@@ -10,9 +10,9 @@ final class CZCmodelGetListHtml extends CZBase
      * @param boolean $link_to_delete_flag
      * @param boolean $add_id_column_flag
      * @param string  $id_column_name
-     * 
+     *
      * @return array / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _getCaptionAreas($model_records, $captions, $records, $link_to_detail_flag, $link_to_update_flag, $link_to_delete_flag, $add_id_column_flag, $id_column_name)
@@ -55,9 +55,9 @@ final class CZCmodelGetListHtml extends CZBase
      * @param boolean $link_to_delete_flag
      * @param boolean $add_id_column_flag
      * @param string  $id_column_name
-     * 
+     *
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _getDataAreasList($model_records, $captions, $records, $link_to_detail_flag, $link_to_update_flag, $link_to_delete_flag, $add_id_column_flag, $id_column_name)
@@ -116,9 +116,9 @@ final class CZCmodelGetListHtml extends CZBase
 
     /**
      * @param object $model_records
-     * 
+     *
      * @return string / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($model_records)

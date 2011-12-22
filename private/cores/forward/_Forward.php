@@ -17,7 +17,7 @@ final class CZCforward_Forward extends CZBase
      *                ...
      *            ) <Option>
      *        ) <Option>
-     * 
+     *
      * @return array(
      *             object Controller object
      *             string Action method name
@@ -26,7 +26,7 @@ final class CZCforward_Forward extends CZBase
      *                 ...
      *             )
      *         )
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($action, $params = NULL)

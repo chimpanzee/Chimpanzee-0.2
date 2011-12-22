@@ -4,9 +4,9 @@ final class CZCformGetDefaultValue extends CZBase
     /**
      * @param object $form
      * @param array  $part
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($form, $part)

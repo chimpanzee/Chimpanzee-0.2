@@ -4,7 +4,7 @@ final class CZCautoload_Autoload extends CZBase
     /**
      * @param string $search_dir
      * @param string $class_name
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _exec($search_dir, $class_name)
@@ -30,13 +30,13 @@ final class CZCautoload_Autoload extends CZBase
         }
 
         return FALSE;
-    }    
+    }
 
     /**
      * @param string $class_name
-     * 
+     *
      * @return boolean
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($class_name)

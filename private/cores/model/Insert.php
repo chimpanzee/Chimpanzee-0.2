@@ -4,9 +4,9 @@ final class CZCmodelInsert extends CZBase
     /**
      * @param object $model
      * @param array  $record
-     * 
+     *
      * @return integer / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($model, $record)

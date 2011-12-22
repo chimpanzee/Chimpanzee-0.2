@@ -3,9 +3,9 @@ final class CZCviewDisplay extends CZBase
 {
     /**
      * @param string $file <Option>
-     * 
+     *
      * @return Exit
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($file = '')
@@ -48,9 +48,9 @@ final class CZCviewDisplay extends CZBase
 
     /**
      * @param boolean $secure_flag <Option>
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     private function root_url($secure_flag = NULL)
@@ -65,9 +65,9 @@ final class CZCviewDisplay extends CZBase
      *            string Controller name   <Option>
      *        )
      * @param boolean $secure_flag <Option>
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _url($action, $secure_flag = NULL)
@@ -81,9 +81,9 @@ final class CZCviewDisplay extends CZBase
      *            string Controller name <Option>
      *        )
      * @param boolean $secure_flag <Option>
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     private function url($action, $secure_flag = NULL)
@@ -93,9 +93,9 @@ final class CZCviewDisplay extends CZBase
 
     /**
      * @param string $name
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     private function func($name)

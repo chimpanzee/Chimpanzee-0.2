@@ -3,7 +3,7 @@ final class CZMRequest extends CZBase
 {
     /**
      * @param string $encoding
-     * 
+     *
      * @author Shin Uesugi
      */
     public function setEncoding($encoding)
@@ -14,7 +14,7 @@ final class CZMRequest extends CZBase
 
     /**
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getParams()
@@ -25,9 +25,9 @@ final class CZMRequest extends CZBase
     /**
      * @param string $var_name
      * @param mixed  $default_value <Option>
-     * 
+     *
      * @return mixed
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getParam($var_name, $default_value = NULL)
@@ -38,7 +38,7 @@ final class CZMRequest extends CZBase
 
     /**
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getGetParams()
@@ -49,9 +49,9 @@ final class CZMRequest extends CZBase
     /**
      * @param string $var_name
      * @param mixed  $default_value <Option>
-     * 
+     *
      * @return mixed
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getGetParam($var_name, $default_value = NULL)
@@ -62,7 +62,7 @@ final class CZMRequest extends CZBase
 
     /**
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getPostParams()
@@ -73,9 +73,9 @@ final class CZMRequest extends CZBase
     /**
      * @param string $var_name
      * @param mixed  $default_value <Option>
-     * 
+     *
      * @return mixed
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getPostParam($var_name, $default_value = NULL)

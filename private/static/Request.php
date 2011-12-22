@@ -15,7 +15,7 @@ final class CZSRequest extends CZBase
 
     /**
      * @param string $encoding
-     * 
+     *
      * @author Shin Uesugi
      */
     public function setEncoding($encoding)
@@ -25,7 +25,7 @@ final class CZSRequest extends CZBase
 
     /**
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getEncoding()

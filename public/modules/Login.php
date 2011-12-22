@@ -9,9 +9,9 @@ final class CZMLogin extends CZBase
      * @param object $model
      * @param array  $values
      * @param array  $auth_column_names
-     * 
+     *
      * @return boolean
-     * 
+     *
      * @author Shin Uesugi
      */
     public function login($model, $values, $auth_column_names)
@@ -21,9 +21,9 @@ final class CZMLogin extends CZBase
 
     /**
      * @param array $condition_values <Option>
-     * 
+     *
      * @return boolean
-     * 
+     *
      * @author Shin Uesugi
      */
     public function isLoggedIn($condition_values = array())
@@ -33,7 +33,7 @@ final class CZMLogin extends CZBase
 
     /**
      * @param string $url
-     * 
+     *
      * @author Shin Uesugi
      */
     public function saveSrcUrl($url)
@@ -43,7 +43,7 @@ final class CZMLogin extends CZBase
 
     /**
      * @return Exit
-     * 
+     *
      * @author Shin Uesugi
      */
     public function redirectSrcUrl()
@@ -53,9 +53,9 @@ final class CZMLogin extends CZBase
 
     /**
      * @param object $model
-     * 
+     *
      * @return boolean
-     * 
+     *
      * @author Shin Uesugi
      */
     public function relogin($model)
@@ -70,7 +70,7 @@ final class CZMLogin extends CZBase
 
     /**
      * @return integer / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getId()
@@ -80,9 +80,9 @@ final class CZMLogin extends CZBase
 
     /**
      * @param boolean $format_flag <Default: TRUE>
-     * 
+     *
      * @return array / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getValues($format_flag = TRUE)

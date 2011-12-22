@@ -5,7 +5,7 @@ final class CZCformSaveErr extends CZBase
      * @param object $form
      * @param string $part_name
      * @param string $msg
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($form, $part_name, $msg)

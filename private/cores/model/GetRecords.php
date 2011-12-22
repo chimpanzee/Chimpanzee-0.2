@@ -5,9 +5,9 @@ final class CZCmodelGetRecords extends CZBase
      * @param object  $model_records
      * @param boolean $format_flag <Default: TRUE>
      * @param boolean $add_id_column_flag <Set TRUE by CZCGetListHtml>
-     * 
+     *
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($model_records, $format_flag = TRUE, $add_id_column_flag = FALSE)

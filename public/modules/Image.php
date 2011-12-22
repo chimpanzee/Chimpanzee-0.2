@@ -3,9 +3,9 @@ final class CZMImage extends CZBase
 {
     /**
      * @param string $uploaded_path
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function saveFile($uploaded_path)
@@ -15,7 +15,7 @@ final class CZMImage extends CZBase
 
     /**
      * @param string $file
-     * 
+     *
      * @author Shin Uesugi
      */
     public function deleteFile($file)

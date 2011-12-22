@@ -4,9 +4,9 @@ final class CZChtmlGetTags extends CZBase
     /**
      * @param array  $info
      * @param string $tag_name
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _getTagOption($info, $tag_name)
@@ -20,9 +20,9 @@ final class CZChtmlGetTags extends CZBase
 
     /**
      * @param array $info
-     * 
+     *
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($info)

@@ -3,9 +3,9 @@ final class CZSAutoload extends CZBase
 {
     /**
      * @param string $class_name
-     * 
+     *
      * @return boolean
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _autoload($class_name)

@@ -7,9 +7,9 @@ final class CZCmodelUpdate extends CZBase
      * @param array   $condition_sentences
      * @param array   $condition_values
      * @param integer $id <Set by self::byId>
-     * 
+     *
      * @return integer / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($model, $record, $condition_sentences = array(), $condition_values = array(), $id = NULL)
@@ -29,9 +29,9 @@ final class CZCmodelUpdate extends CZBase
      * @param object  $model
      * @param integer $id
      * @param array   $record
-     * 
+     *
      * @return integer / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function byId($model, $id, $record)

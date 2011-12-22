@@ -6,9 +6,9 @@ final class CZCfacebookCallApi extends CZBase
      * @param string $method
      * @param array  $params <Option>
      * @param string $access_token <Option>
-     * 
+     *
      * @return array / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($url, $method, $params = NULL, $access_token = NULL)

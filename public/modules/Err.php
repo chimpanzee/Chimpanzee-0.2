@@ -3,9 +3,9 @@ final class CZMErr extends CZBase
 {
     /**
      * @param string $msg
-     * 
+     *
      * @return boolean
-     * 
+     *
      * @author Shin Uesugi
      */
     public function save($msg)
@@ -15,9 +15,9 @@ final class CZMErr extends CZBase
 
     /**
      * @param string $default_msg <Option>
-     * 
+     *
      * @return string / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function load($default_msg = NULL)

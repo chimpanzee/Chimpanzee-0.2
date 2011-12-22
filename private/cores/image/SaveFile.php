@@ -3,9 +3,9 @@ final class CZCimageSaveFile extends CZBase
 {
     /**
      * @param string $uploaded_path
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($uploaded_path)

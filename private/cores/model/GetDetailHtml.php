@@ -5,9 +5,9 @@ final class CZCmodelGetDetailHtml extends CZBase
      * @param object $model
      * @param array  $captions
      * @param array  $record
-     * 
+     *
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _getCaptionAreas($model, $captions, $record)
@@ -29,9 +29,9 @@ final class CZCmodelGetDetailHtml extends CZBase
      * @param object $model
      * @param array  $captions
      * @param array  $record
-     * 
+     *
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _getDataAreas($model, $captions, $record)
@@ -52,9 +52,9 @@ final class CZCmodelGetDetailHtml extends CZBase
     /**
      * @param object  $model
      * @param integer $id
-     * 
+     *
      * @return string / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($model, $id)

@@ -3,9 +3,9 @@ final class CZCerrSave extends CZBase
 {
     /**
      * @param string $msg
-     * 
+     *
      * @return boolean
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($msg)

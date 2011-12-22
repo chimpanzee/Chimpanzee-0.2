@@ -27,9 +27,9 @@ class CZModel extends CZFunc
     /**
      * @param string $table_name
      * @param string $id_column_name
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function setTable($table_name, $id_column_name)
@@ -43,9 +43,9 @@ class CZModel extends CZFunc
     /**
      * @param array $condition_sentences
      * @param array $condition_values <Option>
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function setMask($condition_sentences, $condition_values = array())
@@ -58,9 +58,9 @@ class CZModel extends CZFunc
 
     /**
      * @param array $formats
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function setFormats($formats)
@@ -72,9 +72,9 @@ class CZModel extends CZFunc
 
     /**
      * @param array $uniques
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function setUniques($uniques)
@@ -86,9 +86,9 @@ class CZModel extends CZFunc
 
     /**
      * @param array $captions
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function setCaptions($captions)
@@ -100,9 +100,9 @@ class CZModel extends CZFunc
 
     /**
      * @param array $values
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function setFormModelSetValues($values)
@@ -114,9 +114,9 @@ class CZModel extends CZFunc
 
     /**
      * @param array $names
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function setFormIgnorePartNames($names)
@@ -128,9 +128,9 @@ class CZModel extends CZFunc
 
     /**
      * @param array $values
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function setFormSetValues($values)
@@ -142,9 +142,9 @@ class CZModel extends CZFunc
 
     /**
      * @param array $msgs
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function setFormUniqueErrMsgs($msgs)
@@ -156,9 +156,9 @@ class CZModel extends CZFunc
 
     /**
      * @param object $form
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     public function bindForm($form)
@@ -175,7 +175,7 @@ class CZModel extends CZFunc
 
     /**
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getTableName()
@@ -189,7 +189,7 @@ class CZModel extends CZFunc
 
     /**
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getIdColumnName()
@@ -203,7 +203,7 @@ class CZModel extends CZFunc
 
     /**
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getMaskConditionSentences()
@@ -213,7 +213,7 @@ class CZModel extends CZFunc
 
     /**
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getMaskConditionValues()
@@ -223,7 +223,7 @@ class CZModel extends CZFunc
 
     /**
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getFormats()
@@ -233,7 +233,7 @@ class CZModel extends CZFunc
 
     /**
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getUniques()
@@ -243,7 +243,7 @@ class CZModel extends CZFunc
 
     /**
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getCaptions()
@@ -253,7 +253,7 @@ class CZModel extends CZFunc
 
     /**
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getFormModelSetValues()
@@ -263,7 +263,7 @@ class CZModel extends CZFunc
 
     /**
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getFormIgnorePartNames()
@@ -273,7 +273,7 @@ class CZModel extends CZFunc
 
     /**
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getFormSetValues()
@@ -283,7 +283,7 @@ class CZModel extends CZFunc
 
     /**
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getFormUniqueErrMsgs()
@@ -293,7 +293,7 @@ class CZModel extends CZFunc
 
     /**
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getBoundForm()
@@ -308,9 +308,9 @@ class CZModel extends CZFunc
 
     /**
      * @param array $record
-     * 
+     *
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function format($record)
@@ -325,9 +325,9 @@ class CZModel extends CZFunc
 
     /**
      * @param array $record
-     * 
+     *
      * @return integer / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function insert($record)
@@ -338,9 +338,9 @@ class CZModel extends CZFunc
     /**
      * @param array  $form_values
      * @param array  $add_values <Option>
-     * 
+     *
      * @return integer / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function commitInsert($form_values, $add_values = array())
@@ -357,9 +357,9 @@ class CZModel extends CZFunc
      * @param array $record
      * @param array $condition_sentences <Option>
      * @param array $condition_values <Option>
-     * 
+     *
      * @return integer / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function update($record, $condition_sentences = array(), $condition_values = array())
@@ -370,9 +370,9 @@ class CZModel extends CZFunc
     /**
      * @param integer $id
      * @param array   $record
-     * 
+     *
      * @return integer / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function updateById($id, $record)
@@ -382,9 +382,9 @@ class CZModel extends CZFunc
 
     /**
      * @param integer $id
-     * 
+     *
      * @return array / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function beginUpdate($id)
@@ -394,7 +394,7 @@ class CZModel extends CZFunc
 
     /**
      * @return boolean
-     * 
+     *
      * @author Shin Uesugi
      */
     public function isBegunUpdate()
@@ -404,7 +404,7 @@ class CZModel extends CZFunc
 
     /**
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function loadUpdateId()
@@ -419,9 +419,9 @@ class CZModel extends CZFunc
     /**
      * @param array $form_values
      * @param array $add_values <Option>
-     * 
+     *
      * @return integer / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function commitUpdate($form_values, $add_values = array())
@@ -437,9 +437,9 @@ class CZModel extends CZFunc
     /**
      * @param array $condition_sentences <Option>
      * @param array $condition_values <Option>
-     * 
+     *
      * @return integer
-     * 
+     *
      * @author Shin Uesugi
      */
     public function delete($condition_sentences = array(), $condition_values = array())
@@ -449,9 +449,9 @@ class CZModel extends CZFunc
 
     /**
      * @param integer $id
-     * 
+     *
      * @return integer
-     * 
+     *
      * @author Shin Uesugi
      */
     public function deleteById($id)
@@ -461,9 +461,9 @@ class CZModel extends CZFunc
 
     /**
      * @param integer $id
-     * 
+     *
      * @return array / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function beginDelete($id)
@@ -473,7 +473,7 @@ class CZModel extends CZFunc
 
     /**
      * @return boolean
-     * 
+     *
      * @author Shin Uesugi
      */
     public function isBegunDelete()
@@ -483,7 +483,7 @@ class CZModel extends CZFunc
 
     /**
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function loadDeleteId()
@@ -497,9 +497,9 @@ class CZModel extends CZFunc
 
     /**
      * @param array $relation_models <Option>
-     * 
+     *
      * @return integer / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function commitDelete($relation_models = array())
@@ -517,9 +517,9 @@ class CZModel extends CZFunc
      * @param array   $condition_sentences <Option>
      * @param array   $condition_values <Option>
      * @param boolean $format_flag <Default: TRUE>
-     * 
+     *
      * @return array / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getRecord($column_names = array(), $condition_sentences = array(), $condition_values = array(), $format_flag = TRUE)
@@ -531,9 +531,9 @@ class CZModel extends CZFunc
      * @param integer $id
      * @param array   $column_names <Option>
      * @param boolean $format_flag <Default: TRUE>
-     * 
+     *
      * @return array / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getRecordById($id, $column_names = array(), $format_flag = TRUE)
@@ -551,9 +551,9 @@ class CZModel extends CZFunc
      * @param array   $condition_sentences <Option>
      * @param array   $condition_values <Option>
      * @param boolean $format_flag <Default: TRUE>
-     * 
+     *
      * @return scalar / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getValue($column_name, $condition_sentences = array(), $condition_values = array(), $format_flag = TRUE)
@@ -565,9 +565,9 @@ class CZModel extends CZFunc
      * @param integer $id
      * @param string  $column_name
      * @param boolean $format_flag <Default: TRUE>
-     * 
+     *
      * @return scalar / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getValueById($id, $column_name, $format_flag = TRUE)
@@ -582,9 +582,9 @@ class CZModel extends CZFunc
 
     /**
      * @param integer $id
-     * 
+     *
      * @return string / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getDetailHtml($id)
@@ -599,9 +599,9 @@ class CZModel extends CZFunc
 
     /**
      * @param string $name <Default: 'default'>
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function _addRecords($name = 'default')
@@ -618,9 +618,9 @@ class CZModel extends CZFunc
 
     /**
      * @param string $name <Default: 'default'>
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     public function _getRecords($name = 'default')
@@ -641,9 +641,9 @@ class CZModel extends CZFunc
      * @param array $condition_sentences <Option>
      * @param array $condition_values <Option>
      * @param array $options <Option>
-     * 
+     *
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getRecords($column_names = array(), $condition_sentences = array(), $condition_values = array(), $options = array())
@@ -661,9 +661,9 @@ class CZModel extends CZFunc
      * @param array  $condition_sentences <Option>
      * @param array  $condition_values <Option>
      * @param array  $options <Option>
-     * 
+     *
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getTable($id_column_name, $value_column_name, $condition_sentences = array(), $condition_values = array(), $options = array())

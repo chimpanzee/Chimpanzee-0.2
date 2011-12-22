@@ -5,9 +5,9 @@ final class CZCloginLogin extends CZBase
      * @param object $model
      * @param array  $values
      * @param array  $auth_column_names
-     * 
+     *
      * @return boolean
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($model, $values, $auth_column_names)

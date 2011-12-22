@@ -6,7 +6,7 @@ final class CZSView extends CZBase
 
     /**
      * @param array $vars
-     * 
+     *
      * @author Shin Uesugi
      */
     public function setVars($vars)
@@ -16,7 +16,7 @@ final class CZSView extends CZBase
 
     /**
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getVars()

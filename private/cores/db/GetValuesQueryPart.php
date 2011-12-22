@@ -3,9 +3,9 @@ final class CZCdbGetValuesQueryPart extends CZBase
 {
     /**
      * @param array $param_list
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($param_list)

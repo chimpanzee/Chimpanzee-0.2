@@ -8,13 +8,13 @@ final class CZCgpsGetLoc extends CZBase
         $carrier = $this->_cz->newCore('mobile', 'get_carrier_name')->exec();
 
         switch($carrier) {
-            case 'docomo': 
+            case 'docomo':
                 $lat = $_GET['lat'];
                 $lon = $_GET['lon'];
                 $geo = $_GET['geo'];
                 break;
 
-            case 'softbank': 
+            case 'softbank':
                 $pos = $_GET['pos'];
                 preg_match('/([N|S])(.+)([W|E])(.+)/', $pos, $match);
                 $lat = $match[2];
@@ -24,7 +24,7 @@ final class CZCgpsGetLoc extends CZBase
                 $geo = $_GET['geo'];
                 break;
 
-            case 'au': 
+            case 'au':
                 $lat = $_GET['lat'];
                 $lon = $_GET['lon'];
 /*
@@ -37,7 +37,7 @@ final class CZCgpsGetLoc extends CZBase
                 $geo = 'wgs84';
                 break;
 
-            case 'willcom': 
+            case 'willcom':
                 $pos = $_GET['pos'];
                 preg_match('/([N|S])(.+)([W|E])(.+)/', $pos, $match);
                 $lat = $match[2];
@@ -47,7 +47,7 @@ final class CZCgpsGetLoc extends CZBase
                 $geo = 'tokyo';
                 break;
 
-            default: 
+            default:
                 return FALSE;
 
         }

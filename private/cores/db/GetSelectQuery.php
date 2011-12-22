@@ -10,9 +10,9 @@ final class CZCdbGetSelectQuery extends CZBase
      *        )
      * @param array  $condition_sentences
      * @param array  $options
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($table_name, $column_name = '', $condition_sentences = array(), $options = array())

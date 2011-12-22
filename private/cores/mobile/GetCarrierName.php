@@ -3,7 +3,7 @@ final class CZCmobileGetCarrierName extends CZBase
 {
     /**
      * @return string / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec()

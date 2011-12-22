@@ -3,9 +3,9 @@ final class CZCdbGetRealTableName extends CZBase
 {
     /**
      * @param string $table_name
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($table_name)

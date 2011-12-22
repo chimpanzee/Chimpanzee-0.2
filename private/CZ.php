@@ -28,9 +28,9 @@ final class Cz
 
     /**
      * @param string $name
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     public function loadStatic($name)
@@ -46,9 +46,9 @@ final class Cz
     /**
      * @param string $type
      * @param string $name
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     public function newCore($type, $name)
@@ -59,9 +59,9 @@ final class Cz
     /**
      * @param string $type
      * @param string $name
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     public function loadCore($type, $name)
@@ -72,7 +72,7 @@ final class Cz
     /**
      * @param string $type
      * @param string $name
-     * 
+     *
      * @author Shin Uesugi
      */
     public function unloadCore($type, $name)
@@ -87,9 +87,9 @@ final class Cz
 
     /**
      * @param string $name
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     public function newModule($name)
@@ -99,9 +99,9 @@ final class Cz
 
     /**
      * @param string $name
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     public function loadModule($name)
@@ -111,7 +111,7 @@ final class Cz
 
     /**
      * @param string $name
-     * 
+     *
      * @author Shin Uesugi
      */
     public function unloadModule($name)
@@ -127,9 +127,9 @@ final class Cz
     /**
      * @param integer $arg_num
      * @param array   $args
-     * 
+     *
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _getConstructParams($arg_num, $args)
@@ -149,9 +149,9 @@ final class Cz
      * @param string  $name
      * @param integer $arg_num
      * @param array   $args
-     * 
+     *
      * @return object / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function newUser($type, $name, $arg_num = 0, $args = array())
@@ -164,9 +164,9 @@ final class Cz
      * @param string  $name
      * @param integer $arg_num
      * @param array   $args
-     * 
+     *
      * @return object / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function loadUser($type, $name, $arg_num = 0, $args = array())
@@ -177,7 +177,7 @@ final class Cz
     /**
      * @param string $type
      * @param string $name
-     * 
+     *
      * @author Shin Uesugi
      */
     public function unloadUser($type, $name)
@@ -225,7 +225,7 @@ final class Cz
      * @param string $cz_dir
      * @param string $project_dir
      * @param string $application_name
-     * 
+     *
      * @author Shin Uesugi
      */
     function __construct($cz_dir, $project_dir, $application_name = '')
@@ -250,7 +250,7 @@ final class Cz
 
         /*
          * Global config
-         */ 
+         */
         $this->develop_flag = self::newUser('config', 'CZ')->getValue('develop_flag', TRUE);
         if ($this->develop_flag) {
             ini_set('display_errors', 'On');
@@ -272,9 +272,9 @@ final class Cz
 
     /**
      * @param string $value
-     * 
+     *
      * @return boolean
-     * 
+     *
      * @author Shin Uesugi
      */
     public function isValidStr($value)
@@ -284,11 +284,11 @@ final class Cz
 
     /**
      * ex: '_xxx_yyy...' => '_XxxYyy...'
-     * 
+     *
      * @param string $str
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getUpperStr($str)

@@ -5,7 +5,7 @@ final class CZCformSaveValues extends CZBase
      * @param object $form
      * @param string $part_name
      * @param string $uploaded_path
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _saveUploadedFile($form, $part_name, $uploaded_path)
@@ -25,9 +25,9 @@ final class CZCformSaveValues extends CZBase
     /**
      * @param object $form
      * @param string $part_name
-     * 
+     *
      * @return boolean / ''
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _getUploadedFileValue($form, $part_name)
@@ -71,9 +71,9 @@ final class CZCformSaveValues extends CZBase
      * @param array   $part
      * @param array   $values
      * @param boolean $post_flag <Set TRUE by self::byPost>
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _getSetValue($form, $part_name, $part, $values, $post_flag = FALSE)
@@ -123,9 +123,9 @@ final class CZCformSaveValues extends CZBase
      * @param string $part_name
      * @param array  $part
      * @param array  $set_values
-     * 
+     *
      * @return boolean
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _isRequiredErr($form, $part_name, $part, $set_values)
@@ -159,9 +159,9 @@ final class CZCformSaveValues extends CZBase
      * @param string $part_name
      * @param array  $part
      * @param array  $set_values
-     * 
+     *
      * @return boolean
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _isConfirmErr($form, $part_name, $part, $set_values)
@@ -180,9 +180,9 @@ final class CZCformSaveValues extends CZBase
      * @param string $part_name
      * @param array  $part
      * @param array  $set_values
-     * 
+     *
      * @return boolean
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _isValidateErr($form, $part_name, $part, $set_values)
@@ -204,9 +204,9 @@ final class CZCformSaveValues extends CZBase
      * @param object  $form
      * @param array   $values
      * @param boolean $post_flag <Set TRUE by self::byPost>
-     * 
+     *
      * @return boolean
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($form, $values, $post_flag = FALSE)
@@ -245,9 +245,9 @@ final class CZCformSaveValues extends CZBase
 
     /**
      * @param object $form
-     * 
+     *
      * @return boolean
-     * 
+     *
      * @author Shin Uesugi
      */
     public function byPost($form)

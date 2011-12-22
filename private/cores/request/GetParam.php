@@ -49,7 +49,7 @@ final class CZCrequestGetParam extends CZBase
 
     /**
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getParams()
@@ -60,9 +60,9 @@ final class CZCrequestGetParam extends CZBase
     /**
      * @param string $var_name
      * @param mixed  $default_value <Option>
-     * 
+     *
      * @return mixed
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getParam($var_name, $default_value = NULL)
@@ -73,9 +73,9 @@ final class CZCrequestGetParam extends CZBase
 
     /**
      * @param string $var_name
-     * 
+     *
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getGetParams()
@@ -86,9 +86,9 @@ final class CZCrequestGetParam extends CZBase
     /**
      * @param string $var_name
      * @param mixed  $default_value <Option>
-     * 
+     *
      * @return mixed
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getGetParam($var_name, $default_value = NULL)
@@ -99,9 +99,9 @@ final class CZCrequestGetParam extends CZBase
 
     /**
      * @param string $var_name
-     * 
+     *
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getPostParams()
@@ -112,9 +112,9 @@ final class CZCrequestGetParam extends CZBase
     /**
      * @param string $var_name
      * @param mixed  $default_value <Option>
-     * 
+     *
      * @return mixed
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getPostParam($var_name, $default_value = NULL)

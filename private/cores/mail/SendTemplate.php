@@ -7,9 +7,9 @@ final class CZCmailSendTemplate extends CZBase
      * @param string $template_file
      * @param array  $vars
      * @param string $from_addr
-     * 
+     *
      * @return boolean
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($to_addrs, $subject, $template_file, $vars, $from_addr)

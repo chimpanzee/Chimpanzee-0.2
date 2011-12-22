@@ -9,9 +9,9 @@ final class CZCdbDelete extends CZBase
      *        )
      * @param array  $condition_sentences
      * @param array  $condition_values
-     * 
+     *
      * @return integer
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($table_name, $condition_sentences = array(), $condition_values = array())

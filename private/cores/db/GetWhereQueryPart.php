@@ -3,9 +3,9 @@ final class CZCdbGetWhereQueryPart extends CZBase
 {
     /**
      * @param array $condition_sentences
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($condition_sentences)

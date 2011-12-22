@@ -5,9 +5,9 @@ final class CZCformGetDataArea extends CZBase
      * @param object $form
      * @param array  $part
      * @param string $data
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($form, $part, $data)

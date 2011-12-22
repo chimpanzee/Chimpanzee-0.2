@@ -4,9 +4,9 @@ final class CZCformGetErr extends CZBase
     /**
      * @param object $form
      * @param string $part_name
-     * 
+     *
      * @return string / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($form, $part_name)

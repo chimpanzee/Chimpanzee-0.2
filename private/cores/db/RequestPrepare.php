@@ -5,9 +5,9 @@ final class CZCdbRequestPrepare extends CZBase
      * @param string  $query
      * @param array   $param_list
      * @param boolean $select_flag
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($query, $param_list, $select_flag = FALSE)

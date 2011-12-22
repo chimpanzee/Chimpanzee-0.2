@@ -6,9 +6,9 @@ final class CZChtmlGetNotList extends CZBase
      * @param array $data_areas
      * @param array $info
      * @param array $tags
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($caption_areas, $data_areas, $info, $tags)

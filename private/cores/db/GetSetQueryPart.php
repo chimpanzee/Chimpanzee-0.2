@@ -3,9 +3,9 @@ final class CZCdbGetSetQueryPart extends CZBase
 {
     /**
      * @param array $record
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($record)

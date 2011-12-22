@@ -23,7 +23,7 @@ final class CZModelRecords extends CZBase
 
     /**
      * @param object $model
-     * 
+     *
      * @author Shin Uesugi
      */
     function __construct($model)
@@ -38,9 +38,9 @@ final class CZModelRecords extends CZBase
 
     /**
      * @param array $names
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     public function setColumnNames($names)
@@ -53,9 +53,9 @@ final class CZModelRecords extends CZBase
     /**
      * @param array $sentences
      * @param array $values <Option>
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     public function setCondition($sentences, $values = array())
@@ -68,9 +68,9 @@ final class CZModelRecords extends CZBase
 
     /**
      * @param array $options
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     public function _setOptions($options)
@@ -82,7 +82,7 @@ final class CZModelRecords extends CZBase
 
     /**
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     public function enableDistinct()
@@ -94,9 +94,9 @@ final class CZModelRecords extends CZBase
 
     /**
      * @param array $names
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     public function setGroupColumnNames($names)
@@ -108,9 +108,9 @@ final class CZModelRecords extends CZBase
 
     /**
      * @param array $sentences
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     public function setOrderSentences($sentences)
@@ -122,9 +122,9 @@ final class CZModelRecords extends CZBase
 
     /**
      * @param integer $limit
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     public function setLimit($limit)
@@ -136,9 +136,9 @@ final class CZModelRecords extends CZBase
 
     /**
      * @param integer $offset
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     public function setOffset($offset)
@@ -150,9 +150,9 @@ final class CZModelRecords extends CZBase
 
     /**
      * @param array $captions
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     public function setCaptions($captions)
@@ -164,7 +164,7 @@ final class CZModelRecords extends CZBase
 
     /**
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     public function enableLinkToDetail()
@@ -176,7 +176,7 @@ final class CZModelRecords extends CZBase
 
     /**
      * @author Shin Uesugi
-     * 
+     *
      * @return object
      */
     public function enableLinkToUpdate()
@@ -188,7 +188,7 @@ final class CZModelRecords extends CZBase
 
     /**
      * @author Shin Uesugi
-     * 
+     *
      * @return object
      */
     public function enableLinkToDelete()
@@ -201,9 +201,9 @@ final class CZModelRecords extends CZBase
     /**
      * @param array $condition_sentences
      * @param array $condition_values <Option>
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     public function addSearch($condition_sentences, $condition_values = array())
@@ -218,9 +218,9 @@ final class CZModelRecords extends CZBase
      * @param integer $default_row_num
      * @param string  $page_num_param_name <Default: 'pn'>
      * @param string  $row_num_param_name <Default: 'rn'>
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     public function enablePaging($default_row_num, $page_num_param_name = 'pn', $row_num_param_name = 'rn')
@@ -241,7 +241,7 @@ final class CZModelRecords extends CZBase
 
     /**
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getModel()
@@ -251,7 +251,7 @@ final class CZModelRecords extends CZBase
 
     /**
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getColumnNames()
@@ -261,7 +261,7 @@ final class CZModelRecords extends CZBase
 
     /**
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getConditionSentences()
@@ -271,7 +271,7 @@ final class CZModelRecords extends CZBase
 
     /**
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getConditionValues()
@@ -281,7 +281,7 @@ final class CZModelRecords extends CZBase
 
     /**
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function _getOptions()
@@ -291,7 +291,7 @@ final class CZModelRecords extends CZBase
 
     /**
      * @return boolean
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getDistinctFlag()
@@ -301,7 +301,7 @@ final class CZModelRecords extends CZBase
 
     /**
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getGroupColumnNames()
@@ -311,7 +311,7 @@ final class CZModelRecords extends CZBase
 
     /**
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getOrderSentences()
@@ -321,7 +321,7 @@ final class CZModelRecords extends CZBase
 
     /**
      * @return integer / NULL
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getLimit()
@@ -331,7 +331,7 @@ final class CZModelRecords extends CZBase
 
     /**
      * @return integer / NULL
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getOffset()
@@ -341,7 +341,7 @@ final class CZModelRecords extends CZBase
 
     /**
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getCaptions()
@@ -351,7 +351,7 @@ final class CZModelRecords extends CZBase
 
     /**
      * @return boolean
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getLinkToDetailFlag()
@@ -361,7 +361,7 @@ final class CZModelRecords extends CZBase
 
     /**
      * @return boolean
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getLinkToUpdateFlag()
@@ -371,7 +371,7 @@ final class CZModelRecords extends CZBase
 
     /**
      * @return boolean
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getLinkToDeleteFlag()
@@ -381,7 +381,7 @@ final class CZModelRecords extends CZBase
 
     /**
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getSearchConditionSentences()
@@ -391,7 +391,7 @@ final class CZModelRecords extends CZBase
 
     /**
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getSearchConditionValues()
@@ -401,7 +401,7 @@ final class CZModelRecords extends CZBase
 
     /**
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getPaging()
@@ -416,9 +416,9 @@ final class CZModelRecords extends CZBase
 
     /**
      * @param boolean $format_flag <Default: TRUE>
-     * 
+     *
      * @return array
-     * 
+     *
      * @author Shin Uesuhi
      */
     public function get($format_flag = TRUE)
@@ -435,9 +435,9 @@ final class CZModelRecords extends CZBase
      * @param string  $id_column_name
      * @param string  $value_column_name
      * @param boolean $format_flag <Default: TRUE>
-     * 
+     *
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getTable($id_column_name, $value_column_name, $format_flag = TRUE)
@@ -452,7 +452,7 @@ final class CZModelRecords extends CZBase
 
     /**
      * @return string / FALSE
-     * 
+     *
      * @author Shin Uesuhi
      */
     public function getListHtml()
@@ -467,7 +467,7 @@ final class CZModelRecords extends CZBase
 
     /**
      * @return integer / FALSE
-     * 
+     *
      * @author Shin Uesuhi
      */
     public function getPrevPageUrl()
@@ -477,7 +477,7 @@ final class CZModelRecords extends CZBase
 
     /**
      * @return integer / FALSE
-     * 
+     *
      * @author Shin Uesuhi
      */
     public function getNextPageUrl()

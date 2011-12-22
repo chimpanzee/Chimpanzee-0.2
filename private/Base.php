@@ -7,7 +7,7 @@ class CZBase
 
     /**
      * @param object $cz
-     * 
+     *
      * @author Shin Uesugi
      */
     public function _setCZ($cz)

@@ -3,7 +3,7 @@ final class CZCimageDeleteFile extends CZBase
 {
     /**
      * @param string $file
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($file)

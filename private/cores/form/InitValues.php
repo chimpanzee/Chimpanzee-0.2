@@ -4,9 +4,9 @@ final class CZCformInitValues extends CZBase
     /**
      * @param object $form
      * @param array  $replace_values <Option>
-     * 
+     *
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($form, $replace_values = array())

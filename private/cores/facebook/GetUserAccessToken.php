@@ -4,9 +4,9 @@ final class CZCfacebookGetUserAccessToken extends CZBase
     /**
      * @param string $app_id
      * @param string $redirect_uri
-     * 
+     *
      * @return string / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _getAuthCode($app_id, $redirect_uri)
@@ -44,13 +44,13 @@ final class CZCfacebookGetUserAccessToken extends CZBase
 
     /**
      * @param $expires_return_flag <Option>
-     * 
+     *
      * @return string / array / FALSE
      *         array(
      *             'access_token' => string
      *             'expires'      => string
      *         )
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($expires_return_flag = FALSE)

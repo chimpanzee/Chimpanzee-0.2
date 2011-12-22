@@ -3,9 +3,9 @@ final class CZCredirect302 extends CZBase
 {
     /**
      * @param string $url
-     * 
+     *
      * @return Exit
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($url)

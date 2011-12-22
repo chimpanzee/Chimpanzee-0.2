@@ -18,9 +18,9 @@ final class CZMUrl extends CZBase
      *                ...
      *            ) <Option>
      *        ) <Option>
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function _get($action, $secure_flag = NULL, $params = NULL)
@@ -44,9 +44,9 @@ final class CZMUrl extends CZBase
      *                ...
      *            ) <Option>
      *        ) <Option>
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function get($action, $secure_flag = NULL, $params = NULL)
@@ -57,9 +57,9 @@ final class CZMUrl extends CZBase
 
     /**
      * @param boolean $secure_flag <Option>
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getProtocol($secure_flag = NULL)
@@ -80,9 +80,9 @@ final class CZMUrl extends CZBase
      *                ...
      *            ) <Option>
      *        ) <Option>
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getRoot($secure_flag = NULL, $params = NULL)
@@ -93,7 +93,7 @@ final class CZMUrl extends CZBase
 
     /**
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getSelf()
@@ -104,7 +104,7 @@ final class CZMUrl extends CZBase
 
     /**
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getImages()

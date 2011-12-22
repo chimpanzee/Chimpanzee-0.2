@@ -3,9 +3,9 @@ final class CZCformGetPartNames extends CZBase
 {
     /**
      * @param object $form
-     * 
+     *
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($form)

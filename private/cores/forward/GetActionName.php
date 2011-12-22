@@ -3,7 +3,7 @@ final class CZCforwardGetActionName extends CZBase
 {
     /**
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec()

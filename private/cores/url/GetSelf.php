@@ -3,9 +3,9 @@ final class CZCurlGetSelf extends CZBase
 {
     /**
      * @param $secure_flag <Option>
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($secure_flag = NULL)

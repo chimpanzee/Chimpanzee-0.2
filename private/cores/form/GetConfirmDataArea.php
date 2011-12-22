@@ -7,9 +7,9 @@ final class CZCformGetConfirmDataArea extends CZBase
      * @param boolean $escape_flag
      * @param array   $part
      * @param array   $values
-     * 
+     *
      * @return string / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _getData($form, $part_name, $escape_flag, $part, $values)
@@ -87,9 +87,9 @@ final class CZCformGetConfirmDataArea extends CZBase
      * @param boolean $escape_flag <Default: TRUE>
      * @param array   $part <Option>
      * @param array   $values <Option>
-     * 
+     *
      * @return string / FALSE (No display)
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($form, $part_name, $escape_flag = TRUE, $part = array(), $values = array())

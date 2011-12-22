@@ -5,9 +5,9 @@ final class CZCsesGet extends CZBase
      * @param string $var_name
      * @param mixed  $default_value <Option>
      * @param string $type <Default: 'core'>
-     * 
+     *
      * @return mixed
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($var_name, $default_value = NULL, $type = 'core')
@@ -15,7 +15,7 @@ final class CZCsesGet extends CZBase
         $this->_cz->loadStatic('ses');
 
         $ses_name = $this->_cz->newCore('ses', 'get_name')->exec();
-        
+
         if (!isset($_SESSION[$ses_name][$type][$var_name])) {
             if ($default_value !== NULL) {
                 return $default_value;

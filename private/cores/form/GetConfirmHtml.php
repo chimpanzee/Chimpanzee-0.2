@@ -4,9 +4,9 @@ final class CZCformGetConfirmHtml extends CZBase
     /**
      * @param object  $form
      * @param boolean $escape_flag
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($form, $escape_flag = TRUE)

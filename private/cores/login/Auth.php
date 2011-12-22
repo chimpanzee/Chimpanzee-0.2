@@ -5,9 +5,9 @@ final class CZCloginAuth extends CZBase
      * @param object $model
      * @param array  $condition_sentences
      * @param array  $condition_values
-     * 
+     *
      * @return boolean
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($model, $condition_sentences, $condition_values)

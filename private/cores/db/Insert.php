@@ -4,9 +4,9 @@ final class CZCdbInsert extends CZBase
     /**
      * @param string $table_name
      * @param array  $record
-     * 
+     *
      * @return integer
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($table_name, $record)

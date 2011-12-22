@@ -4,9 +4,9 @@ final class CZCfacebookGetAppAccessToken extends CZBase
     /**
      * @param string $app_id <Option>
      * @param string $app_secret <Option>
-     * 
+     *
      * @return string / boolean
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($app_id = NULL, $app_secret = NULL)

@@ -6,9 +6,9 @@ final class CZCmodelGetTable extends CZBase
      * @param string  $id_column_name
      * @param string  $id_column_name
      * @param boolean $format_flag <Default: TRUE>
-     * 
+     *
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($model_records, $id_column_name, $value_column_name, $format_flag = TRUE)

@@ -5,9 +5,9 @@ final class CZCimageDisplay extends CZBase
      * @param string  $path
      * @param integer $width
      * @param integer $height
-     * 
+     *
      * @return resource
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _getResource($path, $width, $height)
@@ -72,7 +72,7 @@ final class CZCimageDisplay extends CZBase
      * @param string  $file
      * @param integer $width
      * @param integer $height
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($dir_type, $file, $width = NULL, $height = NULL)

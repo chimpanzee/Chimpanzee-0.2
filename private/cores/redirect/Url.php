@@ -4,9 +4,9 @@ final class CZCredirectUrl extends CZBase
     /**
      * @param string  $url
      * @param integer $code <Option>
-     * 
+     *
      * @return Exit
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _external($url, $code = NULL)
@@ -23,9 +23,9 @@ final class CZCredirectUrl extends CZBase
     /**
      * @param string  $url
      * @param integer $code <Option>
-     * 
+     *
      * @return Exit
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _internal($url, $code = NULL)
@@ -39,9 +39,9 @@ final class CZCredirectUrl extends CZBase
     /**
      * @param string  $url
      * @param integer $code <Option>
-     * 
+     *
      * @return Exit
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($url, $code = NULL)

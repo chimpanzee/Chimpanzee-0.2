@@ -3,7 +3,7 @@ final class CZCloginGetId extends CZBase
 {
     /**
      * @return integer / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec()

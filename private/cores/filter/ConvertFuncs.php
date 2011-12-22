@@ -12,7 +12,7 @@ final class CZCfilterConvertFuncs extends CZBase
      *            'pattern'   => string
      *            'match_num' => integer
      *        )
-     * 
+     *
      * @author Shin Uesugi
      */
     public function cz_preg_match($base, $params)
@@ -45,7 +45,7 @@ final class CZCfilterConvertFuncs extends CZBase
      *            'pattern'     => string
      *            'replacement' => scalar
      *        )
-     * 
+     *
      * @author Shin Uesugi
      */
     public function cz_preg_replace($base, $params)
@@ -75,7 +75,7 @@ final class CZCfilterConvertFuncs extends CZBase
      *            'subject' => string Date and Time
      *            'format'  => string
      *        )
-     * 
+     *
      * @author Shin Uesugi
      */
     public function cz_date($base, $params)
@@ -104,7 +104,7 @@ final class CZCfilterConvertFuncs extends CZBase
      *            'month' => integer
      *            'day'   => integer
      *        )
-     * 
+     *
      * @author Shin Uesugi
      */
     public function cz_date_join($base, $params)
@@ -128,7 +128,7 @@ final class CZCfilterConvertFuncs extends CZBase
      *            'min'  => integer
      *            'sec'  => integer
      *        )
-     * 
+     *
      * @author Shin Uesugi
      */
     public function cz_time_join($base, $params)
@@ -155,7 +155,7 @@ final class CZCfilterConvertFuncs extends CZBase
      * @param array  $params(
      *            'subject' => string Mail address
      *        )
-     * 
+     *
      * @author Shin Uesugi
      */
     public function cz_mail_addr_account($base, $params)
@@ -180,7 +180,7 @@ final class CZCfilterConvertFuncs extends CZBase
      * @param array  $params(
      *            'subject' => string Mail address
      *        )
-     * 
+     *
      * @author Shin Uesugi
      */
     public function cz_mail_addr_domain($base, $params)
@@ -206,7 +206,7 @@ final class CZCfilterConvertFuncs extends CZBase
      *            'account' => string
      *            'domain'  => string
      *        )
-     * 
+     *
      * @author Shin Uesugi
      */
     public function cz_mail_addr_join($base, $params)
@@ -232,7 +232,7 @@ final class CZCfilterConvertFuncs extends CZBase
      * @param array  $params(
      *            'subject' => string Telephone number
      *        )
-     * 
+     *
      * @author Shin Uesugi
      */
     public function cz_tel_num_area($base, $params)
@@ -257,7 +257,7 @@ final class CZCfilterConvertFuncs extends CZBase
      * @param array  $params(
      *            'subject' => string Telephone number
      *        )
-     * 
+     *
      * @author Shin Uesugi
      */
     public function cz_tel_num_city($base, $params)
@@ -282,7 +282,7 @@ final class CZCfilterConvertFuncs extends CZBase
      * @param array  $params(
      *            'subject' => string Telephone number
      *        )
-     * 
+     *
      * @author Shin Uesugi
      */
     public function cz_tel_num_rest($base, $params)
@@ -310,7 +310,7 @@ final class CZCfilterConvertFuncs extends CZBase
      *            'rest'           => string
      *            'separator_flag' => boolean <Default: TRUE>
      *        )
-     * 
+     *
      * @author Shin Uesugi
      */
     public function cz_tel_num_join($base, $params)
@@ -344,7 +344,7 @@ final class CZCfilterConvertFuncs extends CZBase
      *            'subject'        => string Zip code
      *            'separator_flag' => boolean <Default: TRUE>
      *        )
-     * 
+     *
      * @author Shin Uesugi
      */
     public function cz_zip_code($base, $params)
@@ -372,7 +372,7 @@ final class CZCfilterConvertFuncs extends CZBase
      * @param array  $params(
      *            'subject' => string Zip code
      *        )
-     * 
+     *
      * @author Shin Uesugi
      */
     public function cz_zip_code_head($base, $params)
@@ -399,7 +399,7 @@ final class CZCfilterConvertFuncs extends CZBase
      * @param array  $params(
      *            'subject' => string Zip code
      *        )
-     * 
+     *
      * @author Shin Uesugi
      */
     public function cz_zip_code_tail($base, $params)
@@ -428,7 +428,7 @@ final class CZCfilterConvertFuncs extends CZBase
      *            'tail'           => string
      *            'separator_flag' => boolean <Default: TRUE>
      *        )
-     * 
+     *
      * @author Shin Uesugi
      */
     public function cz_zip_code_join($base, $params)

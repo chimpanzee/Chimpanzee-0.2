@@ -11,9 +11,9 @@ class CZForm extends CZFunc
 
     /**
      * @param array $parts
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function setParts($parts)
@@ -26,9 +26,9 @@ class CZForm extends CZFunc
     /**
      * @param string $part_name
      * @param array  $part
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     public function addPart($part_name, $part)
@@ -45,9 +45,9 @@ class CZForm extends CZFunc
      * @param string $part_name
      * @param string $property_name
      * @param mixed  $value
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     public function addPartProperty($part_name, $property_name, $value)
@@ -70,7 +70,7 @@ class CZForm extends CZFunc
 
     /**
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getParts()
@@ -89,9 +89,9 @@ class CZForm extends CZFunc
 
     /**
      * @param array $replace_values <Option>
-     * 
+     *
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function initValues($replace_values = array())
@@ -101,9 +101,9 @@ class CZForm extends CZFunc
 
     /**
      * @param array $values
-     * 
+     *
      * @return boolean
-     * 
+     *
      * @author Shin Uesugi
      */
     public function saveValues($values)
@@ -113,7 +113,7 @@ class CZForm extends CZFunc
 
     /**
      * @return boolean
-     * 
+     *
      * @author Shin Uesugi
      */
     public function saveValuesByPost()
@@ -123,9 +123,9 @@ class CZForm extends CZFunc
 
     /**
      * @param array $default_values <Option>
-     * 
+     *
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function loadValues($default_values = array())
@@ -148,7 +148,7 @@ class CZForm extends CZFunc
     /**
      * @param string $part_name
      * @param string $msg
-     * 
+     *
      * @author Shin Uesugi
      */
     public function saveErr($part_name, $msg)
@@ -163,9 +163,9 @@ class CZForm extends CZFunc
 
     /**
      * @param string $part_name
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getEditTag($part_name)
@@ -175,9 +175,9 @@ class CZForm extends CZFunc
 
     /**
      * @param string $part_name
-     * 
+     *
      * @return string / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getErr($part_name)
@@ -187,9 +187,9 @@ class CZForm extends CZFunc
 
     /**
      * @param string $part_name
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getFormDataArea($part_name)
@@ -199,7 +199,7 @@ class CZForm extends CZFunc
 
     /**
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getFormHtml()
@@ -215,9 +215,9 @@ class CZForm extends CZFunc
     /**
      * @param string  $part_name
      * @param boolean $escape_flag <Default: TRUE>
-     * 
+     *
      * @return string / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getConfirmDataArea($part_name, $escape_flag = TRUE)
@@ -227,9 +227,9 @@ class CZForm extends CZFunc
 
     /**
      * @param $escape_flag <Default: TRUE>
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getConfirmHtml($escape_flag = TRUE)
@@ -244,7 +244,7 @@ class CZForm extends CZFunc
 
     /**
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function loadUploadedFiles()

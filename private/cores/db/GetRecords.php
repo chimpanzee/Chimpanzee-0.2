@@ -7,9 +7,9 @@ final class CZCdbGetRecords extends CZBase
      * @param array  $condition_sentences
      * @param array  $condition_values
      * @param array  $options
-     * 
+     *
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($table_name, $column_names = array(), $condition_sentences = array(), $condition_values = array(), $options = array())

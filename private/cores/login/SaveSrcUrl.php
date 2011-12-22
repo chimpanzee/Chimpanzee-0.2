@@ -3,7 +3,7 @@ final class CZCloginSaveSrcUrl extends CZBase
 {
     /**
      * @param string $url
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($url)

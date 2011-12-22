@@ -5,9 +5,9 @@ final class CZCvarLoad extends CZBase
      * @param string $main_class_name
      * @param string $var_name
      * @param mixed  $default_value <Option>
-     * 
+     *
      * @return mixed
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($main_class_name, $var_name, $default_value = NULL)

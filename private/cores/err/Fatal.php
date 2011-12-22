@@ -124,7 +124,7 @@ final class CZCerrFatal extends CZBase
 {
     /*
      * Fatal error messages.
-     * 
+     *
      * @author Takamichi Yanai
      */
     private $_msgs = array(
@@ -256,7 +256,7 @@ final class CZCerrFatal extends CZBase
      * @param integer $fatal_id
      * @param string  $add_msg
      * @param string  $relating_obj_name
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($path, $file_line, $fatal_id, $add_msg = '', $relating_obj_name = '')

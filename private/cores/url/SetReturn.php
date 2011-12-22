@@ -3,7 +3,7 @@ final class CZCurlSetReturn extends CZBase
 {
     /**
      * @return boolean
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _isIgnore()
@@ -27,7 +27,7 @@ final class CZCurlSetReturn extends CZBase
 
     /**
      * @return boolean
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec()

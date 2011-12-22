@@ -3,9 +3,9 @@ final class CZCerrLoad extends CZBase
 {
     /**
      * @param string $default_msg <Option>
-     * 
+     *
      * @return string / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($default_msg = NULL)

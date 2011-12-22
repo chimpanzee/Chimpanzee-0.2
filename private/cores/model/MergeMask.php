@@ -5,9 +5,9 @@ final class CZCmodelMergeMask extends CZBase
      * @param object $model
      * @param array  $condition_sentences <Option>
      * @param array  $condition_values <Option>
-     * 
+     *
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($model, $condition_sentences = array(), $condition_values = array())

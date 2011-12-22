@@ -3,9 +3,9 @@ final class CZCurlGetParam extends CZBase
 {
     /**
      * @param array $merge_params <Option>
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($merge_params = array())

@@ -18,9 +18,9 @@ final class CZCurlGetAction extends CZBase
      *                ...
      *            ) <Option>
      *        ) <Option>
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function _exec($action, $secure_flag = NULL, $params = NULL)
@@ -74,9 +74,9 @@ final class CZCurlGetAction extends CZBase
      *                ...
      *            ) <Option>
      *        ) <Option>
-     * 
+     *
      * @return string URL
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($action, $secure_flag = NULL, $params = NULL)

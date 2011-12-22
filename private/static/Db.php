@@ -8,9 +8,9 @@ final class CZSDb extends CZBase
 
     /**
      * @param object $pdo
-     * 
+     *
      * @author Shin Uesugi
-     */    
+     */
     public function setPDOTran($pdo)
     {
         $this->_pdo_tran = $pdo;
@@ -18,7 +18,7 @@ final class CZSDb extends CZBase
 
     /**
      * @return object / NULL
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getPDOTran()
@@ -29,9 +29,9 @@ final class CZSDb extends CZBase
 
     /**
      * @param object $pdo / NULL
-     * 
+     *
      * @author Shin Uesugi
-     */    
+     */
     public function setPDOSelect($pdo)
     {
         $this->_pdo_select = $pdo;
@@ -39,7 +39,7 @@ final class CZSDb extends CZBase
 
     /**
      * @return object / NULL
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getPDOSelect()

@@ -4,9 +4,9 @@ final class CZCmodelGetRecordByFormValues extends CZBase
     /**
      * @param object $model
      * @param array  $form_values
-     * 
+     *
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($model, $form_values)

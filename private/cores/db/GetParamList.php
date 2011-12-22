@@ -4,9 +4,9 @@ final class CZCdbGetParamList extends CZBase
     /**
      * @param array   $values
      * @param integer $num
-     * 
+     *
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _getValues($values, $num = NULL)
@@ -23,9 +23,9 @@ final class CZCdbGetParamList extends CZBase
 
     /**
      * @param array $values
-     * 
+     *
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($values)

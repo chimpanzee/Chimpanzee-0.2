@@ -9,7 +9,7 @@ class CZConfig extends CZFunc
 
     /**
      * @param string $main_class_name
-     * 
+     *
      * @author Shin Uesugi
      */
     public function _setMainClassName($main_class_name)
@@ -20,9 +20,9 @@ class CZConfig extends CZFunc
 
     /**
      * @param array $values
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function setValues($values)
@@ -35,9 +35,9 @@ class CZConfig extends CZFunc
     /**
      * @param string $var_name
      * @param mixed  $value
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function addValue($var_name, $value)
@@ -53,9 +53,9 @@ class CZConfig extends CZFunc
     /**
      * @param string $var_name
      * @param mixed  $defalut_value <Option>
-     * 
+     *
      * @return mixed
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getValue($var_name, $defalut_value = NULL)

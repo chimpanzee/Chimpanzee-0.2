@@ -6,9 +6,9 @@ final class CZCviewConvert extends CZBase
      * @param boolean $escape_flag
      * @param array   $ignore_escape_keys
      * @param boolean $mobile_flag
-     * 
+     *
      * @return mixed
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _exec($value, $escape_flag, $ignore_escape_keys, $mobile_flag)
@@ -38,9 +38,9 @@ final class CZCviewConvert extends CZBase
      * @param mixed   $value
      * @param boolean $escape_flag <Default: TRUE>
      * @param array   $ignore_escape_keys <Option>
-     * 
+     *
      * @return mixed
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($value, $escape_flag = TRUE, $ignore_escape_keys = array())

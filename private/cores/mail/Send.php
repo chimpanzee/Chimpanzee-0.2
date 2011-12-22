@@ -13,9 +13,9 @@ final class CZCmailSend extends CZBase
      *            string Name,
      *            string Address
      *        )
-     * 
+     *
      * @return boolean
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($to_addrs, $subject, $msg, $from_addr)

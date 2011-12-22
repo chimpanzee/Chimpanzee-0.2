@@ -3,7 +3,7 @@ final class CZCvarFreeAll extends CZBase
 {
     /**
      * @param string $main_class_name
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($main_class_name)

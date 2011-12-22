@@ -3,9 +3,9 @@ final class CZCmodelGetRecordNum extends CZBase
 {
     /**
      * @param object $model_records
-     * 
+     *
      * @return integer
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($model_records)

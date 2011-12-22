@@ -6,9 +6,9 @@ final class CZCloginIsLoggedIn extends CZBase
      *            string Column name => string Value
      *            ...
      *        ) <Option>
-     * 
+     *
      * @return boolean / redirect
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($condition_values = NULL)

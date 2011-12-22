@@ -5,9 +5,9 @@ final class CZCmodelMergeSearch extends CZBase
      * @param object $model_records
      * @param array  $condition_sentences <Option>
      * @param array  $condition_values <Option>
-     * 
+     *
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($model_records, $condition_sentences = array(), $condition_values = array())

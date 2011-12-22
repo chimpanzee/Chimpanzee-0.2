@@ -7,9 +7,9 @@ final class CZCmodelGetValue extends CZBase
      * @param array   $condition_sentences <Option>
      * @param array   $condition_values <Option>
      * @param boolean $format_flag <Option>
-     * 
+     *
      * @return string / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($model, $column_name, $condition_sentences = array(), $condition_values = array(), $format_flag = TRUE)
@@ -33,9 +33,9 @@ final class CZCmodelGetValue extends CZBase
      * @param integer $id
      * @param string  $column_name
      * @param boolean $format_flag <Default: TRUE>
-     * 
+     *
      * @return string / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function byId($model, $id, $column_name, $format_flag = TRUE)

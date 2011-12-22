@@ -3,7 +3,7 @@ final class CZCprocessBegin extends CZBase
 {
     /**
      * @param string $process_name <Option>
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($process_name = NULL)

@@ -4,9 +4,9 @@ final class CZCviewGetTemplate extends CZBase
     /**
      * @param array   $search_paths
      * @param boolean $required_flag <Default: FALSE>
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _get($search_paths, $required_flag = FALSE)
@@ -37,9 +37,9 @@ final class CZCviewGetTemplate extends CZBase
      * @param string $views_dir
      * @param string $views_common_dir
      * @param string $ctrl_name
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _getMain($file, $file_extension, $views_dir, $views_common_dir, $ctrl_name)
@@ -69,9 +69,9 @@ final class CZCviewGetTemplate extends CZBase
      * @param string $views_dir
      * @param string $views_common_dir
      * @param string $ctrl_name
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _getSub($file_name, $file_extension, $views_dir, $views_common_dir, $ctrl_name)
@@ -88,9 +88,9 @@ final class CZCviewGetTemplate extends CZBase
     /**
      * @param string $views_dir
      * @param string $file <Option>
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($views_dir, $file = '')

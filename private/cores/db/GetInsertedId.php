@@ -3,9 +3,9 @@ final class CZCdbGetInsertedId extends CZBase
 {
     /**
      * @param string $sequence_name
-     * 
+     *
      * @return PDO::lastInsertId
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($sequence_name = NULL)

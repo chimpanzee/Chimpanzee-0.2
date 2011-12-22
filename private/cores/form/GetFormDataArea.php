@@ -6,9 +6,9 @@ final class CZCformGetFormDataArea extends CZBase
      * @param string $part_name
      * @param array  $part
      * @param array  $values
-     * 
+     *
      * @return scalar
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _getValue($form, $part_name, $part, $values)
@@ -28,9 +28,9 @@ final class CZCformGetFormDataArea extends CZBase
      * @param string $part_name
      * @param array  $part <Option>
      * @param array  $values <Option>
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($form, $part_name, $part = array(), $values = array())

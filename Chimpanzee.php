@@ -1,14 +1,14 @@
 <?php
 /**
  * Chimpanzee(PHP Framework)
- * 
+ *
  * PHP 5 >= 5.2.0
- * 
+ *
  * @version   0.20a
  * @copyright 2011 Chimpanzee project
  * @license   GPL
  * @link      http://chimpanzee-php.com/
- * 
+ *
  * 2011.01.18 Development started by Shin Uesugi.
  */
 
@@ -27,7 +27,7 @@ final class Chimpanzee
     /**
      * @param string $project_dir
      * @param string $application_name
-     * 
+     *
      * @author Shin Uesugi
      */
     function __construct($project_dir, $application_name)
@@ -42,7 +42,7 @@ final class Chimpanzee
 
     /**
      * @param string $application_name
-     * 
+     *
      * @author Shin Uesugi
      */
     public function setApplicationName($application_name)
@@ -53,7 +53,7 @@ final class Chimpanzee
 
     /**
      * @param string $default_ctrl_name <Option>
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($default_ctrl_name = 'top')

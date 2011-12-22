@@ -5,7 +5,7 @@ final class CZCvarSave extends CZBase
      * @param string $main_class_name
      * @param string $var_name
      * @param mixed  $value
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($main_class_name, $var_name, $value)

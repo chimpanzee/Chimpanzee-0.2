@@ -3,9 +3,9 @@ final class CZCmodelGetNextPageUrl extends CZBase
 {
     /**
      * @param object $model_records
-     * 
+     *
      * @return integer / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($model_records)

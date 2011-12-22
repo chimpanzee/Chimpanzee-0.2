@@ -11,7 +11,7 @@ final class CZObj
 
     /**
      * @param object $cz
-     * 
+     *
      * @author Shin Uesugi
      */
     function __construct($cz)
@@ -26,9 +26,9 @@ final class CZObj
 
     /**
      * @param string $name
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     public function newModule($name)
@@ -38,9 +38,9 @@ final class CZObj
 
     /**
      * @param string $name
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     public function loadModule($name)
@@ -50,7 +50,7 @@ final class CZObj
 
     /**
      * @param string $name
-     * 
+     *
      * @author Shin Uesugi
      */
     public function unloadModule($name)
@@ -65,9 +65,9 @@ final class CZObj
 
     /**
      * @param string $name
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     public function newModel($name)
@@ -80,9 +80,9 @@ final class CZObj
 
     /**
      * @param string $name
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     public function loadModel($name)
@@ -95,7 +95,7 @@ final class CZObj
 
     /**
      * @param string $name
-     * 
+     *
      * @author Shin Uesugi
      */
     public function unloadModel($name)
@@ -110,9 +110,9 @@ final class CZObj
 
     /**
      * @param string $name
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     public function newForm($name)
@@ -125,9 +125,9 @@ final class CZObj
 
     /**
      * @param string $name
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     public function loadForm($name)
@@ -140,7 +140,7 @@ final class CZObj
 
     /**
      * @param string $name
-     * 
+     *
      * @author Shin Uesugi
      */
     public function unloadForm($name)
@@ -155,9 +155,9 @@ final class CZObj
 
     /**
      * @param string $name
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     public function newFunc($name)
@@ -170,9 +170,9 @@ final class CZObj
 
     /**
      * @param string $name
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     public function loadFunc($name)
@@ -185,7 +185,7 @@ final class CZObj
 
     /**
      * @param string $name
-     * 
+     *
      * @author Shin Uesugi
      */
     public function unloadFunc($name)
@@ -200,9 +200,9 @@ final class CZObj
 
     /**
      * @param string $name
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     public function newTable($name)
@@ -215,9 +215,9 @@ final class CZObj
 
     /**
      * @param string $name
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     public function loadTable($name)
@@ -230,7 +230,7 @@ final class CZObj
 
     /**
      * @param string $name
-     * 
+     *
      * @author Shin Uesugi
      */
     public function unloadTable($name)

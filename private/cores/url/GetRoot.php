@@ -13,9 +13,9 @@ final class CZCurlGetRoot extends CZBase
      *                ...
      *            ) <Option>
      *        ) <Option>
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($secure_flag = NULL, $params = NULL)

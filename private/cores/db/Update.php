@@ -5,9 +5,9 @@ final class CZCdbUpdate extends CZBase
      * @param string $table_name
      * @param array  $records
      * @param array  $column_names
-     * 
+     *
      * @return integer
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _replace($table_name, $records, $column_names)
@@ -28,9 +28,9 @@ final class CZCdbUpdate extends CZBase
      * @param array  $record
      * @param array  $condition_sentences
      * @param array  $condition_values
-     * 
+     *
      * @return integer
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($table_name, $record, $condition_sentences = array(), $condition_values = array())

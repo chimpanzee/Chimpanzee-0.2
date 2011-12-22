@@ -3,7 +3,7 @@ final class CZCsesIsValid extends CZBase
 {
     /**
      * @return boolean
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec()

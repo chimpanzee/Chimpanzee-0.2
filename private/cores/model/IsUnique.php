@@ -5,9 +5,9 @@ final class CZCmodelIsUnique extends CZBase
      * @param object  $model
      * @param array   $record
      * @param integer $ignored_id <Option>
-     * 
+     *
      * @return boolean
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($model, $record, $ignored_id = NULL)

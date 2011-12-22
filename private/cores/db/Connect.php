@@ -3,9 +3,9 @@ final class CZCdbConnect extends CZBase
 {
     /**
      * @param boolean $select_flag
-     * 
+     *
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _getServer($select_flag)
@@ -31,9 +31,9 @@ final class CZCdbConnect extends CZBase
 
     /**
      * @param boolean $select_flag
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($select_flag = FALSE)

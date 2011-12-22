@@ -22,9 +22,9 @@ class CZCtrl extends CZFunc
      *                ...
      *            ) <Option>
      *        ) <Option>
-     * 
+     *
      * @return Exit
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function _forward($action, $params = NULL)
@@ -47,9 +47,9 @@ class CZCtrl extends CZFunc
      *                ...
      *            ) <Option>
      *        ) <Option>
-     * 
+     *
      * @return Exit
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function forward($action, $params = NULL)
@@ -59,7 +59,7 @@ class CZCtrl extends CZFunc
 
     /**
      * @reutrn Exit
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function forward403()
@@ -69,7 +69,7 @@ class CZCtrl extends CZFunc
 
     /**
      * @return Exit
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function forward404()
@@ -99,16 +99,16 @@ class CZCtrl extends CZFunc
      *                ...
      *            ) <Option>
      *        ) <Option>
-     * 
+     *
      * @return Exit
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function _redirect($action, $secure_flag = NULL, $params = NULL)
     {
         $this->_cz->newCore('redirect', 'action')->_exec($action, $secure_flag, $params);
     }
-    
+
     /**
      * @param array   $action(
      *            string Action name
@@ -125,9 +125,9 @@ class CZCtrl extends CZFunc
      *                ...
      *            ) <Option>
      *        ) <Option>
-     * 
+     *
      * @return Exit
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function redirect($action, $secure_flag = NULL, $params = NULL)
@@ -147,9 +147,9 @@ class CZCtrl extends CZFunc
      *                ...
      *            ) <Option>
      *        ) <Option>
-     * 
+     *
      * @return Exit
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function redirectRoot($secure_flag = NULL, $params = NULL)
@@ -176,16 +176,16 @@ class CZCtrl extends CZFunc
      *                ...
      *            ) <Option>
      *        )
-     * 
+     *
      * @return Exit / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function _redirectReturn($default_action = NULL, $secure_flag = NULL, $params = NULL)
     {
         return $this->_cz->newCore('redirect', 'return')->_exec($default_action, $secure_flag, $params);
     }
-    
+
     /**
      * @param array   $default_action <Option>
      *        array(
@@ -204,9 +204,9 @@ class CZCtrl extends CZFunc
      *                ...
      *            ) <Option>
      *        )
-     * 
+     *
      * @return Exit / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function redirectReturn($default_action = NULL, $secure_flag = NULL, $params = NULL)
@@ -216,9 +216,9 @@ class CZCtrl extends CZFunc
 
     /**
      * @param string $url
-     * 
+     *
      * @return Exit
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function redirect301($url)
@@ -228,9 +228,9 @@ class CZCtrl extends CZFunc
 
     /**
      * @param string $url
-     * 
+     *
      * @return Exit
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function redirect302($url)
@@ -245,7 +245,7 @@ class CZCtrl extends CZFunc
 
     /**
      * @param string $process_name <Option>
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function beginProcess($process_name = NULL)
@@ -259,9 +259,9 @@ class CZCtrl extends CZFunc
      *            string Process name
      *            ...
      *        )
-     * 
+     *
      * @return Void / Forward 403
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function checkProcess($process_name = NULL)
@@ -284,7 +284,7 @@ class CZCtrl extends CZFunc
 
     /**
      * @return string / NULL
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function getPrevCtrlName()
@@ -294,7 +294,7 @@ class CZCtrl extends CZFunc
 
     /**
      * @return string / NULL
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function getPrevActionGroupName()
@@ -304,7 +304,7 @@ class CZCtrl extends CZFunc
 
     /**
      * @return string / NULL
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function getPrevActionName()
@@ -319,9 +319,9 @@ class CZCtrl extends CZFunc
 
     /**
      * @param array $actions
-     * 
+     *
      * @return Void / Forward 403
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function _checkPrevActions($actions)
@@ -331,9 +331,9 @@ class CZCtrl extends CZFunc
 
     /**
      * @param array $actions
-     * 
+     *
      * @return Void / Forward 403
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function checkPrevActions($actions)
@@ -351,7 +351,7 @@ class CZCtrl extends CZFunc
      * @param mixed   $value
      * @param boolean $escape_flag <Default: TRUE>
      * @param array   $ignore_escape_keys <Option>
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function addViewVar($var_name, $value, $escape_flag = TRUE, $ignore_escape_keys = array())
@@ -361,7 +361,7 @@ class CZCtrl extends CZFunc
 
     /**
      * @param string $file <Option>
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function display($file = '')

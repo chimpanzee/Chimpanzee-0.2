@@ -4,9 +4,9 @@ final class CZCmodelCommitDelete extends CZBase
     /**
      * @param object $model
      * @param array  $relation_models <Option>
-     * 
+     *
      * @return integer / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($model, $relation_models = array())

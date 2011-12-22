@@ -4,7 +4,7 @@ final class CZCsesFree extends CZBase
     /**
      * @param string $var_name
      * @param string $type <Default: 'core'>
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($var_name, $type = 'core')

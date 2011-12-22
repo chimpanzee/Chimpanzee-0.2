@@ -5,9 +5,9 @@ final class CZCmodelDelete extends CZBase
      * @param object $model
      * @param array  $condition_sentences <Option>
      * @param array  $condition_values <Option>
-     * 
+     *
      * @return integer
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($model, $condition_sentences = array(), $condition_values = array())
@@ -22,9 +22,9 @@ final class CZCmodelDelete extends CZBase
     /**
      * @param object  $model
      * @param integer $id
-     * 
+     *
      * @return integer
-     * 
+     *
      * @author Shin Uesugi
      */
     public function byId($model, $id)

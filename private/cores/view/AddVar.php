@@ -6,7 +6,7 @@ final class CZCviewAddVar extends CZBase
      * @param mixed   $value
      * @param boolean $escape_flag <Default: TRUE>
      * @param array   $ignore_escape_keys <Option>
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($var_name, $value, $escape_flag = TRUE, $ignore_escape_keys = array())

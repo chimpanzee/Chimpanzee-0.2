@@ -3,7 +3,7 @@ final class CZCmobileIsMobile extends CZBase
 {
     /**
      * @return boolean
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec()

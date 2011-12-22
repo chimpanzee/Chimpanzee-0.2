@@ -17,9 +17,9 @@ final class CZObjCtrl
      * @param string $main_type
      * @param string $sub_type
      * @param string $name
-     * 
+     *
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _getInfo($main_type, $sub_type, $name)
@@ -95,9 +95,9 @@ final class CZObjCtrl
      * @param string $sub_type
      * @param array  $search_class_paths
      * @param string $class_name
-     * 
+     *
      * @return string / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _getClassPath($main_type, $sub_type, $search_class_paths, $class_name)
@@ -125,9 +125,9 @@ final class CZObjCtrl
      * @param string $sub_type
      * @param array  $info
      * @param array  $construct_params
-     * 
+     *
      * @return object / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     private function _get($main_type, $sub_type, $info, $construct_params)
@@ -161,9 +161,9 @@ final class CZObjCtrl
      * @param string $name
      * @param string $sub_type
      * @param array  $construct_params
-     * 
+     *
      * @return object / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function load($main_type, $name, $sub_type = '', $construct_params = array())
@@ -196,7 +196,7 @@ final class CZObjCtrl
      * @param string $main_type
      * @param string $name
      * @param string $sub_type
-     * 
+     *
      * @author Shin Uesugi
      */
     public function unload($main_type, $name, $sub_type = '')
@@ -226,9 +226,9 @@ final class CZObjCtrl
      * @param string $name
      * @param string $sub_type
      * @param array  $construct_params
-     * 
+     *
      * @return object / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function _new($main_type, $name, $sub_type = '', $construct_params = array())
@@ -247,7 +247,7 @@ final class CZObjCtrl
 
     /**
      * @param object $cz
-     * 
+     *
      * @author Shin Uesugi
      */
     function __construct($cz)

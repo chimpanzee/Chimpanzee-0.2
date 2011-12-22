@@ -18,9 +18,9 @@ final class CZCredirectAction extends CZBase
      *                ...
      *            ) <Option>
      *        ) <Option>
-     * 
+     *
      * @return Exit
-     * 
+     *
      * @author Shin Uesugi
      */
     public function _exec($action, $secure_flag = NULL, $params = NULL)
@@ -45,9 +45,9 @@ final class CZCredirectAction extends CZBase
      *                ...
      *            ) <Option>
      *        ) <Option>
-     * 
+     *
      * @return Exit
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($action, $secure_flag = NULL, $params = NULL)

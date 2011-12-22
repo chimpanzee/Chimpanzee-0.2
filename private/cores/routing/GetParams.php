@@ -3,7 +3,7 @@ final class CZCroutingGetParams extends CZBase
 {
     /**
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec()

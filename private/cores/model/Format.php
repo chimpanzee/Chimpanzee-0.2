@@ -4,9 +4,9 @@ final class CZCmodelFormat extends CZBase
     /**
      * @param object $model
      * @param array  $record
-     * 
+     *
      * @return array
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($model, $record)

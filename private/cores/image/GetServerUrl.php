@@ -3,7 +3,7 @@ final class CZCimageGetServerUrl extends CZBase
 {
     /**
      * @return string URL
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec()

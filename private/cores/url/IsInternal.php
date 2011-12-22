@@ -3,9 +3,9 @@ final class CZCurlIsInternal extends CZBase
 {
     /**
      * @param string $url
-     * 
+     *
      * @return boolean
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($url)

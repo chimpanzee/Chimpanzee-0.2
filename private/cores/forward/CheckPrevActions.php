@@ -10,9 +10,9 @@ final class CZCforwardCheckPrevActions extends CZBase
      *            )
      *            ...
      *        )
-     * 
+     *
      * @return Void / Forward 403
-     * 
+     *
      * @author Shin Uesugi
      */
     public function _exec($actions)
@@ -70,9 +70,9 @@ final class CZCforwardCheckPrevActions extends CZBase
      *            )
      *            ...
      *        )
-     * 
+     *
      * @return Void / Forward 403
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($actions)

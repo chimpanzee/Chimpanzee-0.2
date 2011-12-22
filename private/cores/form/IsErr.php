@@ -3,9 +3,9 @@ final class CZCformIsErr extends CZBase
 {
     /**
      * @param object $form
-     * 
+     *
      * @return boolean
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($form)

@@ -5,9 +5,9 @@ final class CZCformGetCaption extends CZBase
      * @param object $form
      * @param string $part_name
      * @param array  $part <Option>
-     * 
+     *
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($form, $part_name, $part = array())

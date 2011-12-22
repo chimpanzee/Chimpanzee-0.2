@@ -3,9 +3,9 @@ final class CZCdbRequest extends CZBase
 {
     /**
      * @param string $query
-     * 
+     *
      * @return integer
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($query)

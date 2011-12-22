@@ -5,9 +5,9 @@ final class CZCmodelCommitUpdate extends CZBase
      * @param object $model
      * @param array  $form_values
      * @param array  $add_values <Option>
-     * 
+     *
      * @return integer / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($model, $form_values, $add_values = array())

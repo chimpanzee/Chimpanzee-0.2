@@ -6,9 +6,9 @@ final class CZCdbGetValue extends CZBase
      * @param array  $column_name
      * @param array  $condition_sentences
      * @param array  $condition_values
-     * 
+     *
      * @return scalar / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($table_name, $column_name, $condition_sentences = array(), $condition_values = array())

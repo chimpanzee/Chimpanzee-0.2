@@ -10,7 +10,7 @@ class CZFunc extends CZBase
 
     /**
      * @param string $main_class_name
-     * 
+     *
      * @author Shin Uesugi
      */
     public function _setMainClassName($main_class_name)
@@ -25,7 +25,7 @@ class CZFunc extends CZBase
 
     /**
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     public function getMainClassName()
@@ -40,7 +40,7 @@ class CZFunc extends CZBase
 
     /**
      * @return string
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function getApplicationName()
@@ -55,9 +55,9 @@ class CZFunc extends CZBase
 
     /**
      * @param string $name
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function newModule($name)
@@ -67,9 +67,9 @@ class CZFunc extends CZBase
 
     /**
      * @param string $name
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function loadModule($name)
@@ -79,7 +79,7 @@ class CZFunc extends CZBase
 
     /**
      * @param string $name
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function unloadModule($name)
@@ -94,9 +94,9 @@ class CZFunc extends CZBase
 
     /**
      * @param string $name
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function newModel($name)
@@ -109,9 +109,9 @@ class CZFunc extends CZBase
 
     /**
      * @param string $name
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function loadModel($name)
@@ -124,7 +124,7 @@ class CZFunc extends CZBase
 
     /**
      * @param string $name
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function unloadModel($name)
@@ -139,9 +139,9 @@ class CZFunc extends CZBase
 
     /**
      * @param string $name
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function newForm($name)
@@ -154,9 +154,9 @@ class CZFunc extends CZBase
 
     /**
      * @param string $name
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function loadForm($name)
@@ -169,7 +169,7 @@ class CZFunc extends CZBase
 
     /**
      * @param string $name
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function unloadForm($name)
@@ -184,9 +184,9 @@ class CZFunc extends CZBase
 
     /**
      * @param string $name
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function newFunc($name)
@@ -199,9 +199,9 @@ class CZFunc extends CZBase
 
     /**
      * @param string $name
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function loadFunc($name)
@@ -214,7 +214,7 @@ class CZFunc extends CZBase
 
     /**
      * @param string $name
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function unloadFunc($name)
@@ -229,9 +229,9 @@ class CZFunc extends CZBase
 
     /**
      * @param string $name
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function newTable($name)
@@ -244,9 +244,9 @@ class CZFunc extends CZBase
 
     /**
      * @param string $name
-     * 
+     *
      * @return object
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function loadTable($name)
@@ -259,7 +259,7 @@ class CZFunc extends CZBase
 
     /**
      * @param string $name
-     * 
+     *
      * @author Shin Uesugi
      */
     protected function unloadTable($name)
@@ -288,7 +288,7 @@ class CZFunc extends CZBase
     /**
      * @param string $var_name
      * @param mixed  $value
-     * 
+     *
      * @author Shin Uesugi
      */
     public function save($var_name, $value)
@@ -299,9 +299,9 @@ class CZFunc extends CZBase
     /**
      * @param string $var_name
      * @param mixed  $defalt_value <Option>
-     * 
+     *
      * @return mixed
-     * 
+     *
      * @author Shin Uesugi
      */
     public function load($var_name, $defalt_value = NULL)
@@ -311,7 +311,7 @@ class CZFunc extends CZBase
 
     /**
      * @param string $var_name
-     * 
+     *
      * @author Shin Uesugi
      */
     public function free($var_name)

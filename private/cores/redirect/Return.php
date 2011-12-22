@@ -20,9 +20,9 @@ final class CZCredirectReturn extends CZBase
      *                ...
      *            ) <Option>
      *        )
-     * 
+     *
      * @return Exit / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function _exec($default_action = NULL, $secure_flag = NULL, $params = NULL)
@@ -56,9 +56,9 @@ final class CZCredirectReturn extends CZBase
      *                ...
      *            ) <Option>
      *        )
-     * 
+     *
      * @return Exit / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($default_action = NULL, $secure_flag = NULL, $params = NULL)

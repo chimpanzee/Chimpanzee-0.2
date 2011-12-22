@@ -8,9 +8,9 @@ final class CZCmodelGetRecord extends CZBase
      * @param array   $condition_values <Option>
      * @param boolean $format_flag <Option>
      * @param boolean $mask_flag <Set FALSE by CZClogin>
-     * 
+     *
      * @return array / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function exec($model, $column_names = array(), $condition_sentences = array(), $condition_values = array(), $format_flag = TRUE, $mask_flag = TRUE)
@@ -36,9 +36,9 @@ final class CZCmodelGetRecord extends CZBase
      * @param integer $id
      * @param array   $column_names <Option>
      * @param boolean $format_flag <Option>
-     * 
+     *
      * @return array / FALSE
-     * 
+     *
      * @author Shin Uesugi
      */
     public function byId($model, $id, $column_names = array(), $format_flag = TRUE)
